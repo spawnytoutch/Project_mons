@@ -14,9 +14,10 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
-	font: $blanc;
+	color: $blanc;
 	overflow: hidden;
 	cursor: url(../images/cursor/cursor_current.cur),auto;
+	background-color: grey;
 }
 ::selection {
   background: $couleur;

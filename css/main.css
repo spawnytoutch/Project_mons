@@ -15,9 +15,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  font: #ffffff;
+  color: #ffffff;
   overflow: hidden;
   cursor: url(../images/cursor/cursor_current.cur), auto;
+  background-color: grey;
 }
 
 ::selection {
