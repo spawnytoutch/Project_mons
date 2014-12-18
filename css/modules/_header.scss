@@ -1,0 +1,98 @@
+/*--------------------------------------------------*\
+		Header
+\*--------------------------------------------------*/
+header {
+  height: 96px;
+  width: 100%;
+  background-color: $noir;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+}
+.header-logo img {
+	width: 70px;
+	padding-bottom: 13px;
+	cursor: url(../images/cursor/pointer.cur), auto;
+	z-index: 103;
+
+
+}
+
+.rond {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	padding-bottom: 13px;
+	margin-left: 50px;
+	cursor: url(../images/cursor/pointer.cur), auto;
+	background-color: $couleur;
+	z-index: 102;
+	margin-top: 13px;
+	float: left;
+}
+
+.header-nav {
+	display: inline-block;
+	height: 96px;
+	width: 211px;
+	padding-top: 42px;
+	z-index: 120;
+
+}
+
+.header-nav ul {
+	margin: 0px;
+} 
+
+.header-nav li {
+	float: left;
+	padding: 0 20px;
+	list-style: none;
+}
+
+.header-nav a {
+	text-decoration: none;
+	color:$blanc;
+	cursor: url(../images/cursor/pointer.cur), auto;
+	transition: all 0.3s ease;
+
+} 
+
+.header-nav a:hover {
+	color: $couleur;
+  
+}
+
+.title-picture {
+	height: 96px;
+	position: absolute;
+	z-index: 110;
+	left: 331px;
+	top:0;
+	width: calc(100% - 662px);
+	text-align: center;
+
+}
+
+
+
+.title-picture h1 {
+	color: $couleur;  
+	font-size: 17px;
+	font-weight: 100;
+	margin: 0;
+	line-height: 96px;
+	font-family: helvetica;
+	z-index: 111;
+	
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,224 @@
+/*--------------------------------------------------*\
+		Section
+\*--------------------------------------------------*/
+.btn-comments, .btn-timeline {
+  height: 50px;
+  position: absolute;
+  top: 48%;
+  z-index: 110;
+}
+/*-----------------------------*\
+		Partie gauche
+\*-----------------------------*/
+.left-panel {
+  height: 100%;
+  width: 37.5%;
+  position: absolute;
+  left: -37%;
+  z-index: 78;
+  transition: left 0.3s ease;
+  background-color: $noir;
+  opacity: 0.9;
+}
+.left-panel h2 {
+  cursor: url(../images/cursor/cursor_text.cur),auto;
+}
+.comments {
+  padding: 0;
+  margin: 0;
+  color: $blanc;
+  font-family: helvetica, sans-serif;
+  text-align: justify;
+  padding: 150px 50px;
+}
+.comments p {
+  margin-top: 150px;
+  cursor: url(../images/cursor/cursor_text.cur),auto;
+}
+.btn-comments {
+  width: 8.87%;
+  right: -8.87%;
+  background-color: $noir;
+  cursor: url(../images/cursor/pointer.cur),auto;
+}
+
+.btn-comments img {
+  margin-top: 12px;
+  margin-left: 14px;
+}
+
+/*-----------------------------*\
+		Partie centrale
+\*-----------------------------*/
+section {
+  height: 100%;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.overlay {
+  display: none;
+}
+.overlay-active-blue {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $couleur;
+  opacity: 0.5;
+  z-index: 77;
+  cursor: url(../images/cursor/cursor_-_black.cur),auto;
+}
+.overlay-active-black {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 20, 20, 0.9);
+  z-index: 80;
+  cursor: url(../images/cursor/cursor_-_white.cur),auto;
+}
+
+.box-position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.box-arrow {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+.box-arrow.up {
+  top: 110px;
+}
+.box-arrow.down {
+  top: 705px;
+}
+
+.arrow-up{
+  position: relative;
+  z-index: 50;
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  line-height: 7px;
+  border-top: 3px solid $couleur;
+  border-right: 3px solid $couleur;
+  transform:rotate(-45deg);
+}
+
+.arrow-up:hover,.arrow-down:hover{
+  border-top: 3px solid $noir;
+  border-right: 3px solid $noir;
+  opacity: 0.7;
+}
+
+.arrow-down{
+  position: relative;
+  z-index: 50;
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  height: 40px;
+  line-height: 7px;
+  border-top: 3px solid $couleur;
+  border-right: 3px solid $couleur;
+  transform:rotate(135deg);
+}
+
+.block-title{
+  position: absolute;
+  top:96px;
+  width: 37.5%;
+  left: 0;
+  height: 60px;
+  background-color: $couleur;
+  z-index: 79;
+}
+
+.block-title h2 {
+  padding-left: 50px;
+  color: $blanc;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.italic {
+font-size: 18px;
+font-style: italic;
+font-weight: 100;
+}
+
+/*-----------------------------*\
+		Partie droite
+\*-----------------------------*/
+.right-panel {
+  height: 100%;
+  width: 17.5%;
+  position: absolute;
+  right: -17%;
+  z-index: 90;
+  transition: right 0.3s ease;
+  background-color: $couleur;
+  opacity: 0.85; 
+  
+}
+.timeline {
+  padding-top: 150px;
+  padding-left: 10px;
+  overflow-y: hidden; 
+}
+.timeline ul {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+ 
+  width: 100%;
+  margin: 0 auto;
+}
+.timeline li {
+  width: 100%;
+  text-align: center;
+
+}
+.timeline li a {
+  display: block;
+  width: 92%;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: helvetica, sans-serif;
+  color: white;
+  letter-spacing: 10px;
+   bottom: 30px;
+   padding: 30px 0;
+}
+.timeline li a:hover {
+  background-color: $noir;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+.btn-timeline {
+  width: 18.78%;
+  left: -18.78%;
+  background-color: $couleur;
+  cursor: url(../images/cursor/pointer.cur),auto;
+}
+
+.btn-timeline img {
+  margin-top: 15px;
+  margin-left: 14px;
+}

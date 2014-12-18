@@ -1,0 +1,44 @@
+/*--------------------------------------------------*\
+		Footer
+\*--------------------------------------------------*/
+footer {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: $noir;
+  z-index: 100;
+}
+
+footer p {
+	color: $blanc;
+	margin: 0 0 0 50px;
+	font-size: 12px;
+	margin-top: 20px;
+	width: 300px;
+	float: left;
+	cursor: url(../images/cursor/cursor_text.cur),auto;
+}
+
+footer ul {
+	width: 400px;
+	float: right;
+}
+
+footer li {
+	display: inline-block;
+	float: left;
+	padding: 0 15px;
+}
+
+footer a {
+	text-decoration: none;
+	color: $blanc;
+	transition: all 0.3s ease;
+	font-size: 12px;
+	cursor: url(../images/cursor/pointer.cur), auto;
+}
+
+footer a:hover {
+	color: $couleur;
+}
