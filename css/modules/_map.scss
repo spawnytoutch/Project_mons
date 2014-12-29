@@ -1,9 +1,10 @@
 /*--------------------------------------------------*\
 		Map
 \*--------------------------------------------------*/
-
-#map-canvas { 
-	height: 100%; margin: 0; padding: 0;
-	
-}
-
+#map-canvas {height: 85%; top: 96px;}
+      .title-info-mark {font-family: Helvetica, sans-serif; font-size: 2em; font-weight: 700; color: $bleu;}
+      .sub-title-info-mark {margin-bottom:1em; font-family: Helvetica, sans-serif; font-size: 1.3em; font-style: italic; font-weight: 500; color: $noir;}
+      .content-info-mark {width: 500px;position: relative;height: 300px;}
+      .text-info-mark {width: 275px;position: absolute;right: 0;height: 100%;}
+      .mini-bat {width: 200px;position: absolute;left: 0; margin: 0 1em 1em 0;}
+      .text-info-mark p {font-family: Helvetica, sans-serif; font-size: 1em; font-style: normal;text-align: justify;vertical-align: center; color: $noir; margin:0;}
