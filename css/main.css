@@ -311,7 +311,7 @@ section {
   display: none;
 }
 
-.overlay-active-blue {
+.overlay-active-color {
   display: block;
   position: absolute;
   top: 0;

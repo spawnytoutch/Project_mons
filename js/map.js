@@ -22,8 +22,6 @@ var dataMark = [
 
 var myMap;
 
-var infoMark = null;
-
 var imgMark = {
   url: "images/marker.png",
   size: new google.maps.Size(40, 62),
@@ -110,7 +108,7 @@ function addMArk(latlng) {
 
   zoneMark.extend( mark.getPosition() );
 
-  google.maps.event.addListener(mark, 'mouseover', function(evenement){
+  google.maps.event.addListener(mark, 'click', function(evenement){
     infoMark.open(myMap, mark);
   });
 }
