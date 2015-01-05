@@ -1,24 +1,22 @@
 /*--------------------------------------------------*\
 		Section
 \*--------------------------------------------------*/
-.btn-comments, .btn-timeline {
-  height: 50px;
-  position: absolute;
-  top: 48%;
-  z-index: 110;
-}
+
+
+
 /*-----------------------------*\
 		Partie gauche
 \*-----------------------------*/
 .left-panel {
   height: 100%;
-  width: 37.5%;
   position: absolute;
-  left: -37%;
+  left: -40.66667%;
   z-index: 78;
   transition: left 0.3s ease;
   background-color: $noir;
   opacity: 0.9;
+
+  @include span (12);
 }
 .left-panel h2 {
   cursor: url(../images/cursor/cursor_text.cur),auto;
@@ -52,11 +50,19 @@
 \*-----------------------------*/
 section {
   height: 100%;
-  max-width: 100%;
+  // max-width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+
+  @include span (12); 
+}
+.btn-comments, .btn-timeline {
+  height: 50px;
+  position: absolute;
+  top: 48%;
+  z-index: 110;
 }
 .overlay {
   display: none;
@@ -138,16 +144,17 @@ section {
   border-right: 3px solid $couleur;
   transform:rotate(135deg);
 }
-
 .block-title{
-  position: absolute;
-  top:96px;
-  width: 37.5%;
-  left: 0;
-  height: 60px;
-  background-color: $couleur;
-  z-index: 79;
+    position: absolute;
+    top:96px;
+    // width: 37.5%;
+    left: 0;
+    height: 60px;
+    background-color: $couleur;
+    z-index: 79;
+    @include span (12);
 }
+
 
 .block-title h2 {
   padding-left: 50px;
@@ -221,4 +228,19 @@ font-weight: 100;
 .btn-timeline img {
   margin-top: 15px;
   margin-left: 14px;
+}
+
+/*-----------------------------*\
+    Media Queries
+\*-----------------------------*/
+ 
+// @include breakpoint (480px) {
+//     .block-title, .left-panel{
+//         @include span (8);
+//     }
+// }
+@include breakpoint (1024px) {
+    .block-title, .left-panel{
+          @include span (5);
+    }
 }

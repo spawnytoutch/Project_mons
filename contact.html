@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Il était une fois ... Mons ___ Contact</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/tools/_font-awesome.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="rond">
+            <a class="header-logo" href="http://www.mons2015.eu" target="_blank"><img src="images/logo_mons.svg" alt="Logo Mons 2015"></a>
+        </div>
+
+         <nav class="header-nav">
+        <!-- Barre de navigation générale-->
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="map.html">Carte</a></li>
+            </ul>
+        </nav>
+
+        <nav class="header-mobile-nav">
+            <ul>
+                <li><a href "#">Accueil</a></li>
+                <li><a href "#">La Maison Folie</a></li>
+                <li><a href "#">Le manège.mons</a></li>
+                <li><a href "#">Le dépôt des oeuvres d'art</a></li>
+                <li><a href "#">Les Abattoirs</a></li>
+                <li><a href "#">Arsonic</a></li>
+                <li><a href "#">Le Carré des Arts</a></li>
+                <li><a href "#">le BAM</a></li>
+                <li><a href "#">Le Corps de ville</a></li>
+                <li><a href "#">La Gare de Mons</a></li>
+                <li><a href "#">La Fondation Mons 2015</a></li>
+                <li><a href "#">Contact</a></li>
+                <li> <a href="#" class="burger"><i class="fa fa-facebook"></i></a><a href="#" class="burger"><i class="fa fa-twitter"></i></a><a href="#" class="burger"><i class="fa fa-share"></i></a><a href="about.html"><i class="fa fa-info"></i></a></li>
+            </ul>
+        </nav>
+
+
+        <div class="title-picture">
+            <h1></h1>
+        </div>
+
+    </header>
+    
+    <section>
+        <div class="banner">
+            <p>aidez-nous à améliorer</p></br>
+             <p>notre galerie </p>
+             <div></div>
+             <div class="backgroundbanner"></div>
+        </div>
+        <div class="contact">
+            <form action="post">
+                <span>
+                <label for="nom">Nom:</label><br>
+                <input type="text" name="nom" id="nom" placeholder="Votre nom" required="required"></span>
+
+                <span>
+                <label for="prenom">Prénom:</label><br>
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required="required">
+                </span>
+
+                <span>
+                <label for="mail">Adresse e-mail:</label><br>
+                <input type="email" name="mail" id="mail" placeholder="Votre adresse e-mail" required="required">
+                </span><br>
+
+                <span>
+                <label for="batiment">Choix du bâtiment:</label><br>
+                <select>
+                  <option value="abattoirs">Les abattoirs</option>
+                  <option value="arsonic">L'Arsonic</option>
+                  <option value="bam">Le BAM</option>
+                  <option value="carreart">Le Carré des arts</option>
+                  <option value="corpsdeville">Le corps de ville</option>
+                  <option value="depot">Le dépôt des oeuvres d'art</option>
+                  <option value="fondationmons">La Fondation Mons 2015</option>
+                  <option value="garemons">La gare de Mons</option>
+                  <option value="maisonfolie">La Maison Folie</option>
+                  <option value="manegemons">Le Manège.Mons</option>                  
+                </select>
+                </span>
+
+                <span>
+                <label for="date">Date de la photo:</label><br>
+                <input type="date" name="date" id="date" placeholder="jj/mm/aaaa" required="required">
+                </span>
+
+                <span>
+                <label for="photo">Votre photo:</label><br>
+                <input type="file" name="photo" id="photo" accept="image/*" required="required">
+                </span><br>
+                
+                <span>
+                <label for="commentaire">Commentaire:</label><br>
+                <textarea name="Commentaire" id="commentaire" cols="30" rows="10" placeholder="Légende et description de votre photo (max. 200 caractères)" maxlength="200" required="required"></textarea>
+                </span><br>
+                <input type="submit" id="valider">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Pied de page -->
+        <p>Il était une fois … Mons © 2014 - Tous droits réservés</p>
+        
+        <ul>
+            <li><a href="#" class="active">Contact</a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-share"></i></a></li>
+            <li><a href="about.html"><i class="fa fa-info"></i></a></li>
+        </ul>
+
+    </footer>
+
+<script type="text/javascript" src="js/libs/jquery.js"></script>
+</body>
+</html>

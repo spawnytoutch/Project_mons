@@ -73,7 +73,7 @@
 				});
 		},
 		closePanels: function(){
-			$('.left-panel').css('left','-37%');
+			$('.left-panel').css('left','-40.66667%');
 			$('.overlay').removeClass('overlay-active-black').removeClass('overlay-active-color');
 			$('.right-panel').css('right', '-17%');
 			panelVal = 0;

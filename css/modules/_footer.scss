@@ -17,6 +17,7 @@ footer {
   bottom: 0;
   background-color: $noir;
   z-index: 100;
+  display: none;
 }
 
 footer p {
@@ -50,4 +51,12 @@ footer a {
 
 footer a:hover {
 	color: $couleur;
+}
+
+@include breakpoint (1024px) {
+	footer{
+		display: block;
+	}
+	
+
 }

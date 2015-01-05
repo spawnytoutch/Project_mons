@@ -1,5 +1,16 @@
 @import "compass";
 
+
+// Screen
+// ======
+
+@import "tools/grids";
+
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding:$gutter-width;
+
+
 // Variables
 $rouge: #f15b5b;
 $orange:#f7941d;
@@ -30,3 +41,4 @@ $couleur:#00bfdf;
 @import "modules/about";
 @import "modules/contact";
 @import "modules/instruction";
+

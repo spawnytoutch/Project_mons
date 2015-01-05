@@ -18,7 +18,15 @@ body {
   color: #ffffff;
   overflow: hidden;
   cursor: url(../images/cursor/cursor_current.cur), auto;
-  background-color: grey;
+  background-color: #131414;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 ::selection {
@@ -164,7 +172,7 @@ body {
 		Header
 \*--------------------------------------------------*/
 header {
-  height: 96px;
+  height: 60px;
   width: 100%;
   background-color: #131414;
   position: fixed;
@@ -173,27 +181,27 @@ header {
 }
 
 .header-logo img {
-  width: 70px;
-  padding-bottom: 13px;
+  width: 40px;
+  padding-bottom: 10px;
   cursor: url(../images/cursor/pointer.cur), auto;
   z-index: 103;
 }
 
 .rond {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  padding-bottom: 13px;
-  margin-left: 50px;
+  padding-bottom: 10px;
+  margin-left: 25px;
   cursor: url(../images/cursor/pointer.cur), auto;
   background-color: #00bfdf;
   z-index: 102;
-  margin-top: 13px;
+  margin-top: 10px;
   float: left;
 }
 
 .header-nav {
-  display: inline-block;
+  display: none;
   height: 96px;
   width: 211px;
   padding-top: 42px;
@@ -222,47 +230,144 @@ header {
 }
 
 .title-picture {
-  height: 96px;
+  height: 60px;
   position: absolute;
   z-index: 110;
-  left: 331px;
   top: 0;
-  width: calc(100% - 662px);
   text-align: center;
+  width: calc(100% - 130px);
+  left: 80px;
 }
 
 .title-picture h1 {
   color: #00bfdf;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 100;
   margin: 0;
-  line-height: 96px;
+  line-height: 60px;
   font-family: helvetica;
   z-index: 111;
 }
 
+.menu-burger {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 19px;
+  top: 12px;
+}
+.menu-burger:hover > div {
+  background-color: #00bfdf;
+}
+.menu-burger div {
+  background-color: #ffffff;
+  width: 30px;
+  height: 5px;
+  margin: 5px 0px;
+}
+
+.header-mobile-nav {
+  background-color: #131414;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: 900px;
+  overflow: scroll;
+}
+.header-mobile-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.header-mobile-nav li {
+  list-style: none;
+}
+.header-mobile-nav a {
+  margin: 0;
+  padding: 20px 10px;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: solid 1px #ffffff;
+  color: #ffffff;
+  font-family: helvetica;
+  font-size: 1.2em;
+  font-weight: 100;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+.header-mobile-nav a:hover {
+  background-color: #00bfdf;
+}
+.header-mobile-nav li:first-child {
+  border-top: solid 1px #ffffff;
+}
+
+.burger a {
+  display: inline-block;
+}
+
+@media (min-width: 1024px) {
+  .header-mobile-nav, .menu-burger {
+    display: none;
+  }
+
+  .header-nav {
+    display: inline-block;
+  }
+
+  .title-picture {
+    left: 331px;
+    width: calc(100% - 662px);
+  }
+
+  .title-picture h1 {
+    line-height: 96px;
+  }
+
+  header {
+    height: 96px;
+  }
+
+  .header-logo img {
+    width: 70px;
+    padding-bottom: 13px;
+  }
+
+  .rond {
+    width: 70px;
+    height: 70px;
+    padding-bottom: 13px;
+    margin-left: 50px;
+    margin-top: 13px;
+  }
+}
 /*--------------------------------------------------*\
 		Section
 \*--------------------------------------------------*/
-.btn-comments, .btn-timeline {
-  height: 50px;
-  position: absolute;
-  top: 48%;
-  z-index: 110;
-}
-
 /*-----------------------------*\
 		Partie gauche
 \*-----------------------------*/
 .left-panel {
   height: 100%;
-  width: 37.5%;
   position: absolute;
-  left: -37%;
+  left: -40.66667%;
   z-index: 78;
   transition: left 0.3s ease;
   background-color: #131414;
   opacity: 0.9;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
 }
 
 .left-panel h2 {
@@ -300,11 +405,24 @@ header {
 \*-----------------------------*/
 section {
   height: 100%;
-  max-width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+}
+
+.btn-comments, .btn-timeline {
+  height: 50px;
+  position: absolute;
+  top: 48%;
+  z-index: 110;
 }
 
 .overlay {
@@ -395,11 +513,17 @@ section {
 .block-title {
   position: absolute;
   top: 96px;
-  width: 37.5%;
   left: 0;
   height: 60px;
   background-color: #00bfdf;
   z-index: 79;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
 }
 
 .block-title h2 {
@@ -480,6 +604,20 @@ section {
   margin-left: 14px;
 }
 
+/*-----------------------------*\
+    Media Queries
+\*-----------------------------*/
+@media (min-width: 1024px) {
+  .block-title, .left-panel {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 41.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+  }
+}
 /*--------------------------------------------------*\
 		Footer
 \*--------------------------------------------------*/
@@ -497,6 +635,7 @@ footer {
   bottom: 0;
   background-color: #131414;
   z-index: 100;
+  display: none;
 }
 
 footer p {
@@ -532,12 +671,148 @@ footer a:hover {
   color: #00bfdf;
 }
 
+@media (min-width: 1024px) {
+  footer {
+    display: block;
+  }
+}
 /*--------------------------------------------------*\
 		Informations / About
 \*--------------------------------------------------*/
+.leftcontent {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+.leftcontent img {
+  max-height: 100%;
+}
+
+.content {
+  max-width: 60%;
+  height: 100%;
+  float: right;
+  margin-top: 96px;
+}
+.content .text {
+  height: 100%;
+  margin: 0 20%;
+  padding-top: 15%;
+}
+.content .text h1 {
+  color: #00bfdf;
+  font-size: 2em;
+  font-family: helvetica;
+  font-weight: 200;
+  margin: 0;
+}
+.content .text h2 {
+  color: #00bfdf;
+  font-size: 1.2em;
+  font-family: helvetica;
+  font-weight: 100;
+}
+.content .text p {
+  color: #ffffff;
+  font-family: helvetica;
+  font-weight: 100;
+  font-size: 1em;
+}
+
 /*--------------------------------------------------*\
 		Contact
 \*--------------------------------------------------*/
+.banner {
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  height: 254px;
+  margin-top: 96px;
+}
+.banner div {
+  width: 548px;
+  height: 50px;
+  position: absolute;
+  z-index: 0;
+  top: 106px;
+  background-color: #00bfdf;
+  opacity: 0.5;
+}
+.banner .backgroundbanner {
+  width: 365px;
+  height: 50px;
+  position: absolute;
+  z-index: 0;
+  top: 176px;
+  background-color: #00bfdf;
+  opacity: 0.5;
+}
+.banner p {
+  font-family: helvetica;
+  font-size: 3em;
+  font-weight: 100;
+  font-variant: small-caps;
+  color: #ffffff;
+  display: inline-block;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 50px;
+  line-height: 45px;
+  margin: 10px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.contact {
+  margin-top: 50px;
+}
+.contact form {
+  width: 900px;
+  margin: auto;
+}
+.contact span {
+  display: inline-block;
+  margin: 0px 20px 40px 20px;
+}
+.contact label {
+  color: #00bfdf;
+  font-family: helvetica;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+.contact input {
+  border: solid #ffffff 2px;
+  background-color: #131414;
+  color: #ffffff;
+  font-size: 0.8em;
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+}
+.contact select {
+  background-color: #131414;
+  color: #ffffff;
+  height: 30px;
+  border: solid #ffffff 2px;
+  font-family: helvetica;
+  font-size: 0.8em;
+  margin-top: 10px;
+  width: 250px;
+}
+.contact #commentaire {
+  margin-top: 10px;
+  width: 840px;
+  max-width: 840px;
+  max-height: 150px;
+  color: #ffffff;
+  font-family: helvetica;
+  background-color: #131414;
+  border: solid #ffffff 2px;
+  font-size: 0.8em;
+}
+.contact #valider {
+  margin-left: 20px;
+}
+
 /*--------------------------------------------------*\
 		Instructions
 \*--------------------------------------------------*/
