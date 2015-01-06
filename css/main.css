@@ -86,18 +86,15 @@ body:after {
   width: 485px;
   margin: 0 auto;
 }
-
 .buttons ul {
   list-style: none;
   padding: 0;
 }
-
 .buttons li {
   display: inline-block;
   margin-right: 60px;
   margin-left: 60px;
 }
-
 .buttons a {
   display: block;
   width: 120px;
@@ -108,7 +105,6 @@ body:after {
   border: 3px solid #ffffff;
   color: #ffffff;
 }
-
 .buttons a:hover {
   color: #00bfdf;
   border: 3px solid #00bfdf;
@@ -139,33 +135,32 @@ body:after {
 }
 
 .content-info-mark {
-  width: 500px;
   position: relative;
+  width: 500px;
   height: 300px;
 }
 
 .text-info-mark {
+  position: absolute;
   width: 275px;
-  position: absolute;
-  right: 0;
   height: 100%;
+  right: 0;
 }
-
-.mini-bat {
-  width: 200px;
-  position: absolute;
-  left: 0;
-  margin: 0 1em 1em 0;
-}
-
 .text-info-mark p {
+  margin: 0;
   font-family: Helvetica, sans-serif;
   font-size: 1em;
   font-style: normal;
   text-align: justify;
   vertical-align: center;
   color: #131414;
-  margin: 0;
+}
+
+.mini-bat {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  margin: 0 1em 1em 0;
 }
 
 /*--------------------------------------------------*\
@@ -207,24 +202,20 @@ header {
   padding-top: 42px;
   z-index: 120;
 }
-
 .header-nav ul {
   margin: 0px;
 }
-
 .header-nav li {
   float: left;
   padding: 0 20px;
   list-style: none;
 }
-
 .header-nav a {
   text-decoration: none;
   color: #ffffff;
   cursor: url(../images/cursor/pointer.cur), auto;
   transition: all 0.3s ease;
 }
-
 .header-nav a:hover {
   color: #00bfdf;
 }
@@ -238,7 +229,6 @@ header {
   width: calc(100% - 130px);
   left: 80px;
 }
-
 .title-picture h1 {
   color: #00bfdf;
   font-size: 16px;
@@ -253,8 +243,8 @@ header {
   position: absolute;
   width: 30px;
   height: 30px;
-  right: 19px;
   top: 12px;
+  right: 19px;
 }
 .menu-burger:hover > div {
   background-color: #00bfdf;
@@ -267,13 +257,14 @@ header {
 }
 
 .header-mobile-nav {
+  display: none;
   background-color: #131414;
   margin: 0;
   padding: 0;
   position: absolute;
   top: 60px;
   width: 100%;
-  height: 900px;
+  height: 819px;
   overflow: scroll;
 }
 .header-mobile-nav ul {
@@ -308,7 +299,11 @@ header {
   border-top: solid 1px #ffffff;
 }
 
-.burger a {
+.menu-burger-active {
+  display: block;
+}
+
+.icon-inline a {
   display: inline-block;
 }
 
@@ -354,13 +349,7 @@ header {
 		Partie gauche
 \*-----------------------------*/
 .left-panel {
-  height: 100%;
   position: absolute;
-  left: -40.66667%;
-  z-index: 78;
-  transition: left 0.3s ease;
-  background-color: #131414;
-  opacity: 0.9;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -368,21 +357,23 @@ header {
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
+  height: 100%;
+  left: -100%;
+  z-index: 78;
+  background-color: #131414;
+  opacity: 0.9;
 }
-
 .left-panel h2 {
   cursor: url(../images/cursor/cursor_text.cur), auto;
 }
 
 .comments {
-  padding: 0;
   margin: 0;
-  color: #ffffff;
-  font-family: helvetica, sans-serif;
-  text-align: justify;
   padding: 150px 50px;
+  font-family: helvetica, sans-serif;
+  color: #ffffff;
+  text-align: justify;
 }
-
 .comments p {
   margin-top: 150px;
   cursor: url(../images/cursor/cursor_text.cur), auto;
@@ -394,7 +385,6 @@ header {
   background-color: #131414;
   cursor: url(../images/cursor/pointer.cur), auto;
 }
-
 .btn-comments img {
   margin-top: 12px;
   margin-left: 14px;
@@ -404,11 +394,6 @@ header {
 		Partie centrale
 \*-----------------------------*/
 section {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -416,11 +401,16 @@ section {
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .btn-comments, .btn-timeline {
-  height: 50px;
   position: absolute;
+  height: 50px;
   top: 48%;
   z-index: 110;
 }
@@ -471,11 +461,7 @@ section {
 }
 
 .box-arrow.up {
-  top: 110px;
-}
-
-.box-arrow.down {
-  top: 705px;
+  top: 133px;
 }
 
 .arrow-up {
@@ -491,12 +477,6 @@ section {
   transform: rotate(-45deg);
 }
 
-.arrow-up:hover, .arrow-down:hover {
-  border-top: 3px solid #131414;
-  border-right: 3px solid #131414;
-  opacity: 0.7;
-}
-
 .arrow-down {
   position: relative;
   z-index: 50;
@@ -510,13 +490,14 @@ section {
   transform: rotate(135deg);
 }
 
+.arrow-up:hover, .arrow-down:hover {
+  border-top: 3px solid #131414;
+  border-right: 3px solid #131414;
+  opacity: 0.7;
+}
+
 .block-title {
   position: absolute;
-  top: 96px;
-  left: 0;
-  height: 60px;
-  background-color: #00bfdf;
-  z-index: 79;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -524,10 +505,14 @@ section {
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
+  height: 60px;
+  top: 60px;
+  left: 0;
+  background-color: #00bfdf;
+  z-index: 79;
 }
-
 .block-title h2 {
-  padding-left: 50px;
+  padding-left: 25px;
   color: #ffffff;
   font-size: 18px;
   font-weight: 600;
@@ -559,7 +544,6 @@ section {
   padding-left: 10px;
   overflow-y: hidden;
 }
-
 .timeline ul {
   list-style: none;
   padding: 0;
@@ -567,13 +551,11 @@ section {
   width: 100%;
   margin: 0 auto;
 }
-
 .timeline li {
   width: 100%;
   text-align: center;
 }
-
-.timeline li a {
+.timeline a {
   display: block;
   width: 92%;
   text-decoration: none;
@@ -585,8 +567,7 @@ section {
   bottom: 30px;
   padding: 30px 0;
 }
-
-.timeline li a:hover {
+.timeline a:hover {
   background-color: #131414;
   padding: 30px 0;
   transition: all 0.3s ease;
@@ -598,15 +579,11 @@ section {
   background-color: #00bfdf;
   cursor: url(../images/cursor/pointer.cur), auto;
 }
-
 .btn-timeline img {
   margin-top: 15px;
   margin-left: 14px;
 }
 
-/*-----------------------------*\
-    Media Queries
-\*-----------------------------*/
 @media (min-width: 1024px) {
   .block-title, .left-panel {
     -moz-box-sizing: border-box;
@@ -616,6 +593,22 @@ section {
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
+  }
+
+  .block-title {
+    top: 96px;
+  }
+  .block-title h2 {
+    padding-left: 50px;
+  }
+
+  .left-panel {
+    left: -40.66667%;
+    transition: left 0.3s ease;
+  }
+
+  .box-arrow.up {
+    top: 110px;
   }
 }
 /*--------------------------------------------------*\
@@ -637,7 +630,6 @@ footer {
   z-index: 100;
   display: none;
 }
-
 footer p {
   color: #ffffff;
   margin: 0 0 0 50px;
@@ -647,26 +639,22 @@ footer p {
   float: left;
   cursor: url(../images/cursor/cursor_text.cur), auto;
 }
-
 footer ul {
   width: 320px;
   float: right;
 }
-
 footer li {
   display: inline-block;
   float: left;
   padding: 0 15px;
 }
-
 footer a {
-  text-decoration: none;
-  color: #ffffff;
-  transition: all 0.3s ease;
   font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
   cursor: url(../images/cursor/pointer.cur), auto;
 }
-
 footer a:hover {
   color: #00bfdf;
 }

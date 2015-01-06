@@ -2,7 +2,6 @@
 	$(document).ready(function(){
 		urlUtils.init();
 		handlers.init();
-		
 	});
 var handlers={
 	init: function()

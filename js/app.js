@@ -37,8 +37,9 @@
 		init: function(){
 				$('.arrow-up').bind({click: handlers.beforeImg});
 				$('.arrow-down').bind({click: handlers.afterImg});
-				$('.btn-comments').unbind().bind({click: handlers.openComments});
+				$('.btn-comments').bind({click: handlers.openComments});
 				$('.btn-timeline').bind({click: handlers.openTimeline});
+				$('.menu-burger').bind({click: handlers.openMenuBurger});
 				/*$('.'+stationHistory.nameClass).bind({click: handlers.gestionTimeline});*/
 				$(window).bind({mousewheel:function(e){
 					if(e.originalEvent.wheelDelta < 0){
@@ -71,6 +72,9 @@
 						break;
 					}
 				});
+		},
+		openMenuBurger: function(){
+			$('.header-mobile-nav').toggleClass('menu-burger-active');
 		},
 		closePanels: function(){
 			$('.left-panel').css('left','-40.66667%');
@@ -137,7 +141,7 @@
 				}
 		},
 		gestionKeyUp: function(){
-				if(panelVal == 0){
+				if(panelVal == 0 || panelVal == -1){
 					if(indexImg == 0){
 						indexImg = (stationHistory.length-1);
 					}else{
@@ -150,7 +154,7 @@
 				}
 		},
 		gestionKeyDown: function(){
-				if(panelVal == 0){
+				if(panelVal == 0 || panelVal == -1){
 					if(indexImg == (stationHistory.length-1)){
 						indexImg = 0;
 					}else{
