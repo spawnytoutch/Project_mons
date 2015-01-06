@@ -35,21 +35,17 @@
 	];
 	var handlers = {
 		init: function(){
+
 				$('.arrow-up').bind({click: handlers.beforeImg});
 				$('.arrow-down').bind({click: handlers.afterImg});
 				$('.btn-comments').bind({click: handlers.openComments});
 				$('.btn-timeline').bind({click: handlers.openTimeline});
-				$('.menu-burger').bind({click: handlers.openMenuBurger});
+				$('.menu-burger').bind({click: handlers.switchMenuBurger});
 				/*$('.'+stationHistory.nameClass).bind({click: handlers.gestionTimeline});*/
-				$(window).bind({mousewheel:function(e){
-					if(e.originalEvent.wheelDelta < 0){
-							handlers.beforeImg();
-						}else{
-							handlers.afterImg();
-						}
-					}
-				});
+				// $(window).bind({mousewheel: handlers.mousewheelHandlers});
+				// $('.header-mobile-nav').unbind(handlers.mousewheelHandlers).bind({mousewheel:function(e){console.log('yolo')}});
 				$(window).bind('keydown', function(e) {
+
 					switch(e.keyCode) {
 						case 37: // Gauche
 							handlers.gestionKeyLeft(e);
@@ -73,8 +69,17 @@
 					}
 				});
 		},
-		openMenuBurger: function(){
+		mousewheelHandlers: function(e){
+			console.log(e);
+			if(e.originalEvent.wheelDelta < 0){
+						handlers.beforeImg();
+					}else{
+						handlers.afterImg();
+					}
+		},
+		switchMenuBurger: function(){
 			$('.header-mobile-nav').toggleClass('menu-burger-active');
+			// $('.header-mobile-nav').html(contentMenuBurger);
 		},
 		closePanels: function(){
 			$('.left-panel').css('left','-40.66667%');

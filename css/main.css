@@ -227,7 +227,7 @@ header {
   top: 0;
   text-align: center;
   width: calc(100% - 130px);
-  left: 80px;
+  left: 64px;
 }
 .title-picture h1 {
   color: #00bfdf;
@@ -241,30 +241,28 @@ header {
 
 .menu-burger {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 12px;
-  right: 19px;
+  width: 23px;
+  top: 16px;
+  right: 25px;
 }
 .menu-burger:hover > div {
   background-color: #00bfdf;
 }
 .menu-burger div {
   background-color: #ffffff;
-  width: 30px;
-  height: 5px;
-  margin: 5px 0px;
+  width: 23px;
+  height: 4px;
+  margin: 4px 0px;
 }
 
 .header-mobile-nav {
   display: none;
-  background-color: #131414;
   margin: 0;
   padding: 0;
   position: absolute;
   top: 60px;
   width: 100%;
-  height: 700px;
+  height: 950px;
   overflow: auto;
 }
 .header-mobile-nav ul {
@@ -301,6 +299,7 @@ header {
 
 .menu-burger-active {
   display: block;
+  background-color: #131414;
 }
 
 .icon-inline ul {
@@ -382,10 +381,10 @@ header {
 
 .comments {
   margin: 0;
-  padding: 150px 50px;
+  padding: 30px 50px;
   font-family: helvetica, sans-serif;
   color: #ffffff;
-  text-align: justify;
+  text-align: left;
 }
 .comments p {
   margin-top: 150px;
@@ -622,6 +621,10 @@ section {
 
   .box-arrow.up {
     top: 110px;
+  }
+
+  .comments {
+    padding: 150px 50px;
   }
 }
 /*--------------------------------------------------*\

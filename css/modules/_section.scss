@@ -20,10 +20,10 @@
 
 .comments {
 	margin: 0;
-	padding: 150px 50px;
+	padding: 30px 50px;
 	font-family: helvetica, sans-serif;
 	color: $blanc;
-	text-align: justify;
+	text-align: left;
 	p {
 		margin-top: 150px;
 		cursor: url(../images/cursor/cursor_text.cur),auto;
@@ -239,5 +239,8 @@ font-weight: 100;
     }
     .box-arrow.up {
 		top: 110px;
+	}
+	.comments {
+	padding: 150px 50px;
 	}
 }
