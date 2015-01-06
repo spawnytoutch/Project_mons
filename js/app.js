@@ -41,8 +41,9 @@
 				$('.btn-comments').bind({click: handlers.openComments});
 				$('.btn-timeline').bind({click: handlers.openTimeline});
 				$('.menu-burger').bind({click: handlers.switchMenuBurger});
+				$('.fa-close').bind({click: handlers.closePanels});
 				/*$('.'+stationHistory.nameClass).bind({click: handlers.gestionTimeline});*/
-				// $(window).bind({mousewheel: handlers.mousewheelHandlers});
+				$('section').bind({mousewheel: handlers.mousewheelHandlers});
 				// $('.header-mobile-nav').unbind(handlers.mousewheelHandlers).bind({mousewheel:function(e){console.log('yolo')}});
 				$(window).bind('keydown', function(e) {
 
@@ -79,13 +80,14 @@
 		},
 		switchMenuBurger: function(){
 			$('.header-mobile-nav').toggleClass('menu-burger-active');
-			// $('.header-mobile-nav').html(contentMenuBurger);
 		},
 		closePanels: function(){
 			$('.left-panel').css('left','-40.66667%');
 			$('.overlay').removeClass('overlay-active-black').removeClass('overlay-active-color');
 			$('.right-panel').css('right', '-17%');
 			panelVal = 0;
+			$('section').unbind(mousewheel);
+			$('section').bind({mousewheel: handlers.mousewheelHandlers});
 		},
 		beforeImg: function(){
 				if(indexImg === 0){
@@ -127,6 +129,7 @@
 						$('.left-panel').css('left', '-50%');
 						$('.overlay-active-black').click(handlers.closePanels);
 						panelVal = 1;
+						$('section').unbind({mousewheel: handlers.mousewheelHandlers});
 					}else if(panelVal === 1){
 						handlers.closePanels();
 				}

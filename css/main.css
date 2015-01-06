@@ -169,7 +169,7 @@ body:after {
 header {
   height: 60px;
   width: 100%;
-  background-color: #131414;
+  background-color: #f7941d;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -179,7 +179,7 @@ header {
   width: 40px;
   padding-bottom: 10px;
   cursor: url(../images/cursor/pointer.cur), auto;
-  z-index: 103;
+  z-index: 110;
 }
 
 .rond {
@@ -190,7 +190,7 @@ header {
   margin-left: 25px;
   cursor: url(../images/cursor/pointer.cur), auto;
   background-color: #00bfdf;
-  z-index: 102;
+  z-index: 105;
   margin-top: 10px;
   float: left;
 }
@@ -244,6 +244,7 @@ header {
   width: 23px;
   top: 16px;
   right: 25px;
+  z-index: 90;
 }
 .menu-burger:hover > div {
   background-color: #00bfdf;
@@ -259,10 +260,10 @@ header {
   display: none;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 60px;
   width: 100%;
-  height: 950px;
+  height: 100%;
   overflow: auto;
 }
 .header-mobile-nav ul {
@@ -388,18 +389,26 @@ header {
 }
 .comments p {
   margin-top: 150px;
-  cursor: url(../images/cursor/cursor_text.cur), auto;
+}
+.comments a {
+  position: absolute;
+  width: 100%;
+  top: 165px;
+  right: 35px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: right;
+  cursor: url(../images/cursor/pointer.cur), auto;
 }
 
 .btn-comments {
-  width: 8.87%;
-  right: -8.87%;
+  right: -15px;
   background-color: #131414;
   cursor: url(../images/cursor/pointer.cur), auto;
-}
-.btn-comments img {
-  margin-top: 12px;
-  margin-left: 14px;
+  border-right: 20px solid #00bfdf;
+  border-bottom: 20px solid #00bfdf;
+  transform: rotate(45deg);
 }
 
 /*-----------------------------*\
@@ -422,9 +431,11 @@ section {
 
 .btn-comments, .btn-timeline {
   position: absolute;
-  height: 50px;
+  width: 0;
+  height: 0;
   top: 48%;
   z-index: 110;
+  border: 20px solid #00bfdf;
 }
 
 .overlay {
@@ -487,6 +498,7 @@ section {
   border-top: 3px solid #00bfdf;
   border-right: 3px solid #00bfdf;
   transform: rotate(-45deg);
+  cursor: url(../images/cursor/pointer.cur), auto;
 }
 
 .arrow-down {
@@ -500,6 +512,7 @@ section {
   border-top: 3px solid #00bfdf;
   border-right: 3px solid #00bfdf;
   transform: rotate(135deg);
+  cursor: url(../images/cursor/pointer.cur), auto;
 }
 
 .arrow-up:hover, .arrow-down:hover {
@@ -586,14 +599,12 @@ section {
 }
 
 .btn-timeline {
-  width: 18.78%;
-  left: -18.78%;
+  left: -15px;
   background-color: #00bfdf;
   cursor: url(../images/cursor/pointer.cur), auto;
-}
-.btn-timeline img {
-  margin-top: 15px;
-  margin-left: 14px;
+  transform: rotate(45deg);
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid transparent;
 }
 
 @media (min-width: 1024px) {
@@ -624,7 +635,7 @@ section {
   }
 
   .comments {
-    padding: 150px 50px;
+    padding: 200px 50px;
   }
 }
 /*--------------------------------------------------*\

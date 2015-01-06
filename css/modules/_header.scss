@@ -4,17 +4,16 @@
 header {
   height: 60px;
   width: 100%;
-  background-color: $noir;
+  background-color: $orange;
   position: fixed;
   top: 0;
   z-index: 100;
-
 }
 .header-logo img {
 	width: 40px;
 	padding-bottom: 10px;
 	cursor: url(../images/cursor/pointer.cur), auto;
-	z-index: 103;
+	z-index: 110;
 }
 
 .rond {
@@ -25,7 +24,7 @@ header {
 	margin-left: 25px;
 	cursor: url(../images/cursor/pointer.cur), auto;
 	background-color: $couleur;
-	z-index: 102;
+	z-index: 105;
 	margin-top: 10px;
 	float: left;
 }
@@ -79,6 +78,7 @@ header {
 	width:23px;
 	top:16px;
 	right: 25px;
+	z-index: 90;
 	&:hover>div {
 		background-color: $bleu;
 	}
@@ -94,11 +94,13 @@ header {
 	display: none;
 	margin: 0;
 	padding: 0;
-	position: absolute;
+	position: fixed;
 	top: 60px;
+	// padding-top: 60px;
 	width: 100%;
-	height: 950px;
+	height: 100%;
 	overflow: auto;
+	// z-index: -1;
 	ul {
 		margin: 0;
 		padding: 0;

@@ -26,19 +26,27 @@
 	text-align: left;
 	p {
 		margin-top: 150px;
-		cursor: url(../images/cursor/cursor_text.cur),auto;
+	}
+	a {
+		position: absolute;
+		width: 100%;
+		top: 165px;
+		right: 35px;
+		text-decoration: none;
+		font-size: 16px;
+		color: $blanc;
+		text-align: right;
+		cursor: url(../images/cursor/pointer.cur),auto;
 	}
 }
 
 .btn-comments {
-	width: 8.87%;
-	right: -8.87%;
+	right: -15px;
 	background-color: $noir;
 	cursor: url(../images/cursor/pointer.cur),auto;
-	img {
-		margin-top: 12px;
-		margin-left: 14px;
-	}
+	border-right: 20px solid $couleur;
+	border-bottom: 20px solid $couleur;
+	transform: rotate(45deg);
 }
 
 /*-----------------------------*\
@@ -55,9 +63,11 @@ section {
 
 .btn-comments, .btn-timeline {
 	position: absolute;
-	height: 50px;
+	width: 0;
+	height: 0;
 	top: 48%;
 	z-index: 110;
+	border: 20px solid $couleur;
 }
 
 .overlay {
@@ -120,6 +130,7 @@ section {
 	border-top: 3px solid $couleur;
 	border-right: 3px solid $couleur;
 	transform:rotate(-45deg);
+	cursor: url(../images/cursor/pointer.cur),auto;
 }
 
 .arrow-down{
@@ -133,6 +144,7 @@ section {
   border-top: 3px solid $couleur;
   border-right: 3px solid $couleur;
   transform:rotate(135deg);
+  cursor: url(../images/cursor/pointer.cur),auto;
 }
 
 .arrow-up:hover, .arrow-down:hover{
@@ -213,14 +225,12 @@ font-weight: 100;
 }
 
 .btn-timeline {
-	width: 18.78%;
-	left: -18.78%;
+	left: -15px;
 	background-color: $couleur;
 	cursor: url(../images/cursor/pointer.cur),auto;
-	img {
-	margin-top: 15px;
-	margin-left: 14px;
-	}
+	transform: rotate(45deg);
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent;
 }
 
 @include breakpoint (1024px) {
@@ -241,6 +251,6 @@ font-weight: 100;
 		top: 110px;
 	}
 	.comments {
-	padding: 150px 50px;
+	padding: 200px 50px;
 	}
 }
