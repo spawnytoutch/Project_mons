@@ -4,7 +4,7 @@
 header {
   height: 60px;
   width: 100%;
-  background-color: $orange;
+  background-color: $noir;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -100,7 +100,6 @@ header {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	// z-index: -1;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -123,9 +122,10 @@ header {
 		background-color: $bleu;
 		}
 	}
-	li:first-child {
+}
+
+.header-mobile-nav a {
 		border-top: solid 1px $blanc;
-	}
 }
 
 .menu-burger-active {

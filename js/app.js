@@ -44,7 +44,6 @@
 				$('.fa-close').bind({click: handlers.closePanels});
 				/*$('.'+stationHistory.nameClass).bind({click: handlers.gestionTimeline});*/
 				$('section').bind({mousewheel: handlers.mousewheelHandlers});
-				// $('.header-mobile-nav').unbind(handlers.mousewheelHandlers).bind({mousewheel:function(e){console.log('yolo')}});
 				$(window).bind('keydown', function(e) {
 
 					switch(e.keyCode) {
@@ -82,12 +81,15 @@
 			$('.header-mobile-nav').toggleClass('menu-burger-active');
 		},
 		closePanels: function(){
-			$('.left-panel').css('left','-40.66667%');
-			$('.overlay').removeClass('overlay-active-black').removeClass('overlay-active-color');
-			$('.right-panel').css('right', '-17%');
 			panelVal = 0;
-			$('section').unbind(mousewheel);
 			$('section').bind({mousewheel: handlers.mousewheelHandlers});
+			$('.overlay').removeClass('overlay-active-black').removeClass('overlay-active-color');
+			if(window.matchMedia("(max-width:1024px)").matches) {
+					$('.left-panel').css('left','-100%');
+				}else{
+					$('.left-panel').css('left','-40.66667%');
+					$('.right-panel').css('right', '-17%');
+			}
 		},
 		beforeImg: function(){
 				if(indexImg === 0){
@@ -135,7 +137,11 @@
 				}
 		},
 		gestionKeyLeft: function(){
-				if(panelVal === 0){
+				if(window.matchMedia("(max-width:1024px)").matches){
+						if(panelVal === -1){
+								handlers.closePanels();
+						}
+					}else if(panelVal === 0){
 						handlers.openTimeline();
 					}else if(panelVal === -1){
 						handlers.closePanels();
