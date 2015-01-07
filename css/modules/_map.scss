@@ -2,8 +2,8 @@
 		Map
 \*--------------------------------------------------*/
 #map-canvas {
-	height: 85%;
-	top: 96px;
+	height: 100%;
+	top: 60px;
 }
 
 .title-info-mark {
@@ -49,4 +49,15 @@
 	width: 200px;
 	left: 0;
 	margin: 0 1em 1em 0;
+}
+
+.lienGalerie {
+	color: $noir;
+}
+
+@include breakpoint (1024px){
+	#map-canvas {
+		height: 85%;
+		top: 96px;
+	}
 }

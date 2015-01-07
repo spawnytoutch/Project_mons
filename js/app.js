@@ -1,8 +1,20 @@
 (function($){
 	$(document).ready(function(){
+
 		handlers.init();
 		displayUtils.init();
 	});
+
+	// var urlTmp = window.location.href;
+	// console.log(urlTmp);
+	// VM856:2 http://www.w3schools.com/js/js_window_location.asp?id=254875
+	// var urlSplit = urlTmp.split('?');
+	// console.log(urlSplit[1]);
+	// VM952:2 id=254875
+	// var idTmp = urlSplit[1].split('=')[1];
+
+	// vérification »»» window.location = "tonUrl";
+
 	var panelVal       = 0;
 	var indexImg       = 0;
 	var stationHistory = [

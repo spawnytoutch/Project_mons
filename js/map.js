@@ -11,11 +11,11 @@ var dataMark = [
 
     [50.449738, 3.951661, "Le Carré des Arts", "images/tn_carre-arts.jpg", "Rue des Sœurs Noires, 4a", "La cour centrale de ce vaste édifice accueille régulièrement des manifestations culturelles. Pour optimiser au mieux l’usage de l’espace central à ciel ouvert, sans avoir recours à la location ponctuelle de chapiteaux, le Ministère de la Communauté française a lancé une étude de faisabilité pour sa couverture, remportée par l’association momentanée entre le jeune atelier d’architecture AGWA et le bureau d’ingénierie Ney & Partners."],
 
-    [50.455755, 3.952294, "Le BAM", "images/tn_bam.jpg", "Rue Neuve, 8", "La rénovation de l’ancien Musée des Beaux-Arts allie fonctionnalité et transparence. L’architecte parisien a imaginé une véritable fenêtre ouverte sur le monde de l’art et de la création. Pour ce faire, il a opté pour une légère structure métallique. Le réaménagement des salles permet au nouveau musée d’accueillir des oeuvres prestigieuses tout en respectant les normes de sécurité européennes. L’idée phare est d’ouvrir, par la transparence, le BAM à la rue."],
+    [50.455755, 3.952294, "Le BAM", "images/tn_bam.jpg", "Rue Neuve, 8", "La rénovation de l’ancien Musée des Beaux-Arts allie fonctionnalité et transparence. L’architecte parisien a imaginé une véritable fenêtre ouverte sur le monde de l’art et de la création. Pour ce faire, il a opté pour une légère structure métallique. Le réaménagement des salles permet au nouveau musée d’accueillir des oeuvres prestigieuses tout en respectant les normes de sécurité européennes. L’idée phare est d’ouvrir, par la transparence, le BAM à la rue.", "BAM"],
 
     [50.458251, 3.956883, "Le Corps de ville", "images/tn_corps-ville.jpg", "Rue des trois boudins", "La spécificité de la démarche initiée par la Ville de Mons tient dans les critères de qualités urbanistique et architecturale qu’elle institue pour la sélection des projets, contraignant les promoteurs immobiliers candidats à s’associer avec des architectes autour d’une proposition commune. Le projet « Corps de Ville », désigné lauréat par le jury, rencontre les options du plan-masse initial et en formule de nouvelles pour nourrir le dialogue entre les utilisateurs de ce site névralgique pour la candidature de Mons au titre de Capitale européenne de la Culture en 2015."],
 
-    [50.456178, 3.944692, "La Gare de Mons", "images/tn_gare.jpg", "Boulevard Charles Quint, 33", "Le projet d’une nouvelle Gare visait notamment à faciliter l’accès aux quais depuis la place et les parkings, d’optimiser l’accessibilité à la gare et son intermodalité et de liaisonner le coeur historique de Mons et le développement d’une nouvelle ville sur le site des Grands-Prés. Cette gare-passerelle devient l’élément majeur autour duquel s’organisent symétriquement les quais et la place. Elle jouera pleinement son rôle de trait d’union entre la ville de patrimoine et ses nouveaux quartiers dédiés au commerce, à l’habitat et aux nouvelles technologies."],
+    [50.456178, 3.944692, "La Gare de Mons", "images/tn_gare.jpg", "Boulevard Charles Quint, 33", "Le projet d’une nouvelle Gare visait notamment à faciliter l’accès aux quais depuis la place et les parkings, d’optimiser l’accessibilité à la gare et son intermodalité et de liaisonner le coeur historique de Mons et le développement d’une nouvelle ville sur le site des Grands-Prés. Cette gare-passerelle devient l’élément majeur autour duquel s’organisent symétriquement les quais et la place. Elle jouera pleinement son rôle de trait d’union entre la ville de patrimoine et ses nouveaux quartiers dédiés au commerce, à l’habitat et aux nouvelles technologies.", "gareDeMons"],
 
     [50.458829, 3.955801, "La Fondation Mons 2015", "images/tn_fondation-mons.jpg", "Rue de Nimy, 116", "Le bâtiment de l’ancienne Académie des Beaux-Arts est appelé à devenir le centre névralgique de la production et de la promotion de la culture de la Ville et à jouer un rôle emblématique d’accueil du public et des artistes et d’information à la presse dans la perspective de la candidature de Mons au titre de Capitale européenne de la Culture en 2015. Inscrit dans la mémoire des habitants depuis des générations, l’édifice devra être tout autant l’incarnation de notre modernité en architecture."]
 ];
@@ -96,7 +96,7 @@ function addMArk(latlng) {
 
 	var mark = new google.maps.Marker( markOptions );
 
-	var contentInfoMark = '<h1 class="title-info-mark">'+latlng[2]+'</h1>'+'<h2 class="sub-title-info-mark">'+latlng[4]+'</h2>'+'<div class="content-info-mark"><img class="mini-bat" src="'+latlng[3]+'"/>'+'<div class="text-info-mark"><p>'+latlng[5]+'</p></div></div>';
+	var contentInfoMark = '<h1 class="title-info-mark">'+latlng[2]+'</h1>'+'<h2 class="sub-title-info-mark">'+latlng[4]+'</h2>'+'<div class="content-info-mark"><img class="mini-bat" src="'+latlng[3]+'"/>'+'<div class="text-info-mark"><p>'+latlng[5]+'</p><p><a class="lienGalerie" href="galerie.html?'+latlng[6]+'">Voir la galerie :'+latlng[2]+'</a></p></div></div>';
 
 	var infoBulle = {
 		content: contentInfoMark    
@@ -116,6 +116,15 @@ function addMArk(latlng) {
 }
 
 google.maps.event.addDomListener( window, 'load', initialize );
+
+(function($){
+	$(document).ready(function(){
+		$(window).bind({'resize': function(e){
+					myMap.fitBounds( zoneMark ); // set center
+				}
+		});
+	});
+})(jQuery);
 
 
 // //Initialiser la variable qui va enregistrer la dernière infobulle ouverte
