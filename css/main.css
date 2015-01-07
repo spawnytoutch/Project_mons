@@ -44,6 +44,8 @@ body:after { content: " "; display: block; clear: both; }
 \*--------------------------------------------------*/
 #map-canvas { height: 100%; top: 60px; }
 
+.section-map { margin: 0; padding: 0; }
+
 .title-info-mark { font-family: Helvetica, sans-serif; font-size: 2em; font-weight: 700; color: #00bfdf; }
 
 .sub-title-info-mark { margin-bottom: 1em; font-family: Helvetica, sans-serif; font-size: 1.3em; font-style: italic; font-weight: 500; color: #131414; }
@@ -73,8 +75,8 @@ header { height: 60px; width: 100%; background-color: #131414; position: fixed; 
 .header-nav a { text-decoration: none; color: #ffffff; cursor: url(../images/cursor/pointer.cur), auto; transition: all 0.3s ease; }
 .header-nav a:hover { color: #00bfdf; }
 
-.title-picture { height: 60px; position: absolute; z-index: 110; top: 0; text-align: center; width: calc(100% - 130px); left: 64px; }
-.title-picture h1 { color: #00bfdf; font-size: 16px; font-weight: 100; margin: 0; line-height: 60px; font-family: helvetica; z-index: 111; }
+.title-picture, .title-map { height: 60px; position: absolute; z-index: 110; top: 0; text-align: center; width: calc(100% - 130px); left: 64px; }
+.title-picture h1, .title-map h1 { color: #00bfdf; font-size: 16px; font-weight: 100; margin: 0; line-height: 60px; font-family: helvetica; z-index: 111; }
 
 .menu-burger { position: absolute; width: 23px; top: 16px; right: 25px; z-index: 90; }
 .menu-burger:hover > div { background-color: #00bfdf; }
@@ -100,7 +102,8 @@ header { height: 60px; width: 100%; background-color: #131414; position: fixed; 
   .title-picture h1 { line-height: 96px; }
   header { height: 96px; }
   .header-logo img { width: 70px; padding-bottom: 13px; }
-  .rond { width: 70px; height: 70px; padding-bottom: 13px; margin-left: 50px; margin-top: 13px; } }
+  .rond { width: 70px; height: 70px; padding-bottom: 13px; margin-left: 50px; margin-top: 13px; }
+  .title-map { display: none; } }
 /*--------------------------------------------------*\
 		Section
 \*--------------------------------------------------*/
@@ -114,7 +117,7 @@ header { height: 60px; width: 100%; background-color: #131414; position: fixed; 
 .comments p { margin-top: 150px; }
 .comments a { position: absolute; width: 100%; top: 174px; right: 20px; text-decoration: none; font-size: 16px; color: #ffffff; text-align: right; cursor: url(../images/cursor/pointer.cur), auto; }
 
-.btn-comments { right: -21px; background: #131414; cursor: url(../images/cursor/pointer.cur), auto; border-top: 1px solid #00bfdf; border-right: 1px solid #00bfdf; transform: rotate(45deg); }
+.btn-comments { right: -21px; background: #131414; cursor: url(../images/cursor/pointer.cur), auto; border-top: 1px solid #00bfdf; border-right: 1px solid #00bfdf; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 /*-----------------------------*\
 		Partie centrale
@@ -135,9 +138,9 @@ section { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizin
 
 .box-arrow.up { top: 133px; }
 
-.arrow-up { position: relative; z-index: 50; display: inline-block; vertical-align: top; width: 40px; height: 40px; line-height: 7px; border-top: 3px solid #00bfdf; border-right: 3px solid #00bfdf; transform: rotate(-45deg); cursor: url(../images/cursor/pointer.cur), auto; }
+.arrow-up { position: relative; z-index: 50; display: inline-block; vertical-align: top; width: 40px; height: 40px; line-height: 7px; border-top: 3px solid #00bfdf; border-right: 3px solid #00bfdf; -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); cursor: url(../images/cursor/pointer.cur), auto; }
 
-.arrow-down { position: relative; z-index: 50; display: inline-block; vertical-align: top; width: 40px; height: 40px; line-height: 7px; border-top: 3px solid #00bfdf; border-right: 3px solid #00bfdf; transform: rotate(135deg); cursor: url(../images/cursor/pointer.cur), auto; }
+.arrow-down { position: relative; z-index: 50; display: inline-block; vertical-align: top; width: 40px; height: 40px; line-height: 7px; border-top: 3px solid #00bfdf; border-right: 3px solid #00bfdf; -moz-transform: rotate(135deg); -ms-transform: rotate(135deg); -webkit-transform: rotate(135deg); transform: rotate(135deg); cursor: url(../images/cursor/pointer.cur), auto; }
 
 .arrow-up:hover, .arrow-down:hover { border-top: 3px solid #131414; border-right: 3px solid #131414; opacity: 0.7; }
 
@@ -157,7 +160,7 @@ section { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizin
 .timeline a { display: block; width: 92%; text-decoration: none; text-transform: uppercase; font-weight: 100; font-family: helvetica, sans-serif; color: white; letter-spacing: 10px; bottom: 30px; padding: 30px 0; z-index: 100; }
 .timeline a:hover { background-color: #131414; padding: 30px 0; transition: all 0.3s ease; }
 
-.btn-timeline { left: -20px; cursor: url(../images/cursor/pointer.cur), auto; transform: rotate(45deg); border: 20px solid #00bfdf; z-index: -1; }
+.btn-timeline { left: -20px; cursor: url(../images/cursor/pointer.cur), auto; -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); border: 20px solid #00bfdf; z-index: -1; }
 
 @media (min-width: 1024px) { .block-title, .left-panel { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 41.66667%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
   .block-title { top: 96px; }

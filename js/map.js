@@ -108,10 +108,12 @@ function addMArk(latlng) {
 
 	var prev_infoMark;
 
-	google.maps.event.addListener(mark, 'click', function(evenement){
-		infoMark.close();
-		// infoMark.setContent
+	google.maps.event.addListener(mark, 'click', function(){
+		if (typeof( window.infoopened ) != 'undefined'){
+			infoopened.close();
+		}
 		infoMark.open(myMap, mark);
+		infoopened = infoMark;
 	});
 }
 
@@ -125,43 +127,3 @@ google.maps.event.addDomListener( window, 'load', initialize );
 		});
 	});
 })(jQuery);
-
-
-// //Initialiser la variable qui va enregistrer la dernière infobulle ouverte
-//   var prev_infobulle;
-//   //Créer un évènement au clic sur le marker
-//   google.maps.event.addListener(mark, 'click', function(event) {
- 
-//   //Initialiser la variable dans laquelle va être construit l'objet InfoBubble
-//   var infobulle;
-//   infobulle = new InfoBubble({
-//   map: myMap,
-//   content: "Contenu de mon infobulle",  // Contenu de l'infobulle
-//   // position: event.latLng,  // Coordonnées latitude longitude du marker
-//   shadowStyle: 0,  // Style de l'ombre de l'infobulle (0, 1 ou 2)
-//   padding: 10,  // Marge interne de l'infobulle (en px)
-//   backgroundColor: 'rgb(255,255,255)',  // Couleur de fond de l'infobulle
-//   borderRadius: 0, // Angle d'arrondis de la bordure
-//   arrowSize: 10, // Taille du pointeur sous l'infobulle
-//   borderWidth: 3,  // Épaisseur de la bordure (en px)
-//   borderColor: '#009EE0', // Couleur de la bordure
-//   disableAutoPan: true, // Désactiver l'adaptation automatique de l'infobulle
-//   hideCloseButton: true, // Cacher le bouton 'Fermer'
-//   arrowPosition: 50,  // Position du pointeur de l'infobulle (en %)
-//   arrowStyle: 0,  // Type de pointeur (0, 1 ou 2)
-//   disableAnimation: false,  // Déactiver l'animation à l'ouverture de l'infobulle
-//   minWidth :   300  // Largeur minimum de l'infobulle  (en px)
-//   });
- 
-//   //Si on a déjà une infobulle ouverte, on la ferme
-//   if( prev_infobulle )
-//   {
-//   prev_infobulle.close();
-//   }
-   
-//   //La précédent infobulle devient l'infobulle que l'on va ouvrir
-//   prev_infobulle = infobulle;
-   
-//   //Enfin, on ouvre l'infobulle
-//   infobulle.open();
-//   });

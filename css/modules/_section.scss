@@ -46,7 +46,8 @@
 	cursor: url(../images/cursor/pointer.cur),auto;
 	border-top: 1px solid $couleur;
 	border-right: 1px solid $couleur;
-	transform: rotate(45deg);
+	@include transform(rotate(45deg));
+	//transform: rotate(45deg);
 }
 
 /*-----------------------------*\
@@ -128,7 +129,8 @@ section {
 	line-height: 7px;
 	border-top: 3px solid $couleur;
 	border-right: 3px solid $couleur;
-	transform:rotate(-45deg);
+	@include transform(rotate(-45deg));
+	//transform:rotate(-45deg);
 	cursor: url(../images/cursor/pointer.cur),auto;
 }
 
@@ -142,7 +144,8 @@ section {
   line-height: 7px;
   border-top: 3px solid $couleur;
   border-right: 3px solid $couleur;
-  transform:rotate(135deg);
+  @include transform(rotate(135deg));
+  //transform:rotate(135deg);
   cursor: url(../images/cursor/pointer.cur),auto;
 }
 
@@ -227,7 +230,8 @@ font-weight: 100;
 .btn-timeline {
 	left: -20px;
 	cursor: url(../images/cursor/pointer.cur),auto;
-	transform: rotate(45deg);
+	@include transform(rotate(45deg));
+	// transform: rotate(45deg);
 	border: 20px solid $couleur;
 	z-index: -1;
 }
