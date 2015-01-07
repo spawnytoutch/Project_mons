@@ -3,6 +3,8 @@
 
 		handlers.init();
 		displayUtils.init();
+		console.log(urlTmp);
+		console.log(urlSplit[1]);
 	});
 
 	// var urlTmp = window.location.href;
@@ -14,6 +16,9 @@
 	// var idTmp = urlSplit[1].split('=')[1];
 
 	// vérification »»» window.location = "tonUrl";
+
+	var urlTmp = window.location.href;
+	var urlSplit = urlTmp.split('?');
 
 	var panelVal       = 0;
 	var indexImg       = 0;
