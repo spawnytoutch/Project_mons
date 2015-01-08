@@ -7,6 +7,8 @@
 			dataType : 'text'
 		});*/
 
+		
+
 		handlers.init();
 		displayUtils.init();
 
@@ -24,58 +26,58 @@
 
 	var urlTmp;
 	var urlSplit;
-	var nameBuilding;
-
+	var nameBuildingTmp;
+	var nameBuildingPath;
+	var buildingHistory = {
+			"GareDeMons":[
+					{
+							"titleImg": "La Gare de Mons",
+							"image": "images/garedemons/garedemons_1901-04-09.jpg",
+							"date": "09 avril ",
+							"year": "1901",
+							"comment": "09 avril 1901 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+					},
+					{
+							"titleImg": "La Gare de Mons",
+							"image": "images/garedemons/garedemons_1980-09-29.jpg",
+							"date": "29 septembre ",
+							"year": "1980",
+							"comment": "29 septembre 1980 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+					},
+					{
+							"titleImg": "La Gare de Mons",
+							"image": "images/garedemons/garedemons_2015-06-15.jpg",
+							"date": "15 juin ",
+							"year": "2015",
+							"comment": "15 juin 2015 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+					}
+			],
+			"BAM":[
+					{
+							"titleImg": "Le BAM",
+							"image": "images/bam/img01.jpg",
+							"date": "09 avril ",
+							"year": "1901",
+							"comment": "09 avril 1901 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+					},
+					{
+							"titleImg": "Le BAM",
+							"image": "images/bam/img02.jpg",
+							"date": "29 septembre ",
+							"year": "1980",
+							"comment": "29 septembre 1980 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+					},
+					{
+							"titleImg": "Le BAM",
+							"image": "images/bam/img03.png",
+							"date": "15 juin ",
+							"year": "2015",
+							"comment": "15 juin 2015 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+					}
+			]
+		};
 	var panelVal       = 0;
 	var indexImg       = 0;
-	var buildingHistory = {
-		"GareDeMons":[
-				{
-						"titleImg": "La Gare de Mons",
-						"image": "images/img01.jpg",
-						"date": "09 avril ",
-						"year": "1901",
-						"comment": "09 avril 1901 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-				},
-				{
-						"titleImg": "La Gare de Mons",
-						"image": "images/img02.jpg",
-						"date": "29 septembre ",
-						"year": "1980",
-						"comment": "29 septembre 1980 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-				},
-				{
-						"titleImg": "La Gare de Mons",
-						"image": "images/img03.jpg",
-						"date": "15 juin ",
-						"year": "2015",
-						"comment": "15 juin 2015 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-				}
-		],
-		"BAM":[
-				{
-						"titleImg": "Le BAM",
-						"image": "images/bam/img01.jpg",
-						"date": "09 avril ",
-						"year": "1901",
-						"comment": "09 avril 1901 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-				},
-				{
-						"titleImg": "Le BAM",
-						"image": "images/bam/img02.jpg",
-						"date": "29 septembre ",
-						"year": "1980",
-						"comment": "29 septembre 1980 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-				},
-				{
-						"titleImg": "Le BAM",
-						"image": "images/bam/img03.png",
-						"date": "15 juin ",
-						"year": "2015",
-						"comment": "15 juin 2015 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-				}
-		]
-	};
 	var stationHistory = [
 			{
 					"titleImg": "La Gare de Mons",
@@ -136,11 +138,11 @@
 		dataJson: function(){
 			urlTmp = window.location.href;
 			urlSplit = urlTmp.split('?');
-			nameBuilding = urlSplit[1].split('=')[1];
-			console.log(urlTmp);
-			console.log(urlSplit[1]);
-			console.log(nameBuilding);
-			console.log(buildingHistory.nameBuilding);
+			nameBuildingTmp = urlSplit[1].split('=')[1];
+			// console.log(urlTmp);
+			// console.log(urlSplit[1]);
+			// console.log(typeof(nameBuildingTmp));
+			// console.log(buildingHistory[eval('nameBuildingTmp')][1]['date']);
 		},
 		mousewheelHandlers: function(e){
 			if(e.originalEvent.wheelDelta < 0){
@@ -169,21 +171,21 @@
 					}else{
 						indexImg--;
 					}
-				$('.section-galerie').css('background-image', 'url('+ stationHistory[indexImg].image +')');
-				$('.title-picture h1').text(stationHistory[indexImg].titleImg);
-				$('.comments p').text(stationHistory[indexImg].comment);
-				$('.block-title h2').html(stationHistory[indexImg].titleImg+' <span class="italic">'+stationHistory[indexImg].date+stationHistory[indexImg].year+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
 		},
 		afterImg: function(){
-				if(indexImg === (stationHistory.length-1)){
+				if(indexImg === (buildingHistory[eval('nameBuildingTmp')].length-1)){
 						indexImg = 0;
 					}else{
 						indexImg++;
 					}
-				$('.section-galerie').css('background-image', 'url('+ stationHistory[indexImg].image +')');
-				$('.title-picture h1').text(stationHistory[indexImg].titleImg);
-				$('.comments p').text(stationHistory[indexImg].comment);
-				$('.block-title h2').html(stationHistory[indexImg].titleImg+' <span class="italic">'+stationHistory[indexImg].date+stationHistory[indexImg].year+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
 		},
 		openComments: function(){
 				if(panelVal === 0){
@@ -229,34 +231,34 @@
 		gestionKeyUp: function(){
 				if(panelVal == 0 || panelVal == -1){
 					if(indexImg == 0){
-						indexImg = (stationHistory.length-1);
+						indexImg = (buildingHistory[eval('nameBuildingTmp')].length-1);
 					}else{
 						indexImg--;
 				}
-				$('.section-galerie').css('background-image', 'url('+ stationHistory[indexImg].image +')');
-				$('.title-picture h1').text(stationHistory[indexImg].titleImg);
-				$('.comments p').text(stationHistory[indexImg].comment);
-				$('.block-title h2').html(stationHistory[indexImg].titleImg+' <span class="italic">'+stationHistory[indexImg].date+stationHistory[indexImg].year+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
 				}
 		},
 		gestionKeyDown: function(){
 				if(panelVal == 0 || panelVal == -1){
-					if(indexImg == (stationHistory.length-1)){
+					if(indexImg == (buildingHistory[eval('nameBuildingTmp')].length-1)){
 						indexImg = 0;
 					}else{
 						indexImg++;
 				}
-				$('.section-galerie').css('background-image', 'url('+ stationHistory[indexImg].image +')');
-				$('.title-picture h1').text(stationHistory[indexImg].titleImg);
-				$('.comments p').text(stationHistory[indexImg].comment);
-				$('.block-title h2').html(stationHistory[indexImg].titleImg+' <span class="italic">'+stationHistory[indexImg].date+stationHistory[indexImg].year+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
 				}
 
 		},
 		gestionKeyEnter: function(){
 				if(panelVal == 1){
 					$('.timeline a').bind('keydown', function(e){
-						$('.section-galerie').css('background-image', 'url('+ stationHistory[e].image +')');
+						$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][e]['image'] +')');
 					});
 				}
 		},
@@ -278,12 +280,12 @@
 				$('.box-arrow.down').css({'top':posTmp});
 		},
 		initializeDisplay: function(){
-				$('.section-galerie').css('background-image', 'url('+ stationHistory[indexImg].image +')');
-				$('.title-picture h1').text(stationHistory[indexImg].titleImg);
-				$('.comments p').text(stationHistory[indexImg].comment);
-				$('.block-title h2').html(stationHistory[indexImg].titleImg+' <span class="italic">'+stationHistory[indexImg].date+stationHistory[indexImg].year+'</span>');
-				for (i = 0; i < stationHistory.length; i++){
-					$('.timeline ul').append('<li><a class="'+stationHistory[i].nameClass+'" href="#">'+stationHistory[i].year+'</a></li>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
+				for (i = 0; i < buildingHistory[eval('nameBuildingTmp')].length; i++){
+					$('.timeline ul').append('<li><a class="'+buildingHistory[eval('nameBuildingTmp')][i].nameClass+'" href="#">'+buildingHistory[eval('nameBuildingTmp')][i]['year']+'</a></li>');
 				}
 		}
 	};
