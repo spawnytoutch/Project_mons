@@ -2,8 +2,7 @@
 		Map
 \*--------------------------------------------------*/
 #map-canvas {
-	height: 100%;
-	top: 60px;
+	display: none;
 }
 
 .section-map {
@@ -60,8 +59,17 @@
 	color: $noir;
 }
 
-@include breakpoint (1024px){
+.header-mobile-nav {
+	display: block;
+}
+
+
+@include breakpoint (1024px) {
+	.display{
+		display: none;
+	}
 	#map-canvas {
+		display: block;
 		height: 85%;
 		top: 96px;
 	}

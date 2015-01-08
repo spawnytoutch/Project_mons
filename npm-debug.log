@@ -1,9 +1,9 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'node-static' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '--global', 'finch' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 verbose cache add [ 'node-static', null ]
-5 verbose cache add name=undefined spec="node-static" args=["node-static",null]
+4 verbose cache add [ 'finch', null ]
+5 verbose cache add name=undefined spec="finch" args=["finch",null]
 6 verbose parsed url { protocol: null,
 6 verbose parsed url   slashes: null,
 6 verbose parsed url   auth: null,
@@ -13,148 +13,172 @@
 6 verbose parsed url   hash: null,
 6 verbose parsed url   search: null,
 6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'node-static',
-6 verbose parsed url   path: 'node-static',
-6 verbose parsed url   href: 'node-static' }
-7 silly lockFile 17070c41-node-static node-static
-8 verbose lock node-static /Users/etudiant/.npm/17070c41-node-static.lock
-9 silly lockFile 17070c41-node-static node-static
-10 silly lockFile 17070c41-node-static node-static
-11 verbose addNamed [ 'node-static', '' ]
+6 verbose parsed url   pathname: 'finch',
+6 verbose parsed url   path: 'finch',
+6 verbose parsed url   href: 'finch' }
+7 silly lockFile 7a519aa4-finch finch
+8 verbose lock finch /Users/Jack/.npm/7a519aa4-finch.lock
+9 silly lockFile 7a519aa4-finch finch
+10 silly lockFile 7a519aa4-finch finch
+11 verbose addNamed [ 'finch', '' ]
 12 verbose addNamed [ null, '*' ]
-13 silly lockFile 5704b874-node-static node-static@
-14 verbose lock node-static@ /Users/etudiant/.npm/5704b874-node-static.lock
-15 silly addNameRange { name: 'node-static', range: '*', hasData: false }
-16 verbose request where is /node-static
+13 silly lockFile ec4a5454-finch finch@
+14 verbose lock finch@ /Users/Jack/.npm/ec4a5454-finch.lock
+15 silly addNameRange { name: 'finch', range: '*', hasData: false }
+16 verbose request where is /finch
 17 verbose request registry https://registry.npmjs.org/
-18 verbose request id 9452834371cbdf0c
-19 verbose url raw /node-static
-20 verbose url resolving [ 'https://registry.npmjs.org/', './node-static' ]
-21 verbose url resolved https://registry.npmjs.org/node-static
-22 verbose request where is https://registry.npmjs.org/node-static
-23 info trying registry request attempt 1 at 13:47:56
-24 http GET https://registry.npmjs.org/node-static
-25 http 200 https://registry.npmjs.org/node-static
+18 verbose request id e52f9548c97c9115
+19 verbose url raw /finch
+20 verbose url resolving [ 'https://registry.npmjs.org/', './finch' ]
+21 verbose url resolved https://registry.npmjs.org/finch
+22 verbose request where is https://registry.npmjs.org/finch
+23 info trying registry request attempt 1 at 09:52:48
+24 http GET https://registry.npmjs.org/finch
+25 http 200 https://registry.npmjs.org/finch
 26 silly registry.get cb [ 200,
-26 silly registry.get   { date: 'Tue, 06 Jan 2015 12:47:57 GMT',
+26 silly registry.get   { date: 'Thu, 08 Jan 2015 08:52:48 GMT',
 26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-26 silly registry.get     etag: '"3EXAO4OE1MUEQ9NPP5S261MZI"',
+26 silly registry.get     etag: '"1CTEWJKQ565ZV962ZCXJXMSA8"',
 26 silly registry.get     'content-type': 'application/json',
 26 silly registry.get     'cache-control': 'max-age=60',
-26 silly registry.get     'content-length': '32361',
+26 silly registry.get     'content-length': '26222',
 26 silly registry.get     'accept-ranges': 'bytes',
 26 silly registry.get     via: '1.1 varnish',
 26 silly registry.get     age: '0',
-26 silly registry.get     'x-served-by': 'cache-ams4147-AMS',
-26 silly registry.get     'x-cache': 'HIT',
-26 silly registry.get     'x-cache-hits': '1',
-26 silly registry.get     'x-timer': 'S1420548477.102148,VS0,VE651',
+26 silly registry.get     'x-served-by': 'cache-ams4136-AMS',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1420707168.257054,VS0,VE179',
 26 silly registry.get     vary: 'Accept',
 26 silly registry.get     'keep-alive': 'timeout=10, max=50',
 26 silly registry.get     connection: 'Keep-Alive' } ]
-27 silly addNameRange number 2 { name: 'node-static', range: '*', hasData: true }
-28 silly addNameRange versions [ 'node-static',
-28 silly addNameRange   [ '0.5.6',
-28 silly addNameRange     '0.5.7',
-28 silly addNameRange     '0.5.8',
-28 silly addNameRange     '0.5.9',
-28 silly addNameRange     '0.6.0',
-28 silly addNameRange     '0.6.1',
-28 silly addNameRange     '0.6.2',
-28 silly addNameRange     '0.6.3',
-28 silly addNameRange     '0.6.4',
-28 silly addNameRange     '0.6.5',
-28 silly addNameRange     '0.6.6',
-28 silly addNameRange     '0.6.7',
-28 silly addNameRange     '0.6.8',
-28 silly addNameRange     '0.6.9',
-28 silly addNameRange     '0.7.0',
-28 silly addNameRange     '0.7.1',
-28 silly addNameRange     '0.7.2',
-28 silly addNameRange     '0.7.3',
-28 silly addNameRange     '0.7.4',
-28 silly addNameRange     '0.7.5',
-28 silly addNameRange     '0.7.6' ] ]
-29 verbose addNamed [ 'node-static', '0.7.6' ]
-30 verbose addNamed [ '0.7.6', '0.7.6' ]
-31 silly lockFile 04f479d4-node-static-0-7-6 node-static@0.7.6
-32 verbose lock node-static@0.7.6 /Users/etudiant/.npm/04f479d4-node-static-0-7-6.lock
-33 silly lockFile cf0da5be-ode-static-node-static-0-7-6-tgz https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz
-34 verbose lock https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz /Users/etudiant/.npm/cf0da5be-ode-static-node-static-0-7-6-tgz.lock
-35 verbose addRemoteTarball [ 'https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz',
-35 verbose addRemoteTarball   'ac032e40de6881fb5e4dadeed6e1d07d37268380' ]
-36 info retry fetch attempt 1 at 13:47:57
-37 verbose fetch to= /var/folders/r9/k86yhwsx02q__28_k78v8hl40000gp/T/npm-1130-GCrPUqjW/registry.npmjs.org/node-static/-/node-static-0.7.6.tgz
-38 http GET https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz
-39 http 200 https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz
-40 silly lockFile cf0da5be-ode-static-node-static-0-7-6-tgz https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz
-41 silly lockFile cf0da5be-ode-static-node-static-0-7-6-tgz https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz
-42 silly lockFile 04f479d4-node-static-0-7-6 node-static@0.7.6
-43 silly lockFile 04f479d4-node-static-0-7-6 node-static@0.7.6
-44 silly lockFile 5704b874-node-static node-static@
-45 silly lockFile 5704b874-node-static node-static@
-46 silly resolved [ { name: 'node-static',
-46 silly resolved     description: 'simple, compliant file streaming module for node',
-46 silly resolved     url: 'http://github.com/cloudhead/node-static',
-46 silly resolved     keywords: [ 'http', 'static', 'file', 'server' ],
-46 silly resolved     author: { name: 'Alexis Sellier', email: 'self@cloudhead.net' },
-46 silly resolved     contributors: [ [Object], [Object] ],
-46 silly resolved     repository: { type: 'git', url: 'http://github.com/cloudhead/node-static' },
-46 silly resolved     main: './lib/node-static',
-46 silly resolved     scripts: { test: 'vows --spec --isolate' },
-46 silly resolved     bin: { static: 'bin/cli.js' },
-46 silly resolved     license: 'MIT',
-46 silly resolved     dependencies: { optimist: '>=0.3.4', colors: '>=0.6.0', mime: '>=1.2.9' },
-46 silly resolved     devDependencies: { request: 'latest', vows: 'latest' },
-46 silly resolved     version: '0.7.6',
-46 silly resolved     engines: { node: '>= 0.4.1' },
-46 silly resolved     bugs: { url: 'https://github.com/cloudhead/node-static/issues' },
-46 silly resolved     homepage: 'https://github.com/cloudhead/node-static',
-46 silly resolved     directories: { example: 'examples', test: 'test' },
-46 silly resolved     _id: 'node-static@0.7.6',
+27 silly addNameRange number 2 { name: 'finch', range: '*', hasData: true }
+28 silly addNameRange versions [ 'finch',
+28 silly addNameRange   [ '0.0.0',
+28 silly addNameRange     '0.0.9',
+28 silly addNameRange     '0.0.10',
+28 silly addNameRange     '0.0.11',
+28 silly addNameRange     '0.0.12',
+28 silly addNameRange     '0.0.13',
+28 silly addNameRange     '0.0.14',
+28 silly addNameRange     '0.0.15',
+28 silly addNameRange     '0.0.16',
+28 silly addNameRange     '0.0.17',
+28 silly addNameRange     '0.0.18',
+28 silly addNameRange     '0.0.19',
+28 silly addNameRange     '0.0.20',
+28 silly addNameRange     '0.0.22',
+28 silly addNameRange     '0.0.23',
+28 silly addNameRange     '0.0.24',
+28 silly addNameRange     '0.0.25',
+28 silly addNameRange     '0.0.26',
+28 silly addNameRange     '0.0.27',
+28 silly addNameRange     '0.0.28',
+28 silly addNameRange     '0.0.29',
+28 silly addNameRange     '0.0.30',
+28 silly addNameRange     '0.0.31',
+28 silly addNameRange     '0.0.32',
+28 silly addNameRange     '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.1.0' ] ]
+29 verbose addNamed [ 'finch', '1.1.0' ]
+30 verbose addNamed [ '1.1.0', '1.1.0' ]
+31 silly lockFile c5e222bb-finch-1-1-0 finch@1.1.0
+32 verbose lock finch@1.1.0 /Users/Jack/.npm/c5e222bb-finch-1-1-0.lock
+33 silly lockFile 74f02a6d--npmjs-org-finch-finch-1-1-0-tgz https://registry.npmjs.org/finch/-/finch-1.1.0.tgz
+34 verbose lock https://registry.npmjs.org/finch/-/finch-1.1.0.tgz /Users/Jack/.npm/74f02a6d--npmjs-org-finch-finch-1-1-0-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/finch/-/finch-1.1.0.tgz',
+35 verbose addRemoteTarball   '5dcbe86674cb440defd24f0f32c5443ee85c8f88' ]
+36 info retry fetch attempt 1 at 09:52:49
+37 verbose fetch to= /var/folders/zp/908rk1mn4vgfbzjdzhw5yk5w0000gn/T/npm-39103-WHQmwRgc/registry.npmjs.org/finch/-/finch-1.1.0.tgz
+38 http GET https://registry.npmjs.org/finch/-/finch-1.1.0.tgz
+39 http 200 https://registry.npmjs.org/finch/-/finch-1.1.0.tgz
+40 silly lockFile 74f02a6d--npmjs-org-finch-finch-1-1-0-tgz https://registry.npmjs.org/finch/-/finch-1.1.0.tgz
+41 silly lockFile 74f02a6d--npmjs-org-finch-finch-1-1-0-tgz https://registry.npmjs.org/finch/-/finch-1.1.0.tgz
+42 silly lockFile c5e222bb-finch-1-1-0 finch@1.1.0
+43 silly lockFile c5e222bb-finch-1-1-0 finch@1.1.0
+44 silly lockFile ec4a5454-finch finch@
+45 silly lockFile ec4a5454-finch finch@
+46 silly resolved [ { name: 'finch',
+46 silly resolved     version: '1.1.0',
+46 silly resolved     description: 'The https://meetfinch.com client app',
+46 silly resolved     main: 'index.js',
+46 silly resolved     preferGlobal: true,
+46 silly resolved     engines: { node: '>=0.10.0' },
+46 silly resolved     scripts: { prepublish: './build.coffee', postpublish: 'git clean -fx' },
+46 silly resolved     bin: { finch: './bin/finch.js' },
+46 silly resolved     dependencies:
+46 silly resolved      { asn1: '0.2.1',
+46 silly resolved        colors: '0.6.2',
+46 silly resolved        mime: '1.2.11',
+46 silly resolved        minimist: '0.0.10',
+46 silly resolved        'mute-stream': '0.0.4',
+46 silly resolved        'node-static': '0.7.3',
+46 silly resolved        optimist: '0.6.1',
+46 silly resolved        read: '1.0.5',
+46 silly resolved        ssh2: 'git://github.com/makeusabrew/ssh2',
+46 silly resolved        streamsearch: '0.1.2',
+46 silly resolved        wordwrap: '0.0.2' },
+46 silly resolved     devDependencies: { chai: '^1.9.1', sinon: '^1.9.1', 'sinon-chai': '^2.5.0' },
+46 silly resolved     bundleDependencies:
+46 silly resolved      [ 'asn1',
+46 silly resolved        'colors',
+46 silly resolved        'mime',
+46 silly resolved        'minimist',
+46 silly resolved        'mute-stream',
+46 silly resolved        'node-static',
+46 silly resolved        'optimist',
+46 silly resolved        'read',
+46 silly resolved        'readable-stream',
+46 silly resolved        'ssh2',
+46 silly resolved        'streamsearch',
+46 silly resolved        'wordwrap' ],
+46 silly resolved     _id: 'finch@1.1.0',
+46 silly resolved     _shasum: '5dcbe86674cb440defd24f0f32c5443ee85c8f88',
+46 silly resolved     _from: 'finch@',
+46 silly resolved     _npmVersion: '1.4.9',
+46 silly resolved     _npmUser: { name: 'makeusabrew', email: 'nick@kurai.co.uk' },
+46 silly resolved     maintainers: [ [Object] ],
 46 silly resolved     dist:
-46 silly resolved      { shasum: 'ac032e40de6881fb5e4dadeed6e1d07d37268380',
-46 silly resolved        tarball: 'http://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz' },
-46 silly resolved     _from: 'node-static@',
-46 silly resolved     _npmVersion: '1.3.21',
-46 silly resolved     _npmUser: { name: 'phstc', email: 'pablo@pablocantero.com' },
-46 silly resolved     maintainers: [ [Object], [Object], [Object] ],
-46 silly resolved     _shasum: 'ac032e40de6881fb5e4dadeed6e1d07d37268380',
-46 silly resolved     _resolved: 'https://registry.npmjs.org/node-static/-/node-static-0.7.6.tgz' } ]
-47 info install node-static@0.7.6 into /usr/local/lib
-48 info installOne node-static@0.7.6
-49 verbose lib/node_modules/node-static unbuild
-50 verbose tar unpack /Users/etudiant/.npm/node-static/0.7.6/package.tgz
-51 silly lockFile a82cd5cb-cal-lib-node-modules-node-static tar:///usr/local/lib/node_modules/node-static
-52 verbose lock tar:///usr/local/lib/node_modules/node-static /Users/etudiant/.npm/a82cd5cb-cal-lib-node-modules-node-static.lock
-53 silly lockFile f91e8bf3-pm-node-static-0-7-6-package-tgz tar:///Users/etudiant/.npm/node-static/0.7.6/package.tgz
-54 verbose lock tar:///Users/etudiant/.npm/node-static/0.7.6/package.tgz /Users/etudiant/.npm/f91e8bf3-pm-node-static-0-7-6-package-tgz.lock
+46 silly resolved      { shasum: '5dcbe86674cb440defd24f0f32c5443ee85c8f88',
+46 silly resolved        tarball: 'http://registry.npmjs.org/finch/-/finch-1.1.0.tgz' },
+46 silly resolved     directories: {},
+46 silly resolved     _resolved: 'https://registry.npmjs.org/finch/-/finch-1.1.0.tgz' } ]
+47 info install finch@1.1.0 into /usr/local/lib
+48 info installOne finch@1.1.0
+49 verbose lib/node_modules/finch unbuild
+50 verbose tar unpack /Users/Jack/.npm/finch/1.1.0/package.tgz
+51 silly lockFile 31bb0bc4-usr-local-lib-node-modules-finch tar:///usr/local/lib/node_modules/finch
+52 verbose lock tar:///usr/local/lib/node_modules/finch /Users/Jack/.npm/31bb0bc4-usr-local-lib-node-modules-finch.lock
+53 silly lockFile 5662544c-Jack-npm-finch-1-1-0-package-tgz tar:///Users/Jack/.npm/finch/1.1.0/package.tgz
+54 verbose lock tar:///Users/Jack/.npm/finch/1.1.0/package.tgz /Users/Jack/.npm/5662544c-Jack-npm-finch-1-1-0-package-tgz.lock
 55 silly gunzTarPerm modes [ '755', '644' ]
-56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/node-static'
-56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/node-static']
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/finch'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/finch']
 56 error   errno: 3,
 56 error   code: 'EACCES',
-56 error   path: '/usr/local/lib/node_modules/node-static',
+56 error   path: '/usr/local/lib/node_modules/finch',
 56 error   fstream_type: 'Directory',
-56 error   fstream_path: '/usr/local/lib/node_modules/node-static',
+56 error   fstream_path: '/usr/local/lib/node_modules/finch',
 56 error   fstream_class: 'DirWriter',
 56 error   fstream_stack:
 56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
 56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
 56 error      'Object.oncomplete (fs.js:107:15)' ] }
 57 error Please try running this command again as root/Administrator.
-58 error System Darwin 13.4.0
-59 error command "node" "/usr/local/bin/npm" "install" "-g" "node-static"
-60 error cwd /Users/etudiant/www/project_01
+58 error System Darwin 14.0.0
+59 error command "node" "/usr/local/bin/npm" "install" "--global" "finch"
+60 error cwd /Users/Jack/Documents/www/project_01
 61 error node -v v0.10.33
 62 error npm -v 1.4.28
-63 error path /usr/local/lib/node_modules/node-static
-64 error fstream_path /usr/local/lib/node_modules/node-static
+63 error path /usr/local/lib/node_modules/finch
+64 error fstream_path /usr/local/lib/node_modules/finch
 65 error fstream_type Directory
 66 error fstream_class DirWriter
 67 error code EACCES
 68 error errno 3
-69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/node-static'
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/finch'
 70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
 70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
 70 error fstream_stack Object.oncomplete (fs.js:107:15)
