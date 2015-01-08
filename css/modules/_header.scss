@@ -62,6 +62,7 @@ header {
 	text-align: center;
 	width: calc(100% - 130px);
 	left: 64px;
+	display: none;
 	h1 {
 		color: $couleur;
 		font-size: 16px;
@@ -91,7 +92,6 @@ header {
 }
 
 .header-mobile-nav {
-	display: none;
 	margin: 0;
 	padding: 0;
 	position: fixed;
@@ -120,6 +120,21 @@ header {
 		@include span (12);
 		&:hover{
 		background-color: $bleu;
+		}
+	}
+	& li:first-child {
+		& div:first-child{
+			@include span (1);
+			height: 50px;
+		}
+		& div:nth-child(2) {
+			@include span (10);
+			margin-bottom: 30px;
+		}
+		
+		& div:last-child{
+			@include span (1);
+			height: 50px;
 		}
 	}
 }
