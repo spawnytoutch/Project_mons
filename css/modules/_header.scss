@@ -60,9 +60,10 @@ header {
 	z-index: 110;
 	top:0;
 	text-align: center;
+	width: -webkit-calc(100% - 130px);
+	width: -moz-calc(100% - 130px);
 	width: calc(100% - 130px);
 	left: 64px;
-	display: none;
 	h1 {
 		color: $couleur;
 		font-size: 16px;
@@ -74,6 +75,12 @@ header {
 	}
 }
 
+.title-picture {
+	display: none;
+}
+.title-map {
+	display: block;
+}
 .menu-burger {
 	position: absolute;
 	width:23px;
@@ -125,22 +132,30 @@ header {
 	& li:first-child {
 		& div:first-child{
 			@include span (1);
-			height: 50px;
+			height: 325px;
+			background-color: $bleu;
+			padding: 0;
+			border: 1px solid $bleu;
 		}
 		& div:nth-child(2) {
 			@include span (10);
-			margin-bottom: 30px;
+			height: 325px;
+			background-color: $bleu;
+			padding: 0;
+			border: 1px solid $bleu;
 		}
 		
 		& div:last-child{
 			@include span (1);
-			height: 50px;
+			height: 325px;
+			background-color: $bleu;
+			padding: 0;
 		}
 	}
 }
 
-.header-mobile-nav a {
-		border-top: solid 1px $blanc;
+.border-top {
+	border-top: solid 1px $blanc;
 }
 
 .menu-burger-active {
@@ -169,6 +184,18 @@ header {
 		width: 50px;
 		border:none;
 	}
+}
+
+
+@include breakpoint (600px) {
+	.header-mobile-nav {
+		& li:first-child {
+			& div:nth-child(2) {
+				padding-top: 45px;
+			}
+		}
+	}
+
 }
 
 @include breakpoint (1024px) {

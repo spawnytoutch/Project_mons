@@ -9,7 +9,7 @@
 
 .logo-mons {
 	margin: 0 auto;
-	margin-top: 200px;
+	margin-top: 60px;
 	display: block;
 	background-color: $bleu;
 	width: 150px;
@@ -18,7 +18,8 @@
 }
 
 .home-title {
-	margin: 50px 0 0 50px;
+	width: 85%;
+	margin: 50px auto;
 	font-family: helvetica;
 	font-weight: 100;
 	font-size: 20px;
@@ -29,23 +30,28 @@
 }
 
 .buttons{
-	@include span (12);
+
 	height: 50px;
 	ul {
+			@include span (12);
 		list-style: none;
 
 		& :first-child {
-			@include span (2);
+			@include span (4);
 			height: 50px;
 		}
 		& :nth-child(2) {
 			@include span (4);
+
+			a {
+				width: 100%;
+			}
 		}
 		& :nth-child(3) {
-			@include span (4);
+			display: none;
 		}
 		& :last-child {
-			@include span (2);
+			@include span (4);
 			height: 50px;
 		}
 		
@@ -67,6 +73,41 @@
 			color: $blanc;
 			background-color: $bleu;
 			border:3px solid $bleu;
+		}
+	}
+}
+
+@include breakpoint (600px) {
+	.logo-mons {
+		margin-top: 130px;
+	}
+}
+
+@include breakpoint (1024px) {
+	.home-title {
+		margin: 50px 0 0 50px;
+	}
+	.logo-mons {
+		margin-top: 200px;
+	}
+	.buttons ul {
+		& :first-child {
+			@include span (4);
+			height: 50px;
+		}
+		& :nth-child(2) {
+			@include span (2);
+		}
+		& :nth-child(3) {
+			@include span (2);
+			display: block;
+			a {
+			width: 100%;
+			}
+		}
+		& :last-child {
+			@include span (4);
+			height: 50px;
 		}
 	}
 }
