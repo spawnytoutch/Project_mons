@@ -139,10 +139,6 @@
 			urlTmp = window.location.href;
 			urlSplit = urlTmp.split('?');
 			nameBuildingTmp = urlSplit[1].split('=')[1];
-			// console.log(urlTmp);
-			// console.log(urlSplit[1]);
-			// console.log(typeof(nameBuildingTmp));
-			// console.log(buildingHistory[eval('nameBuildingTmp')][1]['date']);
 		},
 		mousewheelHandlers: function(e){
 			if(e.originalEvent.wheelDelta < 0){
