@@ -14,7 +14,7 @@
 	font-family: Helvetica, sans-serif;
 	font-size: 2em;
 	font-weight: 700;
-	color: $bleu;
+	color: $couleur;
 }
 
 .sub-title-info-mark {
@@ -36,22 +36,26 @@
 	position: absolute;
 	width: 275px;
 	height: 100%;
-	right: 0;
+	left: 0;
 	p {
 		margin:0;
+		padding-bottom: 30px;
 		font-family: Helvetica, sans-serif;
 		font-size: 1em;
-		font-style: normal;
-		text-align: justify;
-		vertical-align: center;
 		color: $noir;
+		text-align: right;
+		&:last-child {
+		color: $couleur;
+		font-size: 1em;
+		text-align: right;
+		}
 	}
 }
 
 .mini-bat {
 	position: absolute;
 	width: 200px;
-	left: 0;
+	right: 0;
 	margin: 0 1em 1em 0;
 }
 
