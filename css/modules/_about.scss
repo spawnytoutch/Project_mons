@@ -1,24 +1,57 @@
 /*--------------------------------------------------*\
 		Informations / About
 \*--------------------------------------------------*/
-.leftcontent {
-	width: 40%;
-	height: 100%;
-	float: left;
-	img{
-		max-height:100%;
+
+.body-about {
+	overflow-y: scroll;
+}
+section {
+	padding: 0;
+}
+.left-content {
+	@include span (12);
+	padding:0;
+	background-image: url(../images/img_about.jpg);
+	height: 250px;
+	margin-top: 60px;
+	.greetings {
+		padding-top: 50px;
+		margin: 0;
+		h1 {
+			color: $couleur;
+			font-size: 1.5em;
+			font-weight: 100;
+			position: relative;
+			z-index: 1;
+			margin: 0;
+			padding-bottom: 56px;
+			padding-left: 5%;
+
+
+		}
+	}
+	.opacity-about {
+		@include span (12);
+		background-color: $noir;
+		margin-top: -95px;
+		height: 50px;
+		padding: 0;
+		opacity: 0.8;
+		position: relative;
+		z-index: 0;
 	}
 }
 
 .content {
-	max-width: 60%;
-	height: 100%;
-	float: right;
-	margin-top: 96px;
+
+	@include span (12);
+
+	
 	.text {
+	 @include span (12);
+		padding: 10% 5% 0% 5%;
 		height: 100%;
-		margin: 0 20%;
-		padding-top: 15%;
+
 		h1 {
 			color:$couleur;
 			font-size: 2em;
@@ -39,4 +72,25 @@
 			font-size: 1em;
 		}
 	}
+}
+
+@include breakpoint (1024px) {
+	.body-about {
+		overflow: hidden;
+	}
+	.left-content {
+		@include span (6);
+		height: 100%;
+		margin-top: 96px;
+		padding: 0;	
+		.greetings h1 {
+			padding-left: 50px;
+		}	
+	}
+	.content {
+	@include span (6);
+		margin-top:80px;
+		overflow-y: auto;
+	}
+
 }

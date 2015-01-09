@@ -2,10 +2,25 @@
 		Instructions
 \*--------------------------------------------------*/
 
+// g:hover *{
+// 	stroke: #00bfdf;
+// }
 rect:hover, rect:hover+g>* {
-	stroke:#00bfdf;
+	stroke:$couleur;
 }
-
+g:hover #roulette{
+	stroke:$couleur;
+}
+// body {
+// 	background-image: url(../images/bg.jpg);
+// 	background-size: cover;
+// }
+.howto {
+	font-family: Helvetica;
+	font-weight: 100;
+	margin-top: 200px;
+	text-align: center;
+}
 .text1{
 	display: none;
 	margin: 10px 0 0 10px;
@@ -14,3 +29,36 @@ rect:hover, rect:hover+g>* {
 	font-size: 16px;
 	font-weight: 300;
 }
+.marge{
+	@include span(3);
+	height: 210px;
+}
+.margelast{
+	@include span(3 last);
+	height: 210px;
+	padding-right: 0;
+}
+
+.arrows{
+	@include span (2);
+	#Layer_1 {
+		width: 100%;
+	}
+}
+.separate{
+	@include span (1);
+	height: 150px;
+	margin-top: 55px;
+	border-right: 3px solid $blanc;
+}
+.space {
+	@include span (1);
+	height: 150px;
+}
+.mouse {
+	@include span (2);
+	#Layer_2 {
+		width: 100%;
+	}
+}
+
