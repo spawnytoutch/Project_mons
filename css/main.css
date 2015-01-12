@@ -267,25 +267,30 @@ section { padding: 0; }
 .banner .backgroundbanner { width: 365px; height: 50px; position: absolute; z-index: 0; top: 176px; background-color: #00bfdf; opacity: 0.5; }
 .banner .p-banner { display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 50%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 25%; margin-right: 25%; font-family: helvetica; font-size: 2em; font-weight: 400; color: #ffffff; height: 50px; text-align: center; }
 
-.contact { padding-top: 50px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
-.contact form { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 83.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 8.33333%; margin-right: 8.33333%; height: 100%; }
-.contact span { display: block; margin-bottom: 40px; height: 40px; }
-.contact label { width: 100%; color: #00bfdf; font-family: helvetica; font-weight: 100; font-size: 1em; display: block; margin-bottom: 5px; height: 10px; }
-.contact input { width: 100%; border: solid #ffffff 2px; background-color: #131414; color: #ffffff; font-size: 0.8em; height: 30px; }
-.contact .select select { background: transparent; width: 100%; padding: 5px; font-size: 0.8em; border: 2px solid #ffffff; height: 34px; -webkit-appearance: none; border-radius: 0px; color: #ccc; }
-.contact .select { width: 100%; height: 34px; overflow: hidden; color: #ffffff; }
-.contact #commentaire { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-top: 10px; color: #ffffff; font-family: helvetica; background-color: #131414; border: solid #ffffff 2px; font-size: 0.8em; margin-bottom: 30px; }
+.contact { @with-layout (16); margin-left: 6.25%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 87.5%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-right: 6.25%; padding-top: 50px; }
+.contact form { height: 100%; }
+.contact .label-input { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; display: block; margin-bottom: 40px; height: 40px; padding: 0; }
+.contact label { color: #00bfdf; font-family: helvetica; font-weight: 100; font-size: 1em; display: block; margin-bottom: 5px; height: 10px; }
+.contact input { width: 100%; border: solid #ffffff 2px; background-color: #131414; color: #ffffff; font-size: 0.8em; height: 30px; padding: 5px; }
+.contact .select select { background: transparent; width: 100%; padding: 5px; font-size: 0.8em; border: 2px solid #ffffff; -webkit-appearance: none; border-radius: 0px; color: #ccc; }
+.contact .select { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; height: 85px; overflow: hidden; color: #ffffff; padding: 0; }
+.contact .label-bat { display: block; height: 34px; }
+.contact .text-comment { display: block; }
+.contact #commentaire { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-top: 30px; color: #ffffff; font-family: helvetica; background-color: #131414; border: solid #ffffff 2px; font-size: 0.8em; margin-bottom: 30px; }
 .contact #commentaire .text { width: 100%; display: block; }
-.contact #valider { margin-left: 66.66667%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 33.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
+.contact #valider { margin-left: 75%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
+.contact #valider:hover { background-color: #00bfdf; border: 1px solid #00bfdf; }
 .contact .submit { padding-bottom: 100px; }
 
 @media (min-width: 1024px) { .body-contact { overflow: auto; }
   .banner { margin: 0; margin-top: 96px; display: block; }
-  span { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 33.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
+  .label-input { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
   .text { height: 160px; }
-  .text-comment { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; display: block; margin-bottom: 100px; height: 60px; }
-  .submit { margin-left: 50%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 50%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-top: 60px; }
-  .p-banner { padding-top: 40px; } }
+  .text-comment { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; display: block; margin-bottom: 100px; height: 60px; }
+  .submit { margin-left: 75%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-top: 60px; }
+  .p-banner { padding-top: 40px; }
+  .select { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
+  .select select { height: 30px; } }
 /*--------------------------------------------------*\
 		Instructions
 \*--------------------------------------------------*/

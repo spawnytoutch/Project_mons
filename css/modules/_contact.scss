@@ -42,21 +42,24 @@
 }
 
 .contact {
+	@with-layout(16);
+	@include pre (1 of 16);
+	@include span (14 of 16);
+	@include post (1 of 16);
 	padding-top:50px;
-	@include span (12);
 
 	form {
-		@include span (10);
-		@include squish (1,1);
+		// @include squish (1,1);
 		height: 100%;
 	}
-	span {
+	.label-input {
+		@include span (16 of 16);
 		display: block;
 		margin-bottom: 40px;
 		height: 40px;
+		padding: 0;
 	}
 	label {
-		width: 100%;
 		color: $couleur;
 		font-family: helvetica;
 		font-weight: 100;
@@ -72,6 +75,7 @@
 		color: $blanc;
 		font-size: 0.8em;
 		height: 30px;
+		padding: 5px;
 	}
 	.select select {
 
@@ -80,21 +84,28 @@
     padding: 5px;
     font-size: 0.8em;
     border: 2px solid $blanc;
-    height: 34px;
     -webkit-appearance: none;
     border-radius: 0px;
     color: #ccc;
 	}
 	.select{
-    width: 100%;
-    height: 34px;
+	@include span (16 of 16);
+    height: 85px;
     overflow: hidden;
     color: $blanc;
+    padding: 0;
 	}
 
+	.label-bat {
+		display: block;
+		height: 34px;
+	}
+	.text-comment {
+		display: block;
+	}
 	#commentaire {
-		@include span (12);
-		margin-top: 10px;
+		@include span (16 of 16);
+		margin-top: 30px;
 		color: $blanc;
 		font-family: helvetica;
 		background-color: $noir;
@@ -108,9 +119,12 @@
 		}
 	}
 	#valider{
-		@include pre (8);
-		@include span (4);
-
+		@include pre (12 of 16);
+		@include span (4 of 16);
+		&:hover {
+			background-color: $bleu;
+			border: 1px solid $bleu;
+		}
 	}
 	.submit {
 		padding-bottom: 100px;
@@ -126,24 +140,31 @@
 		margin-top: 96px;
 		display: block;
 	}
-	span {
-		@include span (4);
+	.label-input {
+		@include span (4 of 16);
+
 	}
 	.text {
 		height: 160px;
 	}
 	.text-comment {
-		@include span (12);
+		@include span (16 of 16);
 		display: block;
 		margin-bottom: 100px;
 		height: 60px;
 	}
 	.submit {
-		@include pre (6);
-		@include span (6);
+		@include pre (12 of 16);
+		@include span (4 of 16);
 		margin-top: 60px;
 	}
 	.p-banner {
 		padding-top: 40px;
+	}
+	.select {
+		@include span (4 of 16);
+	}
+	.select select {
+		height: 30px;
 	}
 }

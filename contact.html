@@ -121,29 +121,30 @@
 
 		<div class="contact">
 			<form action="post">
-				<span>
-					<label for="nom">Nom:</label>
+				<div class="label-input">
+					<label for="nom">Nom</label>
 					<br>
 					<input type="text" name="nom" id="nom" placeholder="Votre nom" required="required">
-				</span>
+				</div>
 
-				<span>
-					<label for="prenom">Prénom:</label>
+				<div class="label-input">
+					<label for="prenom">Prénom</label>
 					<br>
 					<input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required="required">
-				</span>
+				</div>
 
-				<span>
-					<label for="mail">Adresse e-mail:</label>
+				<div class="label-input">
+					<label for="mail">Adresse e-mail</label>
 					<br>
 					<input type="email" name="mail" id="mail" placeholder="Votre adresse e-mail" required="required">
-				</span>
+				</div>
 				<br>
 
-<label for="batiment">Choix du bâtiment:</label>
-					<br>
-				<div class="select">
 					
+				<div class="select">
+					<div class="label-bat">
+						<label for="batiment">Choix du bâtiment</label>
+					</div>
 					<select>
 						<option value="abattoirs"><p class="bidule">Les abattoirs</p></option>
 						<option value="arsonic">L'Arsonic</option>
@@ -158,26 +159,26 @@
 					</select>
 				</div>
 
-				<span>
-					<label for="date">Date de la photo:</label>
+				<div class="label-input">
+					<label for="date">Date de la photo</label>
 					<br>
 					<input type="date" name="date" id="date" placeholder="jj/mm/aaaa" required="required">
-				</span>
+				</div>
 
-				<span>
-					<label for="photo">Votre photo:</label>
+				<div class="label-input">
+					<label for="photo">Votre photo</label>
 					<br>
 					<input type="file" name="photo" id="photo" accept="image/*" required="required">
-				</span>
+				</div>
 
 				<div class="text-comment">
-					<label for="commentaire">Commentaire:</label><br>
+					<label for="commentaire">Commentaire</label>
 					<textarea class="text" name="Commentaire" id="commentaire" placeholder="Légende et description de votre photo (max. 200 mots)" maxlength="1400" required="required"></textarea>
 				</div>
 
-				<span class="submit">
+				<div class="label-input submit">
 					<input type="submit" id="valider">
-				</span>
+				</div>
 
 			</form>
 		</div>
