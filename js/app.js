@@ -251,6 +251,9 @@
 		},
 		toggleMenuBurger: function(){
 			$('.header-mobile-nav').toggleClass('menu-burger-active');
+			$('.section-galerie').toggleClass('display-off');
+			$('.section-about').toggleClass('display-off');
+			$('.section-contact').toggleClass('display-off');
 		}
 	};
 })(jQuery);
