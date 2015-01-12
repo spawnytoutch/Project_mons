@@ -7,22 +7,10 @@
 			dataType : 'text'
 		});*/
 
-		
-
 		handlers.init();
 		displayUtils.init();
 
 	});
-
-	// var urlTmp = window.location.href;
-	// console.log(urlTmp);
-	// VM856:2 http://www.w3schools.com/js/js_window_location.asp?id=254875
-	// var urlSplit = urlTmp.split('?');
-	// console.log(urlSplit[1]);
-	// VM952:2 id=254875
-	// var idTmp = urlSplit[1].split('=')[1];
-
-	// vérification »»» window.location = "tonUrl";
 
 	var urlTmp;
 	var urlSplit;
@@ -76,31 +64,8 @@
 					}
 			]
 		};
-	var panelVal       = 0;
-	var indexImg       = 0;
-	var stationHistory = [
-			{
-					"titleImg": "La Gare de Mons",
-					"image": "images/garedemons/garedemons_1901-04-09.jpg",
-					"date": "09 avril ",
-					"year": "1901",
-					"comment": "09 avril 1901 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-			},
-			{
-					"titleImg": "La Gare de Mons",
-					"image": "images/garedemons/garedemons_1980-09-29.jpg",
-					"date": "29 septembre ",
-					"year": "1980",
-					"comment": "29 septembre 1980 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-			},
-			{
-					"titleImg": "La Gare de Mons",
-					"image": "images/garedemons/garedemons_2015-06-15.jpg",
-					"date": "15 juin ",
-					"year": "2015",
-					"comment": "15 juin 2015 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-			}
-	];
+	var panelVal = 0;
+	var indexImg = 0;
 	var handlers = {
 		init: function(){
 				handlers.dataJson();
@@ -142,9 +107,9 @@
 		},
 		mousewheelHandlers: function(e){
 			if(e.originalEvent.wheelDelta < 0){
-						handlers.beforeImg();
-					}else{
 						handlers.afterImg();
+					}else{
+						handlers.beforeImg();
 					}
 		},
 		toggleMenuBurger: function(){
@@ -163,7 +128,7 @@
 		},
 		beforeImg: function(){
 				if(indexImg === 0){
-						indexImg = (buildingHistory.nameBuilding.length-1);
+						indexImg = (buildingHistory[eval('nameBuildingTmp')].length-1);
 					}else{
 						indexImg--;
 					}
@@ -272,8 +237,10 @@
 				displayUtils.initializeDisplay();
 		},
 		resizeWindow: function(){
-				var posTmp = ($(window).innerHeight())-105;
-				$('.box-arrow.down').css({'top':posTmp});
+				var posTmpArrow = ($(window).innerHeight())-105;
+				var posTmpFooterTimeline = ($(window).innerHeight())-50;
+				$('.box-arrow.down').css({'top':posTmpArrow});
+				$('.footer-nav').css({'top':posTmpFooterTimeline});
 		},
 		initializeDisplay: function(){
 				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
