@@ -16,7 +16,9 @@ body:after { content: " "; display: block; clear: both; }
 
 .active { color: #00bfdf !important; }
 
-.display-off { display: none; height: 0%; }
+.display-off { display: none; height: 0; }
+
+.overflow-off { overflow: hidden; }
 
 /*--------------------------------------------------*\
 		Formulaires
