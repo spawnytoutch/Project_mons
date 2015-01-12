@@ -12,6 +12,10 @@ section {
 	@include span (12);
 	padding:0;
 	background-image: url(../images/img_about.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
 	height: 250px;
 	margin-top: 60px;
 	.greetings {

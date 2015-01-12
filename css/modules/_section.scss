@@ -189,43 +189,37 @@ font-style: italic;
 
 
 .footer-nav {
-	top:716px;
+	position: relative;
 	@include span (12);
 	height: 50px;
 	padding: 0;
 	background-color: $couleur;
-	position: relative;
 	text-align: center;
 	line-height: 50px;
 	font-family: helvetica;
 	font-size: 14px;
 	font-weight: 100;
-	
-	
-
 	.footer-nav-year {
-	@include span (6);
-	height: 50px;
-	padding: 0;
+		@include span (6);
+		height: 50px;
+		padding: 0;
 		&:hover {
 			background-color: $noir;
 		}
-
 	}
 	.footer-nav-day {
-	border-right: 1px solid $noir;
-	@include span (6);
-	height: 50px;
-	padding: 0;
+		border-right: 1px solid $noir;
+		@include span (6);
+		height: 50px;
+		padding: 0;
 	}
-
-
 }
 
 /*-----------------------------*\
 		Partie droite
 \*-----------------------------*/
 .right-panel {
+	display: none;
 	height: 100%;
 	width: 17.5%;
 	position: absolute;
@@ -270,15 +264,15 @@ font-style: italic;
 			}
 	}
 }
-
 .btn-timeline {
 	left: -20px;
 	cursor: url(../images/cursor/pointer.cur),auto;
 	@include transform(rotate(45deg));
-	// transform: rotate(45deg);
 	border: 20px solid $couleur;
 	z-index: -1;
 }
+
+
 @include breakpoint (1024px) {
     .block-title, .left-panel {
 		@include span (5);
@@ -294,6 +288,7 @@ font-style: italic;
 		transition: left 0.3s ease;
     }
     .right-panel {
+		display: block;
 		right: -16.5%;
 	}
     .box-arrow.up {
