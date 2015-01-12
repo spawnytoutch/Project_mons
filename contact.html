@@ -85,7 +85,7 @@
 		</div>
 
 		<!-- Menu de navigation mobile-->
-		<nav class="header-mobile-nav display-on">
+		<nav class="header-mobile-nav">
 			<ul>
 				<li><a class="border-top" href="index.html">Accueil</a></li>
 				<li><a href="galerie.html?name=MaisonFolie">La Maison Folie</a></li>
@@ -115,7 +115,7 @@
 
 	<section>
 		<div class="banner">
-			<p>aidez-nous à améliorer notre galerie </p>
+			<p class="p-banner">A propos</p>
 <!-- 			<div class="backgroundbanner"></div> -->
 		</div>
 
@@ -140,11 +140,12 @@
 				</span>
 				<br>
 
-				<span>
-					<label for="batiment">Choix du bâtiment:</label>
+<label for="batiment">Choix du bâtiment:</label>
 					<br>
+				<div class="select">
+					
 					<select>
-						<option value="abattoirs">Les abattoirs</option>
+						<option value="abattoirs"><p class="bidule">Les abattoirs</p></option>
 						<option value="arsonic">L'Arsonic</option>
 						<option value="bam">Le BAM</option>
 						<option value="carreart">Le Carré des arts</option>
@@ -155,7 +156,7 @@
 						<option value="maisonfolie">La Maison Folie</option>
 						<option value="manegemons">Le Manège.Mons</option>
 					</select>
-				</span>
+				</div>
 
 				<span>
 					<label for="date">Date de la photo:</label>
@@ -169,12 +170,14 @@
 					<input type="file" name="photo" id="photo" accept="image/*" required="required">
 				</span>
 
-				<span>
+				<div class="text-comment">
 					<label for="commentaire">Commentaire:</label><br>
-					<textarea class="text" name="Commentaire" id="commentaire"rows="10" placeholder="Légende et description de votre photo (max. 200 caractères)" maxlength="200" required="required"></textarea>
-				</span>
+					<textarea class="text" name="Commentaire" id="commentaire" placeholder="Légende et description de votre photo (max. 200 mots)" maxlength="1400" required="required"></textarea>
+				</div>
 
-				<input type="submit" id="valider">
+				<span class="submit">
+					<input type="submit" id="valider">
+				</span>
 
 			</form>
 		</div>

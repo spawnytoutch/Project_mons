@@ -266,20 +266,27 @@ section { padding: 0; }
 .banner { background-image: url(../images/banner.jpg); background-size: cover; height: 254px; margin-top: 60px; }
 .banner div { width: 548px; height: 50px; position: absolute; z-index: 0; top: 106px; background-color: #00bfdf; opacity: 0.5; }
 .banner .backgroundbanner { width: 365px; height: 50px; position: absolute; z-index: 0; top: 176px; background-color: #00bfdf; opacity: 0.5; }
-.banner p { font-family: helvetica; font-size: 2em; font-weight: 400; font-variant: small-caps; color: #00bfdf; display: inline-block; padding-left: 50px; padding-right: 50px; height: 50px; line-height: 45px; margin: 10px 0; position: relative; z-index: 2; }
+.banner .p-banner { display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 50%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 25%; margin-right: 25%; font-family: helvetica; font-size: 2em; font-weight: 400; color: #ffffff; height: 50px; text-align: center; }
 
-.contact { margin-top: 50px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
-.contact form { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 83.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 8.33333%; margin-right: 8.33333%; }
-.contact span { display: block; margin-bottom: 30px; height: 40px; }
-.contact label { width: 100%; color: #00bfdf; font-family: helvetica; font-weight: 100; font-size: 1em; }
+.contact { padding-top: 50px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
+.contact form { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 83.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 8.33333%; margin-right: 8.33333%; height: 100%; }
+.contact span { display: block; margin-bottom: 40px; height: 40px; }
+.contact label { width: 100%; color: #00bfdf; font-family: helvetica; font-weight: 100; font-size: 1em; display: block; margin-bottom: 5px; height: 10px; }
 .contact input { width: 100%; border: solid #ffffff 2px; background-color: #131414; color: #ffffff; font-size: 0.8em; height: 30px; }
-.contact select { background-color: #131414; color: #ffffff; height: 30px; border: solid #ffffff 2px; font-family: helvetica; font-size: 0.8em; margin-top: 10px; width: 250px; }
+.contact .select select { background: transparent; width: 100%; padding: 5px; font-size: 0.8em; border: 2px solid #ffffff; height: 34px; -webkit-appearance: none; border-radius: 0px; color: #ccc; }
+.contact .select { width: 100%; height: 34px; overflow: hidden; color: #ffffff; }
 .contact #commentaire { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-top: 10px; color: #ffffff; font-family: helvetica; background-color: #131414; border: solid #ffffff 2px; font-size: 0.8em; margin-bottom: 30px; }
 .contact #commentaire .text { width: 100%; display: block; }
 .contact #valider { margin-left: 66.66667%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 33.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
+.contact .submit { padding-bottom: 100px; }
 
-@media (min-width: 1024px) { .banner { margin-top: 96px; }
-  span { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 33.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; } }
+@media (min-width: 1024px) { .body-contact { overflow: auto; }
+  .banner { margin: 0; margin-top: 96px; display: block; }
+  span { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 33.33333%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; }
+  .text { height: 160px; }
+  .text-comment { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; display: block; margin-bottom: 100px; height: 60px; }
+  .submit { margin-left: 50%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 50%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-top: 60px; }
+  .p-banner { padding-top: 40px; } }
 /*--------------------------------------------------*\
 		Instructions
 \*--------------------------------------------------*/
