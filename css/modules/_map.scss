@@ -2,14 +2,14 @@
 		Map
 \*--------------------------------------------------*/
 #map-canvas {
-	display: none;
+	height: 0;
+	top: 0;
 }
-
 .section-map {
+	display: none;
 	margin: 0;
 	padding: 0;
 }
-
 .title-info-mark {
 	font-family: Helvetica, sans-serif;
 	font-size: 2em;
@@ -72,8 +72,10 @@
 	.display{
 		display: none;
 	}
+	.section-map {
+		display: block;	
+	}
 	#map-canvas {
-		display: block;
 		height: 85%;
 		top: 96px;
 	}

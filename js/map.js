@@ -96,8 +96,6 @@ function addMArk(latlng) {
 
 	var mark = new google.maps.Marker( markOptions );
 
-	console.log(latlng[6]);
-
 	var contentInfoMark = '<h1 class="title-info-mark">'+latlng[2]+'</h1>'+'<h2 class="sub-title-info-mark">'+latlng[4]+'</h2>'+'<div class="content-info-mark"><img class="mini-bat" src="'+latlng[3]+'"/>'+'<div class="text-info-mark"><p>'+latlng[5]+'</p><p><a class="lienGalerie" href="galerie.html?name='+latlng[6]+'">Voir la galerie :'+latlng[2]+'</a></p></div></div>';
 
 	var infoBulle = {

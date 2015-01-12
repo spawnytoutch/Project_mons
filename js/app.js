@@ -7,15 +7,18 @@
 			dataType : 'text'
 		});*/
 
-		handlers.init();
-		displayUtils.init();
+		if(testUrl){
+				handlers.init();
+		}
+		displayUtils.init();		
 
 	});
 
-	var urlTmp;
+
+	var urlTmp = window.location.href;
+	var testUrl = urlTmp.indexOf("galerie.html") > -1;
 	var urlSplit;
-	var nameBuildingTmp;
-	var nameBuildingPath;
+	var nameBuilding;
 	var buildingHistory = {
 			"GareDeMons":[
 					{
@@ -69,11 +72,11 @@
 	var handlers = {
 		init: function(){
 				handlers.dataJson();
+				handlers.initializeDisplay();
 				$('.arrow-up').bind({click: handlers.beforeImg});
 				$('.arrow-down').bind({click: handlers.afterImg});
 				$('.btn-comments').bind({click: handlers.openComments});
 				$('.btn-timeline').bind({click: handlers.openTimeline});
-				$('.menu-burger').bind({click: handlers.toggleMenuBurger});
 				$('.fa-close').bind({click: handlers.closePanels});
 				$('.section-galerie').bind({mousewheel: handlers.mousewheelHandlers});
 				$(window).bind('keydown', function(e) {
@@ -100,10 +103,18 @@
 					}
 				});
 		},
+		initializeDisplay: function(){
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuilding')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuilding')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuilding')][indexImg]['date']+buildingHistory[eval('nameBuilding')][indexImg]['year']+'</span>');
+				for (i = 0; i < buildingHistory[eval('nameBuilding')].length; i++){
+					$('.timeline ul').append('<li><a class="'+buildingHistory[eval('nameBuilding')][i].nameClass+'" href="#">'+buildingHistory[eval('nameBuilding')][i]['year']+'</a></li>');
+				}
+		},
 		dataJson: function(){
-			urlTmp = window.location.href;
 			urlSplit = urlTmp.split('?');
-			nameBuildingTmp = urlSplit[1].split('=')[1];
+			nameBuilding = urlSplit[1].split('=')[1];
 		},
 		mousewheelHandlers: function(e){
 			if(e.originalEvent.wheelDelta < 0){
@@ -111,9 +122,6 @@
 					}else{
 						handlers.beforeImg();
 					}
-		},
-		toggleMenuBurger: function(){
-			$('.header-mobile-nav').toggleClass('menu-burger-active');
 		},
 		closePanels: function(){
 			panelVal = 0;
@@ -128,25 +136,25 @@
 		},
 		beforeImg: function(){
 				if(indexImg === 0){
-						indexImg = (buildingHistory[eval('nameBuildingTmp')].length-1);
+						indexImg = (buildingHistory[eval('nameBuilding')].length-1);
 					}else{
 						indexImg--;
 					}
-				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
-				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
-				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
-				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuilding')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuilding')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuilding')][indexImg]['date']+buildingHistory[eval('nameBuilding')][indexImg]['year']+'</span>');
 		},
 		afterImg: function(){
-				if(indexImg === (buildingHistory[eval('nameBuildingTmp')].length-1)){
+				if(indexImg === (buildingHistory[eval('nameBuilding')].length-1)){
 						indexImg = 0;
 					}else{
 						indexImg++;
 					}
-				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
-				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
-				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
-				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuilding')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuilding')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuilding')][indexImg]['date']+buildingHistory[eval('nameBuilding')][indexImg]['year']+'</span>');
 		},
 		openComments: function(){
 				if(panelVal === 0){
@@ -192,34 +200,33 @@
 		gestionKeyUp: function(){
 				if(panelVal == 0 || panelVal == -1){
 					if(indexImg == 0){
-						indexImg = (buildingHistory[eval('nameBuildingTmp')].length-1);
+						indexImg = (buildingHistory[eval('nameBuilding')].length-1);
 					}else{
 						indexImg--;
 				}
-				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
-				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
-				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
-				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuilding')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuilding')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuilding')][indexImg]['date']+buildingHistory[eval('nameBuilding')][indexImg]['year']+'</span>');
 				}
 		},
 		gestionKeyDown: function(){
 				if(panelVal == 0 || panelVal == -1){
-					if(indexImg == (buildingHistory[eval('nameBuildingTmp')].length-1)){
+					if(indexImg == (buildingHistory[eval('nameBuilding')].length-1)){
 						indexImg = 0;
 					}else{
 						indexImg++;
 				}
-				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
-				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
-				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
-				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
+				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuilding')][indexImg]['image'] +')');
+				$('.title-picture h1').text(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']);
+				$('.comments p').text(buildingHistory[eval('nameBuilding')][indexImg]['comment']);
+				$('.block-title h2').html(buildingHistory[eval('nameBuilding')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuilding')][indexImg]['date']+buildingHistory[eval('nameBuilding')][indexImg]['year']+'</span>');
 				}
-
 		},
 		gestionKeyEnter: function(){
 				if(panelVal == 1){
 					$('.timeline a').bind('keydown', function(e){
-						$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][e]['image'] +')');
+						$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuilding')][e]['image'] +')');
 					});
 				}
 		},
@@ -234,7 +241,7 @@
 		init: function(){
 				$(window).load(displayUtils.resizeWindow);
 				$(window).resize(displayUtils.resizeWindow);
-				displayUtils.initializeDisplay();
+				$('.menu-burger').bind({click: displayUtils.toggleMenuBurger});
 		},
 		resizeWindow: function(){
 				var posTmpArrow = ($(window).innerHeight())-105;
@@ -242,14 +249,8 @@
 				$('.box-arrow.down').css({'top':posTmpArrow});
 				$('.footer-nav').css({'top':posTmpFooterTimeline});
 		},
-		initializeDisplay: function(){
-				$('.section-galerie').css('background-image', 'url('+ buildingHistory[eval('nameBuildingTmp')][indexImg]['image'] +')');
-				$('.title-picture h1').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']);
-				$('.comments p').text(buildingHistory[eval('nameBuildingTmp')][indexImg]['comment']);
-				$('.block-title h2').html(buildingHistory[eval('nameBuildingTmp')][indexImg]['titleImg']+' <span class="italic">'+buildingHistory[eval('nameBuildingTmp')][indexImg]['date']+buildingHistory[eval('nameBuildingTmp')][indexImg]['year']+'</span>');
-				for (i = 0; i < buildingHistory[eval('nameBuildingTmp')].length; i++){
-					$('.timeline ul').append('<li><a class="'+buildingHistory[eval('nameBuildingTmp')][i].nameClass+'" href="#">'+buildingHistory[eval('nameBuildingTmp')][i]['year']+'</a></li>');
-				}
+		toggleMenuBurger: function(){
+			$('.header-mobile-nav').toggleClass('menu-burger-active');
 		}
 	};
 })(jQuery);
