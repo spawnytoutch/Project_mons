@@ -1,11 +1,15 @@
 /*--------------------------------------------------*\
 		Contact
 \*--------------------------------------------------*/
+.body-contact {
+	overflow: auto;
+}
+
 .banner {
 	background-image: url(../images/banner.jpg);
 	background-size: cover;
 	height: 254px;
-	margin-top: 96px;
+	margin-top: 60px;
 	div {
 		width: 548px;
 		height: 50px;
@@ -26,10 +30,10 @@
 	}
 	p {
 		font-family: helvetica;
-		font-size: 3em;
-		font-weight: 100;
+		font-size: 2em;
+		font-weight: 400;
 		font-variant: small-caps; 
-		color: $blanc;
+		color: $couleur;
 		display: inline-block;
 		padding-left: 50px;
 		padding-right: 50px;
@@ -43,29 +47,31 @@
 
 .contact {
 	margin-top:50px;
-	form{
-		width: 900px;
-		margin:auto;
+	@include span (12);
 
+	form{
+		@include span (10);
+		@include squish (1,1);
 	}
 	span {
-		display: inline-block;
-		margin: 0px 20px 40px 20px;
+		display: block;
+		margin-bottom: 30px;
+		height: 40px;
 	}
 	label{
+		width: 100%;
 		color: $couleur;
 		font-family: helvetica;
 		font-weight: 100;
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 	input{
+		width: 100%;
 		border:solid $blanc 2px;
 		background-color: $noir;
 		color: $blanc;
 		font-size: 0.8em;
 		height: 30px;
-		width: 250px;
-		margin-top: 10px;
 	}
 	select {
 		background-color: $noir;
@@ -78,17 +84,33 @@
 		width: 250px;
 	}
 	#commentaire {
+		@include span (12);
 		margin-top: 10px;
-		width: 840px;
-		max-width: 840px;
-		max-height: 150px;
 		color: $blanc;
 		font-family: helvetica;
 		background-color: $noir;
 		border:solid $blanc 2px;
 		font-size: 0.8em;
+		margin-bottom: 30px;
+		.text {
+			width: 100%;
+			display: block;
+
+		}
 	}
 	#valider{
-		margin-left: 20px;
+		@include pre (8);
+		@include span (4);
+
+	}
+}
+
+@include breakpoint (1024px) {
+	.banner {
+		margin-top: 96px;
+	}
+	span {
+		@include span (4);
+
 	}
 }

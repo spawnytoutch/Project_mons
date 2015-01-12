@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body class="body-contact">
 
 	<header>
 		<!-- Logo Mons 2015 -->
@@ -25,7 +25,7 @@
 		<nav class="header-nav">
 			<ul>
 				<li><a href="index.html">Accueil</a></li>
-				<li><a href="map.html" class="active">Carte</a></li>
+				<li><a href="map.html">Carte</a></li>
 			</ul>
 		</nav>
 
@@ -115,11 +115,8 @@
 
 	<section>
 		<div class="banner">
-			<p>aidez-nous à améliorer</p>
-			</br>
-			<p>notre galerie </p>
-			<div></div>
-			<div class="backgroundbanner"></div>
+			<p>aidez-nous à améliorer notre galerie </p>
+<!-- 			<div class="backgroundbanner"></div> -->
 		</div>
 
 		<div class="contact">
@@ -171,13 +168,11 @@
 					<br>
 					<input type="file" name="photo" id="photo" accept="image/*" required="required">
 				</span>
-				<br>
 
 				<span>
 					<label for="commentaire">Commentaire:</label><br>
-					<textarea name="Commentaire" id="commentaire" cols="30" rows="10" placeholder="Légende et description de votre photo (max. 200 caractères)" maxlength="200" required="required"></textarea>
+					<textarea class="text" name="Commentaire" id="commentaire"rows="10" placeholder="Légende et description de votre photo (max. 200 caractères)" maxlength="200" required="required"></textarea>
 				</span>
-				<br>
 
 				<input type="submit" id="valider">
 
@@ -188,7 +183,7 @@
 	<footer>
 		<p>Il était une fois … Mons © 2014 - Tous droits réservés</p>
 		<ul>
-			<li><a href="#" class="active">Contact</a></li>
+			<li><a href="contact.html" class="active">Contact</a></li>
 			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 			<li><a href="#"><i class="fa fa-share"></i></a></li>
