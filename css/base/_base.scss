@@ -10,16 +10,16 @@ html {
 	box-sizing: inherit;
 }
 body {
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: Arial, sans-serif;
 	color: $blanc;
-	overflow: hidden;
 	cursor: url(../images/cursor/cursor_current.cur),auto;
 	background-color: $noir;
-
 	@include container (100%);
+}
+.body-gallery {
+		overflow: hidden;
 }
 ::selection {
   background: $couleur;
@@ -27,24 +27,17 @@ body {
 ::-moz-selection {
   background: $couleur;
 }
-
 .active {
 	color:$couleur !important;
 }
-
-.display-off {
-	display: none;
-}
-
-.display-on {
-	display: block;
-}
-
 @include breakpoint (1024px) {
 	.display-on {
 		display: none;
 	}
 	.display-off {
 		display: block;
+	}
+	body {
+		height: 100%;
 	}
 }
