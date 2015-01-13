@@ -24,20 +24,22 @@
 	font-family: helvetica, sans-serif;
 	color: $blanc;
 	text-align: left;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 	p {
 		margin-top: 150px;
 	}
-	a {
-		position: absolute;
-		width: 100%;
-		top: 174px;
-		right: 20px;
-		text-decoration: none;
-		font-size: 16px;
-		color: $blanc;
-		text-align: right;
-		cursor: url(../images/cursor/pointer.cur),auto;
-	}
+/* 	a {
+	position: absolute;
+	width: 100%;
+	top: 174px;
+	right: 20px;
+	text-decoration: none;
+	font-size: 16px;
+	color: $blanc;
+	text-align: right;
+	cursor: url(../images/cursor/pointer.cur),auto;
+} */
 }
 
 .btn-comments {
@@ -55,6 +57,7 @@
 \*-----------------------------*/
 section {
 	@include span (12);
+	padding: 0;
 	height: 100%;
 	background-repeat: no-repeat;
 	background-position: center;

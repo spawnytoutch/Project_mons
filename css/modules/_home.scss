@@ -5,6 +5,9 @@
 .home-bg {
 	background-image: url(../images/bg.jpg);
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 .logo-mons {
@@ -30,11 +33,10 @@
 }
 
 .buttons{
-
 	height: 50px;
 	ul {
 		@include span (12);
-		list-style: none;		
+		list-style: none;
 	}
 	li {
 		height: 50px;
@@ -50,7 +52,6 @@
 		}
 	}
 	a {
-
 	display: block;
 	line-height: 50px;
 	height: 50px;
@@ -65,13 +66,11 @@
 		}
 	}
 }
-
 @include breakpoint (600px) {
 	.logo-mons {
 		margin-top: 130px;
 	}
 }
-
 @include breakpoint (1024px) {
 	.home-title {
 		margin: 50px 0 0 50px;
