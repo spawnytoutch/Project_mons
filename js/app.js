@@ -317,7 +317,9 @@
 		init: function(){
 				$(window).load(displayUtils.resizeWindow);
 				$(window).resize(displayUtils.resizeWindow);
-				$('.menu-burger').bind({click: displayUtils.toggleMenuBurger});
+				//$('.menu-burger').bind({click: displayUtils.toggleMenuBurger});
+				$('#burger-button').bind({click: displayUtils.toggleMenuBurger});
+				$('#burger-button-gallery').bind({click: displayUtils.toggleMenuBurgerGallery});
 		},
 		resizeWindow: function(){
 				var posTmpArrow = ($(window).innerHeight())-105;
@@ -325,17 +327,20 @@
 				$('.box-arrow.down').css({'top':posTmpArrow});
 				$('.footer-nav').css({'top':posTmpFooterTimeline});
 		},
-		toggleMenuBurger: function(){
+		toggleMenuBurgerGallery: function(){
 			$('.header-mobile-nav').toggleClass('display-off');
 			$('.section-galerie').toggleClass('display-off');
-			$('.section-about').toggleClass('display-off');
+		},
+		toggleMenuBurger: function(){
+			$('.header-mobile-nav').toggleClass('display-off');
 			$('.section-contact').toggleClass('display-off');
+			$('.section-about').toggleClass('display-off');
+			$('.section-upload').toggleClass('display-off');
 			if($('body').hasClass('overflow-on')){
 				$('body').removeClass('overflow-on');
 				$('body').addClass('overflow-off');
-			}else if($('body').hasClass('body-gallery')){
-				$('body').addClass('overflow-off');
 			}else{
+				$('body').removeClass('overflow-off');
 				$('body').addClass('overflow-on');
 			}
 		}
