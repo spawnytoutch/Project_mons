@@ -293,7 +293,6 @@ footer a:hover { color: #00bfdf; }
 /*--------------------------------------------------*\
 		Contact
 \*--------------------------------------------------*/
-<<<<<<< HEAD
 .body-contact { overflow: auto; }
 
 .border-top { border-top: solid 1px #ffffff; }
@@ -302,8 +301,6 @@ footer a:hover { color: #00bfdf; }
 
 .p-banner { display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 50%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 25%; margin-right: 25%; font-family: helvetica; font-size: 2em; font-weight: 400; font-variant: small-caps; color: #ffffff; height: 50px; text-align: center; position: absolute; z-index: 3; top: 125px; }
 
-=======
->>>>>>> e49e72ebaafb03dbffc7bcb9eca0d53816063338
 .banner { background-image: url(../images/banner.jpg); background-size: cover; height: 254px; margin-top: 60px; }
 .banner div { width: 548px; height: 50px; position: absolute; z-index: 0; top: 106px; background-color: #00bfdf; opacity: 0.5; }
 .banner .backgroundbanner { width: 365px; height: 50px; position: absolute; z-index: 0; top: 176px; background-color: #00bfdf; opacity: 0.5; }
