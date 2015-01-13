@@ -1,10 +1,6 @@
 /*--------------------------------------------------*\
 		Contact
 \*--------------------------------------------------*/
-.body-contact {
-	overflow: auto;
-}
-
 .banner {
 	background-image: url(../images/banner.jpg);
 	background-size: cover;
@@ -40,14 +36,12 @@
 		text-align: center;
 	}
 }
-
 .contact {
 	@with-layout(16);
 	@include pre (1 of 16);
 	@include span (14 of 16);
 	@include post (1 of 16);
 	padding-top:50px;
-
 	form {
 		// @include squish (1,1);
 		height: 100%;
@@ -78,7 +72,6 @@
 		padding: 5px;
 	}
 	.select select {
-
     background: transparent;
     width: 100%;
     padding: 5px;
@@ -95,7 +88,6 @@
     color: $blanc;
     padding: 0;
 	}
-
 	.label-bat {
 		display: block;
 		height: 34px;
@@ -115,7 +107,6 @@
 		.text {
 			width: 100%;
 			display: block;
-
 		}
 	}
 	#valider{
@@ -130,7 +121,6 @@
 		padding-bottom: 100px;
 	}
 }
-
 @include breakpoint (1024px) {
 	.body-contact {
 	overflow: auto;

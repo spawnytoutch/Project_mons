@@ -116,17 +116,23 @@ function addMArk(latlng) {
 		infoopened = infoMark;
 	});
 }
+var screenResDevice = window.matchMedia("screen and (min-width: 1024px)");
 
-google.maps.event.addDomListener( window, 'load', initialize );
+if(screenResDevice.matches){
+	// alert('on est sur desktop resolution plus de 1024');
+	google.maps.event.addDomListener( window, 'load', initialize );
+}else{
+	// alert('on est sur un device mobile');
+}
 
-(function($){
+/*(function($){
 	$(document).ready(function(){
 		$(window).bind({'resize': function(e){
 					myMap.fitBounds( zoneMark ); // set center
 				}
 		});
 	});
-})(jQuery);
+})(jQuery);*/
 
 
 /*(function($){

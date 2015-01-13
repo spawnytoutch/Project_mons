@@ -25,13 +25,11 @@
 	font-weight: 500;
 	color: $noir;
 }
-
 .content-info-mark {
 	position: relative;
 	width: 500px;
 	height: 300px;
 }
-
 .text-info-mark {
 	position: absolute;
 	width: 275px;
@@ -51,23 +49,15 @@
 		}
 	}
 }
-
 .mini-bat {
 	position: absolute;
 	width: 200px;
 	right: 0;
 	margin: 0 1em 1em 0;
 }
-
 .lienGalerie {
 	color: $noir;
 }
-
-.header-mobile-nav {
-	display: block;
-}
-
-
 @include breakpoint (1024px) {
 	.display{
 		display: none;
