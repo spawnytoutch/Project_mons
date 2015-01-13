@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Il était une fois ... Mons ___ Contact</title>
+	<title>Il était une fois ... Mons ___ Upload</title>
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/tools/_font-awesome.min.css" />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0">
@@ -99,7 +99,7 @@
 				<li><a href="galerie.html?name=GareDeMons">La Gare de Mons</a></li>
 				<li><a href="galerie.html?name=FondationMons2015">La Fondation Mons 2015</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="upload.html">Contribution à la galerie</a></li>
+				<li><a href="upload.html" class="active">Contribution à la galerie</a></li>
 				<li>
 					<nav class="icon-inline">
 						<ul>
@@ -109,16 +109,18 @@
 							<li><a href="about.html"><i class="fa fa-info"></i></a></li>
 						</ul>
 					</nav>
-				</li>	
+				</li>
 			</ul>
 		</nav>
 	</header>
 
 	<section>
-		<p class="p-banner">Contactez-nous</p>
+		<p class="p-banner">Contribuez à la galerie</p>
 		<div class="bruce-banner"></div>
 			<div class="banner"></div>
-		<div class="contact">
+			<p class="mentions-legales">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita vitae magnam facere, molestias ducimus quam velit non voluptas eveniet a, ratione, sunt totam culpa repellendus ullam earum atque obcaecati nemo voluptatum aliquid necessitatibus quis, iure veniam. Id incidunt ex voluptate, alias aspernatur delectus autem perferendis architecto quos fuga enim reiciendis eaque a voluptatem labore, impedit magni animi maxime rem sapiente placeat quod inventore cum. Ratione quod maxime possimus. Error, atque earum minima vitae vel fugiat pariatur et commodi consequatur nisi cupiditate iure praesentium aliquam officiis beatae nam. Libero dolores earum sed, iure vero reiciendis placeat, maiores et beatae expedita dolore!</p>
+			<p class="mentions-legales">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim aspernatur nam dolorem, laudantium quas perferendis porro! Vitae voluptates quam voluptate distinctio incidunt inventore, ipsum nesciunt eos mollitia natus cupiditate odit, aut sapiente corporis quae optio assumenda voluptatum qui possimus voluptas alias quia! Optio consequatur odit maxime non, iusto amet architecto consequuntur laborum atque, veritatis saepe porro laudantium numquam. Ipsam minima rerum iusto ipsum, perspiciatis numquam quia dolores, harum commodi nemo beatae, architecto explicabo facere. Sapiente quia similique porro expedita inventore alias rerum facilis hic, quisquam quaerat magni, omnis voluptates corporis eligendi sed delectus asperiores consequatur necessitatibus illum consequuntur dicta suscipit.</p>
+		<div class="contact  border-top">
 			<form action="post">
 				<div class="label-input">
 					<label for="nom">Nom</label>
@@ -137,6 +139,36 @@
 					<br>
 					<input type="email" name="mail" id="mail" placeholder="Votre adresse e-mail" required="required">
 				</div>
+				<div class="select">
+					<div class="label-bat">
+						<label for="batiment">Choix du bâtiment</label>
+					</div>
+					<select>
+						<option value="abattoirs"><p class="bidule">Les abattoirs</p></option>
+						<option value="arsonic">L'Arsonic</option>
+						<option value="bam">Le BAM</option>
+						<option value="carreart">Le Carré des arts</option>
+						<option value="corpsdeville">Le corps de ville</option>
+						<option value="depot">Le dépôt des oeuvres d'art</option>
+						<option value="fondationmons">La Fondation Mons 2015</option>
+						<option value="garemons">La gare de Mons</option>
+						<option value="maisonfolie">La Maison Folie</option>
+						<option value="manegemons">Le Manège.Mons</option>
+					</select>
+				</div>
+
+				<div class="label-input" id="label-date">
+					<label for="date">Date de la photo</label>
+					<br>
+					<input type="date" name="date" id="date" placeholder="jj/mm/aaaa" required="required">
+				</div>
+
+				<div class="label-input">
+					<label for="photo">Votre photo</label>
+					<br>
+					<input type="file" name="photo" id="photo" accept="image/*" required="required">
+				</div>
+
 				<div class="text-comment">
 					<label for="commentaire">Commentaire</label>
 					<br>
@@ -154,8 +186,8 @@
 	<footer>
 		<p>Il était une fois … Mons © 2014 - Tous droits réservés</p>
 		<ul>
-			<li><a href="upload.html">Upload</a></li>
-			<li><a href="contact.html" class="active">Contact</a></li>
+			<li><a href="upload.html" class="active">Upload</a></li>
+			<li><a href="contact.html">Contact</a></li>
 			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 			<li><a href="#"><i class="fa fa-share"></i></a></li>

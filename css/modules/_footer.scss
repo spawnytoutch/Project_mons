@@ -11,16 +11,18 @@
 }
 
 footer {
+	@with-layout(16);
+	@include span (14 of 16);
+	@include squish (1 of 16, 1 of 16);
 	height: 50px;
-	width: 100%;
 	position: fixed;
 	bottom: 0;
 	background-color: $noir;
 	z-index: 100;
 	display: none;
+	padding: 0;
 	p {
 		color: $blanc;
-		margin: 0 0 0 50px;
 		font-size: 12px;
 		margin-top: 20px;
 		width: 300px;
@@ -28,13 +30,16 @@ footer {
 		cursor: url(../images/cursor/cursor_text.cur),auto;
 	}
 	ul {
-		width: 320px;
 		float: right;
+		padding: 0;
 	}
 	li {
 		display: inline-block;
 		float: left;
 		padding: 0 15px;
+		&:last-child {
+			padding-right: 0;
+		}
 	}
 	a {
 		font-size: 16px;
@@ -47,6 +52,8 @@ footer {
 		}
 	}
 }
+
+
 
 @include breakpoint (1024px) {
 	footer{

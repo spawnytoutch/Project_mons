@@ -1,3 +1,138 @@
 /*--------------------------------------------------*\
 		Formulaires
 \*--------------------------------------------------*/
+
+.contact {
+	@with-layout(16);
+	@include pre (1 of 16);
+	@include span (14 of 16);
+	@include post (1 of 16);
+	padding:40px 0 20px 0;
+	margin-top: 40px;
+
+
+	form {
+		// @include squish (1,1);
+		height: 100%;
+		@include span (16 of 16);
+		margin-bottom: 30px;
+		padding: 0;
+	}
+	.label-input {
+		display: block;
+		margin-bottom: 40px;
+		height: 40px;
+		padding: 0;
+	}
+	
+	label {
+		color: $couleur;
+		font-family: helvetica;
+		font-weight: 100;
+		font-size: 1em;
+		display: block;
+		margin-bottom: 5px;
+		height: 10px;
+	}
+	input {
+		width: 100%;
+		border:solid $blanc 2px;
+		background-color: $noir;
+		color: $blanc;
+		font-size: 0.8em;
+		height: 30px;
+		padding: 5px;
+	}
+	.select select {
+
+    background: transparent;
+    width: 100%;
+    padding: 5px;
+    font-size: 0.8em;
+    border: 2px solid $blanc;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    color: #ccc;
+	}
+	.select{
+    height: 85px;
+    overflow: hidden;
+    color: $blanc;
+    padding: 0;
+	}
+
+	.label-bat {
+		display: block;
+		height: 34px;
+	}
+	.text-comment {
+		display: block;
+	}
+	#commentaire {
+		@include span (16 of 16);
+		color: $blanc;
+		font-family: helvetica;
+		background-color: $noir;
+		border:solid $blanc 2px;
+		font-size: 0.8em;
+		margin-bottom: 30px;
+		min-height: 120px;
+		.text {
+			width: 100%;
+			display: block;
+
+		}
+	}
+	#valider{
+		@include pre (12 of 16);
+		@include span (4 of 16 last);
+		&:hover {
+			background-color: $couleur;
+			border: 1px solid $couleur;
+		}
+	}
+	.submit {
+		padding-bottom: 100px;
+	}
+}
+
+@include breakpoint (1024px) {
+	.label-input {
+		@include span (4 of 16);
+
+	}
+	.text {
+		height: 160px;
+	}
+	.text-comment {
+		@include span (16 of 16);
+		display: block;
+		margin-bottom: 100px;
+		height: 60px;
+		padding: 0;
+	}
+	#valide {
+		@include span (6 of 16 last);
+	}
+	.submit {
+		@include pre (10 of 16);
+		@include span (6 of 16);
+		margin-top: 60px;
+		padding-right: 0;
+	}
+	.p-banner {
+		padding-top: 40px;
+	}
+	.select {
+		@include span (4 of 16);
+	}
+	.select select {
+		height: 30px;
+	}
+	#firstname {
+		@include squish (2 of 16,2 of 16); 
+	}
+	#label-date {
+		@include squish (2 of 16,2 of 16);
+	}
+}

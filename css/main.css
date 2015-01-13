@@ -22,6 +22,31 @@ body:after { content: " "; display: block; clear: both; }
 /*--------------------------------------------------*\
 		Formulaires
 \*--------------------------------------------------*/
+.contact { @with-layout (16); margin-left: 6.25%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 87.5%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-right: 6.25%; padding: 40px 0 20px 0; margin-top: 40px; }
+.contact form { height: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-bottom: 30px; padding: 0; }
+.contact .label-input { display: block; margin-bottom: 40px; height: 40px; padding: 0; }
+.contact label { color: #00bfdf; font-family: helvetica; font-weight: 100; font-size: 1em; display: block; margin-bottom: 5px; height: 10px; }
+.contact input { width: 100%; border: solid #ffffff 2px; background-color: #131414; color: #ffffff; font-size: 0.8em; height: 30px; padding: 5px; }
+.contact .select select { background: transparent; width: 100%; padding: 5px; font-size: 0.8em; border: 2px solid #ffffff; -webkit-appearance: none; border-radius: 0px; color: #ccc; }
+.contact .select { height: 85px; overflow: hidden; color: #ffffff; padding: 0; }
+.contact .label-bat { display: block; height: 34px; }
+.contact .text-comment { display: block; }
+.contact #commentaire { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; color: #ffffff; font-family: helvetica; background-color: #131414; border: solid #ffffff 2px; font-size: 0.8em; margin-bottom: 30px; min-height: 120px; }
+.contact #commentaire .text { width: 100%; display: block; }
+.contact #valider { margin-left: 75%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: right; padding-left: 0.625%; padding-right: 0.625%; }
+.contact #valider:hover { background-color: #00bfdf; border: 1px solid #00bfdf; }
+.contact .submit { padding-bottom: 100px; }
+
+@media (min-width: 1024px) { .label-input { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
+  .text { height: 160px; }
+  .text-comment { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; display: block; margin-bottom: 100px; height: 60px; padding: 0; }
+  #valide { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 37.5%; float: right; padding-left: 0.625%; padding-right: 0.625%; }
+  .submit { margin-left: 62.5%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 37.5%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-top: 60px; padding-right: 0; }
+  .p-banner { padding-top: 40px; }
+  .select { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
+  .select select { height: 30px; }
+  #firstname { margin-left: 12.5%; margin-right: 12.5%; }
+  #label-date { margin-left: 12.5%; margin-right: 12.5%; } }
 /*--------------------------------------------------*\
 		Grille de mise en page
 \*--------------------------------------------------*/
@@ -227,10 +252,11 @@ section { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizin
 		Footer
 \*--------------------------------------------------*/
 @font-face { font-family: 'FontAwesome'; src: url("fonts/fontawesome-webfont.eot?v=4.2.0"); src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg"); font-weight: normal; font-style: normal; }
-footer { height: 50px; width: 100%; position: fixed; bottom: 0; background-color: #131414; z-index: 100; display: none; }
-footer p { color: #ffffff; margin: 0 0 0 50px; font-size: 12px; margin-top: 20px; width: 300px; float: left; cursor: url(../images/cursor/cursor_text.cur), auto; }
-footer ul { width: 320px; float: right; }
+footer { @with-layout (16); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 87.5%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-left: 6.25%; margin-right: 6.25%; height: 50px; position: fixed; bottom: 0; background-color: #131414; z-index: 100; display: none; padding: 0; }
+footer p { color: #ffffff; font-size: 12px; margin-top: 20px; width: 300px; float: left; cursor: url(../images/cursor/cursor_text.cur), auto; }
+footer ul { float: right; padding: 0; }
 footer li { display: inline-block; float: left; padding: 0 15px; }
+footer li:last-child { padding-right: 0; }
 footer a { font-size: 16px; color: #ffffff; text-decoration: none; transition: all 0.3s ease; cursor: url(../images/cursor/pointer.cur), auto; }
 footer a:hover { color: #00bfdf; }
 
@@ -262,35 +288,22 @@ section { padding: 0; }
 \*--------------------------------------------------*/
 .body-contact { overflow: auto; }
 
+.border-top { border-top: solid 1px #ffffff; }
+
+.bruce-banner { background-color: #00bfdf; height: 254px; position: absolute; top: 60px; z-index: 1; width: 100%; opacity: 0.4; }
+
+.p-banner { display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 50%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 25%; margin-right: 25%; font-family: helvetica; font-size: 2em; font-weight: 400; font-variant: small-caps; color: #ffffff; height: 50px; text-align: center; position: absolute; z-index: 3; top: 125px; }
+
 .banner { background-image: url(../images/banner.jpg); background-size: cover; height: 254px; margin-top: 60px; }
 .banner div { width: 548px; height: 50px; position: absolute; z-index: 0; top: 106px; background-color: #00bfdf; opacity: 0.5; }
 .banner .backgroundbanner { width: 365px; height: 50px; position: absolute; z-index: 0; top: 176px; background-color: #00bfdf; opacity: 0.5; }
-.banner .p-banner { display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 50%; float: left; padding-left: 0.83333%; padding-right: 0.83333%; margin-left: 25%; margin-right: 25%; font-family: helvetica; font-size: 2em; font-weight: 400; color: #ffffff; height: 50px; text-align: center; }
 
-.contact { @with-layout (16); margin-left: 6.25%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 87.5%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-right: 6.25%; padding-top: 50px; }
-.contact form { height: 100%; }
-.contact .label-input { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; display: block; margin-bottom: 40px; height: 40px; padding: 0; }
-.contact label { color: #00bfdf; font-family: helvetica; font-weight: 100; font-size: 1em; display: block; margin-bottom: 5px; height: 10px; }
-.contact input { width: 100%; border: solid #ffffff 2px; background-color: #131414; color: #ffffff; font-size: 0.8em; height: 30px; padding: 5px; }
-.contact .select select { background: transparent; width: 100%; padding: 5px; font-size: 0.8em; border: 2px solid #ffffff; -webkit-appearance: none; border-radius: 0px; color: #ccc; }
-.contact .select { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; height: 85px; overflow: hidden; color: #ffffff; padding: 0; }
-.contact .label-bat { display: block; height: 34px; }
-.contact .text-comment { display: block; }
-.contact #commentaire { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-top: 30px; color: #ffffff; font-family: helvetica; background-color: #131414; border: solid #ffffff 2px; font-size: 0.8em; margin-bottom: 30px; }
-.contact #commentaire .text { width: 100%; display: block; }
-.contact #valider { margin-left: 75%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
-.contact #valider:hover { background-color: #00bfdf; border: 1px solid #00bfdf; }
-.contact .submit { padding-bottom: 100px; }
+.mentions-legales { @with-layout (16); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 87.5%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-left: 6.25%; margin-right: 6.25%; padding: 0; margin-top: 40px; margin-bottom: 0; }
 
 @media (min-width: 1024px) { .body-contact { overflow: auto; }
   .banner { margin: 0; margin-top: 96px; display: block; }
-  .label-input { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
-  .text { height: 160px; }
-  .text-comment { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; float: left; padding-left: 0.625%; padding-right: 0.625%; display: block; margin-bottom: 100px; height: 60px; }
-  .submit { margin-left: 75%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-top: 60px; }
-  .p-banner { padding-top: 40px; }
-  .select { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 25%; float: left; padding-left: 0.625%; padding-right: 0.625%; }
-  .select select { height: 30px; } }
+  .bruce-banner { top: 96px; }
+  .mentions-legales { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 37.5%; float: left; padding-left: 0.625%; padding-right: 0.625%; margin-left: 6.25%; margin-right: 6.25%; padding: 0; margin-top: 80px; } }
 /*--------------------------------------------------*\
 		Instructions
 \*--------------------------------------------------*/
