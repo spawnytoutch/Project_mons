@@ -12,9 +12,6 @@ body:after { content: " "; display: block; clear: both; }
 
 ::-moz-selection { background: #00bfdf; }
 
-/* .body-gallery {
-	overflow: hidden;
-} */
 .overflow-on { overflow-y: scroll; }
 
 .overflow-off { overflow: hidden; }

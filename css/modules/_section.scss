@@ -49,7 +49,6 @@
 	border-top: 1px solid $couleur;
 	border-right: 1px solid $couleur;
 	@include transform(rotate(45deg));
-	//transform: rotate(45deg);
 }
 
 /*-----------------------------*\

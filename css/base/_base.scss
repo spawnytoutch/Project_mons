@@ -24,9 +24,6 @@ body {
 ::-moz-selection {
   background: $couleur;
 }
-/* .body-gallery {
-	overflow: hidden;
-} */
 .overflow-on {
 	overflow-y: scroll;
 }
@@ -38,5 +35,4 @@ body {
 }
 .display-off {
 		display: none;
-		//height: 0;
 }

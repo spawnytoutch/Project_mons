@@ -9,10 +9,7 @@
 	@include post (1 of 16);
 	padding:40px 0 20px 0;
 	margin-top: 40px;
-
-
 	form {
-		// @include squish (1,1);
 		height: 100%;
 		@include span (16 of 16);
 		margin-bottom: 30px;
@@ -24,7 +21,6 @@
 		height: 40px;
 		padding: 0;
 	}
-	
 	label {
 		color: $couleur;
 		font-family: helvetica;
@@ -44,7 +40,6 @@
 		padding: 5px;
 	}
 	.select select {
-
     background: transparent;
     width: 100%;
     padding: 5px;
@@ -60,7 +55,6 @@
     color: $blanc;
     padding: 0;
 	}
-
 	.label-bat {
 		display: block;
 		height: 34px;
@@ -80,7 +74,6 @@
 		.text {
 			width: 100%;
 			display: block;
-
 		}
 	}
 	#valider{
@@ -95,11 +88,9 @@
 		padding-bottom: 100px;
 	}
 }
-
 @include breakpoint (1024px) {
 	.label-input {
 		@include span (4 of 16);
-
 	}
 	.text {
 		height: 160px;
@@ -130,7 +121,7 @@
 		height: 30px;
 	}
 	#firstname {
-		@include squish (2 of 16,2 of 16); 
+		@include squish (2 of 16,2 of 16);
 	}
 	#label-date {
 		@include squish (2 of 16,2 of 16);
