@@ -2,17 +2,18 @@
 		Admin
 \*--------------------------------------------------*/
 #body-admin{
-	background-color: $couleur;
+	background-color: $blanc;
 }
 .titre-admin{
 	@include span (2);
 	@include squish (1,9);
 	padding: 0;
-	margin-top: 32px;
+	margin-top: 96px;
+	color: $couleur;
 }
 .info-admin{
-	@include span (5);
-	@include pre (1);
+	@include span (10);
+	@include squish (1,1);
 	padding: 0;
 	p{
 		margin-top: 0;
@@ -32,7 +33,7 @@
 	padding: 0;
 }
 .info-recue{
-	color: $blanc;
+	color: $couleur;
 	height: 30px;
 	text-align: right;
 	padding: 0;
@@ -40,29 +41,63 @@
 .info-commentaire {
 	clear: both;
 	padding: 0;
+	color: $couleur;
 }
 .photo-admin{
-	@include span (5);
-	@include post (1);
-	padding: 0;
-	padding-left:35px; 
+	@include span (10);
+	@include squish (1,1);
+	padding: 0; 
 	img{
 		max-width: 100%
 	}
 }
 .boutton-admin{
+	@include span (10);
+	@include squish (1,1);
+	padding: 0;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	button{
+		@include span (4);
+		@include squish (1,1);
+		padding: 0;
+		height: 35px;
+		color: $couleur;
+		background: transparent;
+		border: solid 2px $couleur;
+		&:hover {
+			color: $blanc;
+			background-color: $couleur;
+		}
+	}
+}
+@include breakpoint (1024px) {
+	.info-admin{
+	@include span (5);
+	@include squish (1,0);
+	padding: 0;
+	p{
+		margin-top: 0;
+		}
+	}
+	.photo-admin{
+	@include span (5);
+	@include squish (0,1);
+	padding: 0;
+	padding-left:35px; 
+	img{
+		max-width: 100%
+		}
+	}
+	.boutton-admin{
 	@include span (2);
 	@include squish (9,2);
 	padding: 0;
 	button{
 		@include span (5);
-		@include pre (1);
+		@include squish (1,0);
 		padding: 0;
 		height: 35px;
-		color: $blanc;
-		background-color: $couleur;
-		border: solid 1px $blanc;
-
 	}
-	clear: both;
+}
 }
