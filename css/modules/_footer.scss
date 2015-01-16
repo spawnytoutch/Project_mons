@@ -12,8 +12,7 @@
 
 footer {
 	@with-layout(16);
-	@include span (14 of 16);
-	@include squish (1 of 16, 1 of 16);
+	@include span(16 of 16);
 	height: 50px;
 	position: fixed;
 	bottom: 0;
@@ -21,6 +20,11 @@ footer {
 	z-index: 100;
 	display: none;
 	padding: 0;
+	.footer {
+		@include span (14 of 16);
+		@include squish (1 of 16, 1 of 16);
+		padding: 0;
+	}
 	p {
 		color: $blanc;
 		font-size: 12px;

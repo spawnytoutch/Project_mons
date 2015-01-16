@@ -13,19 +13,22 @@
 	z-index: 78;
 	background-color: $noir;
 	opacity: 0.9;
+	// overflow: auto;
 	h2 {
 		cursor: url(../images/cursor/cursor_text.cur),auto;
 	}
 }
 
 .comments {
+	position: relative;
+	z-index: 111;
 	margin: 0;
 	padding: 30px 50px;
 	font-family: helvetica, sans-serif;
 	color: $blanc;
 	text-align: left;
-	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
+	overflow-y: auto;
+	// -webkit-overflow-scrolling: touch;
 	p {
 		margin-top: 150px;
 	}
