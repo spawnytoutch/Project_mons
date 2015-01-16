@@ -1,0 +1,68 @@
+/*--------------------------------------------------*\
+		PAGE 404
+\*--------------------------------------------------*/
+
+@font-face {
+    font-family: 'MavenProRegular';
+    src: url('../fonts/regular/maven_pro_regular-webfont.eot');
+    src: url('../fonts/regular/maven_pro_regular-webfont.eot?#iefix') format('eot'),
+         url('../fonts/regular/maven_pro_regular-webfont.woff') format('woff'),
+         url('../fonts/regular/maven_pro_regular-webfont.ttf') format('truetype'),
+         url('../fonts/regular/maven_pro_regular-webfont.svg#webfontOM8fITNz') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.body-404 {
+		@include container (100%);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: $couleur;
+	cursor: url(../images/cursor/cursor_current.cur),auto;
+}
+.nf {
+	@include span (10);
+	@include squish (1,1);
+	height: 100%;
+}
+.error-404 {
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	height: 100%;
+	padding-top: 300px;
+}
+.h1-404 {
+		font-size: 6em;
+		margin-bottom: 0;
+		margin-top: 0;
+		font-family: 'MavenProRegular';
+}
+.page-not-found {
+	font-size: 1em;
+	font-family: 'MavenProRegular';
+}
+.back-404 {
+    @include span (8);
+    @include squish (2,2);
+	position: relative;
+	bottom: 60px;
+	color: $blanc;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+	-webkit-transition: padding-left 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: padding-left 0.3s;
+    a {
+    	display: block;
+
+
+
+    }
+	&:hover {
+		padding-left: 20px;
+		opacity: 0.7;
+	}
+}
