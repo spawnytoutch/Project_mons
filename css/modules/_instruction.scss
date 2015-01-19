@@ -1,20 +1,12 @@
 /*--------------------------------------------------*\
 		Instructions
 \*--------------------------------------------------*/
-
-// g:hover *{
-// 	stroke: #00bfdf;
-// }
 rect:hover, rect:hover+g>* {
 	stroke:$couleur;
 }
 g:hover #roulette{
 	stroke:$couleur;
 }
-// body {
-// 	background-image: url(../images/bg.jpg);
-// 	background-size: cover;
-// }
 .howto {
 	font-family: Helvetica;
 	font-weight: 100;
@@ -61,4 +53,3 @@ g:hover #roulette{
 		width: 100%;
 	}
 }
-

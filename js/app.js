@@ -1,22 +1,24 @@
  (function($){
 	$(document).ready(function(){
-
+		
+		displayUtils.init();
 		if(testUrl){
 				handlers.init();
 		}
-		displayUtils.init();
+		
 	});
 
 	var urlTmp = window.location.href;
 	var testUrl = urlTmp.indexOf("galerie.html") > -1;
-	var urlSplit, nameBuilding, buildingHistory, posMouse, truc;
+	var urlSplit, nameBuilding, buildingHistory, posMouse, truc, mc, elem;
 	var panelVal = 0;
 	var indexImg = 0;
 	var overLeftPanel = false;
-	var elem = document.getElementById('section-gallery');
-	var mc = new Hammer(elem);
+	
 	var handlers = {
 		init: function(){
+				var elem = document.getElementById('section-gallery');
+				var mc = new Hammer(elem);
 				handlers.dataJson();
 				handlers.callAjax();
 				//mc.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL});
@@ -27,7 +29,8 @@
 				$('.arrow-down').bind({click: handlers.afterImg});
 				$('.btn-comments').bind({click: handlers.openComments});
 				$('.btn-timeline').bind({click: handlers.openTimeline});
-				$('#closeBtn').bind({click: handlers.closePanels});
+				$('#leftBtnClose').bind({click: handlers.closePanels});
+				$('#rightBtnClose').bind({click: handlers.closePanels});
 				$('.section-galerie').bind({mousewheel: handlers.mousewheelHandlers});
 				$(window).bind('keydown', function(e) {
 					switch(e.keyCode) {
@@ -295,6 +298,8 @@
 		init: function(){
 				$(window).load(displayUtils.resizeWindow);
 				$(window).resize(displayUtils.resizeWindow);
+				$('#btnPopIn').bind({click: displayUtils.showInstructions});
+				$('#pop-in').bind({click: displayUtils.showInstructions});
 				$('#burger-button').bind({click: displayUtils.toggleMenuBurger});
 				$('#burger-button-gallery').bind({click: displayUtils.toggleMenuBurgerGallery});
 		},
@@ -303,6 +308,9 @@
 				var posTmpFooterTimeline = ($(window).innerHeight())-50;
 				$('.box-arrow.down').css({'top':posTmpArrow});
 				$('.footer-nav').css({'top':posTmpFooterTimeline});
+		},
+		showInstructions: function(){
+			$('.pop-in').toggleClass('display-off');
 		},
 		toggleMenuBurgerGallery: function(){
 			$('.header-mobile-nav').toggleClass('display-off');
