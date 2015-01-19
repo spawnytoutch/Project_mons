@@ -11,14 +11,29 @@ rect:hover, rect:hover+g>* {
 g:hover #roulette{
 	stroke:$couleur;
 }
-// body {
-// 	background-image: url(../images/bg.jpg);
-// 	background-size: cover;
-// }
+.overlay-popin {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+
+}
+.content-popin {
+	position: absolute;
+	top: 20%;
+	right: 0;
+	left: 0;
+}
+.fa-popin {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
 .howto {
 	font-family: Helvetica;
 	font-weight: 100;
-	margin-top: 200px;
 	text-align: center;
 }
 .text1{
@@ -29,18 +44,10 @@ g:hover #roulette{
 	font-size: 16px;
 	font-weight: 300;
 }
-.marge{
-	@include span(3);
-	height: 210px;
-}
-.margelast{
-	@include span(3 last);
-	height: 210px;
-	padding-right: 0;
-}
-
 .arrows{
+	@include pre (3);
 	@include span (2);
+	padding: 0;
 	#Layer_1 {
 		width: 100%;
 	}
@@ -50,13 +57,13 @@ g:hover #roulette{
 	height: 150px;
 	margin-top: 55px;
 	border-right: 3px solid $blanc;
-}
-.space {
-	@include span (1);
-	height: 150px;
+	padding: 0;
 }
 .mouse {
+	@include pre (1);
 	@include span (2);
+	@include post (3);
+	padding: 0;
 	#Layer_2 {
 		width: 100%;
 	}
