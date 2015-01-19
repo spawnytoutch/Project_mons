@@ -29,6 +29,7 @@ body {
 }
 .overflow-off {
 	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 .active {
 	color:$couleur !important;
@@ -36,3 +37,4 @@ body {
 .display-off {
 		display: none;
 }
+

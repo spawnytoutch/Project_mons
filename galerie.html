@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="overflow-off">
 
 <head>
 	<meta charset="UTF-8" />
@@ -114,7 +114,14 @@
 		</ul>
 	</nav>
 
-	<section class="section-galerie overflow-off">
+	<section id="section-gallery" class="section-galerie overflow-off">
+
+		<!-- Div injection photo -->
+			<div id="gallery-photo" class="gallery-photo"></div>
+
+		<!-- Div Animate -->
+			<div id="leftClac" class="leftClac"></div>
+			<div id="rightClac" class="rightClac"></div>
 		<!-- Titre de la photo & date -->
 			<div class="block-title">
 				<h2></h2>
@@ -182,7 +189,9 @@
 	</footer>
 
 		<script type="text/javascript" src="js/libs/jquery.js"></script>
+		<script type="text/javascript" src="js/libs/hammer.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/testswipe.js"></script>
 
 </body>
 </html>

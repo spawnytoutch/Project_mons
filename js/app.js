@@ -1,4 +1,4 @@
-(function($){
+ (function($){
 	$(document).ready(function(){
 
 		if(testUrl){
@@ -65,7 +65,7 @@
 			});
 		},
 		initializeDisplay: function(){
-				$('.section-galerie').css('background-image', 'url('+ buildingHistory[0]["image"] +')');
+				$('#gallery-photo').css('background-image', 'url('+ buildingHistory[0]["image"] +')');
 				$('.title-picture h1').text(buildingHistory[0]["titleImg"]);
 				$('.comments p').text(buildingHistory[0]["comment"]);
 				for (i = 0; i < buildingHistory.length; i++){
@@ -133,8 +133,16 @@
 				$('.timeline p').removeClass('timeline-p-hover');
 				$('.timeline p:eq('+indexImg+')').addClass('timeline-p-hover');
 		},
+		changeBackground: function(){
+			var cssFunction = setTimeout(function(){
+				$('#leftClac').css('left', '0').css('left', '-50%');
+			}, 500);
+			//$('#leftClac').css('left', '0').delay(200).css('background-color', 'red');
+			//$('#rightClac').css('right', '50%');
+			$('#gallery-photo').css('background-image', 'url('+ buildingHistory[indexImg]['image'] +')');
+		},
 		changeImg: function(){
-				$('.section-galerie').css('background-image', 'url('+ buildingHistory[indexImg]['image'] +')');
+				$('#gallery-photo').fadeOut(500).fadeIn(500, handlers.changeBackground());
 				$('.title-picture h1').text(buildingHistory[indexImg]['titleImg']);
 				$('.comments p').text(buildingHistory[indexImg]['comment']);
 				$('.block-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');

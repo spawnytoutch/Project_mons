@@ -33,7 +33,7 @@
 	p {
 		margin-top: 150px;
 	}
-/* 	a {
+/*a {
 	position: absolute;
 	width: 100%;
 	top: 174px;
@@ -67,7 +67,33 @@ section {
 	background-attachment: fixed;
 	background-size: cover;
 }
-
+.gallery-photo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.leftClac {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: -50%;
+	background-color: $noir;
+	@include transition(all 1s ease);
+}
+.rightClac {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	right: -50%;
+	background-color: $noir;
+	transition: all 1s ease;
+}
 .section-galerie {
 	padding: 0;
 }
