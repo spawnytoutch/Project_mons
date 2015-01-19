@@ -55,6 +55,13 @@
 	@include transform(rotate(45deg));
 }
 
+.fa-left {
+	position: absolute;
+	padding-top: 140px;
+	right: 25px;
+	z-index: 120;
+}
+
 /*-----------------------------*\
 		Partie centrale
 \*-----------------------------*/
@@ -329,9 +336,23 @@ font-style: italic;
 		top: 110px;
 	}
 	.comments {
-		padding: 200px 50px;
+		padding:180px 50px 0 50px;
 	}
 	.footer-nav {
 		display: none;
 	}
+	.comments p {
+		margin-top: 40px;
+	}
+	.fa-left {
+	position: absolute;
+	padding-top: 180px;
+	right: 30px;
+	}
+	.fa-right {
+	position: absolute;
+	padding-top: 105px;
+	left: 15px;
+	}
+
 }
