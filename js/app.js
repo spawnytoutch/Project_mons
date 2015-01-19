@@ -13,15 +13,21 @@
 	var panelVal = 0;
 	var indexImg = 0;
 	var overLeftPanel = false;
+	var elem = document.getElementById('section-gallery');
+	var mc = new Hammer(elem);
 	var handlers = {
 		init: function(){
 				handlers.dataJson();
 				handlers.callAjax();
+				//mc.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL});
+				mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL});
+				mc.on("swipeleft swiperight swipeup swipedown", handlers.hammerHandlers);
+				//new Hammer(elem,{preventDefault: true}).on('swiperight swipeleft panup pandown', handlers.hammerHandlers);
 				$('.arrow-up').bind({click: handlers.beforeImg});
 				$('.arrow-down').bind({click: handlers.afterImg});
 				$('.btn-comments').bind({click: handlers.openComments});
 				$('.btn-timeline').bind({click: handlers.openTimeline});
-				$('.fa-close').bind({click: handlers.closePanels});
+				$('#closeBtn').bind({click: handlers.closePanels});
 				$('.section-galerie').bind({mousewheel: handlers.mousewheelHandlers});
 				$(window).bind('keydown', function(e) {
 					switch(e.keyCode) {
@@ -46,6 +52,30 @@
 						break;
 					}
 				});
+		},
+		hammerHandlers: function(e){
+			// e.stopPropagation();
+			console.log(e.type);
+			switch(e.type) {
+						case 'swiperight': 
+						alert('r');
+						handlers.openComments();
+						break;
+						case 'swipeleft':
+						alert('l');
+						handlers.closePanels();
+						break;
+						case 'swipeup': // Haut
+						alert('u');
+						handlers.beforeImg();
+						break;
+						case 'swipedown': // Bas
+						alert('d');
+						handlers.afterImg();
+						break;
+						default:
+						break;
+					}
 		},
 		dataJson: function(){
 			urlSplit = urlTmp.split('?');
@@ -135,14 +165,12 @@
 		},
 		changeBackground: function(){
 			var cssFunction = setTimeout(function(){
-				$('#leftClac').css('left', '0').css('left', '-50%');
-			}, 500);
-			//$('#leftClac').css('left', '0').delay(200).css('background-color', 'red');
-			//$('#rightClac').css('right', '50%');
-			$('#gallery-photo').css('background-image', 'url('+ buildingHistory[indexImg]['image'] +')');
+				$('#gallery-photo').css('background-image', 'url('+ buildingHistory[indexImg]['image'] +')').fadeIn(500);
+			}, 600);
 		},
 		changeImg: function(){
-				$('#gallery-photo').fadeOut(500).fadeIn(500, handlers.changeBackground());
+				$('#gallery-photo').fadeOut(500, handlers.changeBackground());
+				
 				$('.title-picture h1').text(buildingHistory[indexImg]['titleImg']);
 				$('.comments p').text(buildingHistory[indexImg]['comment']);
 				$('.block-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');
