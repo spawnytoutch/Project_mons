@@ -2,9 +2,9 @@
 		Instructions
 \*--------------------------------------------------*/
 
-// g:hover *{
-// 	stroke: #00bfdf;
-// }
+//	g:hover *{
+//	stroke: #00bfdf;
+//	}
 rect:hover, rect:hover+g>* {
 	stroke:$couleur;
 }
@@ -37,12 +37,12 @@ g:hover #roulette{
 	text-align: center;
 }
 .text1{
-	display: none;
-	margin: 10px 0 0 10px;
+	padding-top: 300px;
 	font-family: Helvetica;
 	color:#00bfdf;
 	font-size: 16px;
 	font-weight: 300;
+	text-align: center;
 }
 .arrows{
 	@include pre (3);
@@ -68,4 +68,3 @@ g:hover #roulette{
 		width: 100%;
 	}
 }
-
