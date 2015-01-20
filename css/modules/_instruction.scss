@@ -24,19 +24,22 @@ g:hover #roulette{
 	right: 0;
 	left: 0;
 }
-.fa-popin {
+.cross-popin {
 	position: absolute;
 	top: 50px;
 	right: 50px;
+	svg:hover>* {
+		stroke:$couleur;
+	}
 }
 .howto {
-	font-family: Helvetica;
+	font-family: $font;
 	font-weight: 100;
 	text-align: center;
 }
 .text1{
 	padding-top: 300px;
-	font-family: Helvetica;
+	font-family: $font;
 	color:#00bfdf;
 	font-size: 16px;
 	font-weight: 300;

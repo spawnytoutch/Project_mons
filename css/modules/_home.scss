@@ -3,14 +3,21 @@
 \*--------------------------------------------------*/
 
 .home-bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 	background-image: url(../images/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
+	z-index: 1;
 }
 
 .logo-mons {
+	position: relative;
 	margin: 0 auto;
 	margin-top: 60px;
 	display: block;
@@ -18,22 +25,27 @@
 	width: 150px;
 	border-radius: 50%;
 	margin-bottom: 50px;
+	z-index: 2;
 }
 
 .home-title {
 	width: 85%;
 	margin: 50px auto;
-	font-family: helvetica;
+	font-family: $fontlight;
 	font-weight: 100;
 	font-size: 20px;
+	z-index: 2;
+	position: relative;
 }
 
 .gras{
-	font-weight: 800;
+	font-family: $fontbold;
 }
 
 .buttons{
+	position: relative;
 	height: 50px;
+	z-index: 2;
 	ul {
 		@include span (12);
 		list-style: none;
@@ -53,7 +65,7 @@
 	}
 	a {
 	display: block;
-	line-height: 50px;
+	line-height: 44px;
 	height: 50px;
 	text-align: center;
 	text-decoration: none;

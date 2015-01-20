@@ -10,13 +10,16 @@ html {
 }
 body {
 	@include container (100%);
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: $noir;
-	font-family: Arial, sans-serif;
+	font-family: $font;
 	color: $blanc;
 	cursor: url(../images/cursor/cursor_current.cur),auto;
+}
+
+.height-100 {
+    height: 100%;
 }
 ::selection {
   background: $couleur;
@@ -37,4 +40,67 @@ body {
 .display-off {
 		display: none;
 }
+.blur-filter {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
 
+@font-face {
+    font-family: 'MavenProRegular';
+    src: url('../fonts/regular/maven_pro_regular-webfont.eot');
+    src: url('../fonts/regular/maven_pro_regular-webfont.eot?#iefix') format('eot'),
+         url('../fonts/regular/maven_pro_regular-webfont.woff') format('woff'),
+         url('../fonts/regular/maven_pro_regular-webfont.ttf') format('truetype'),
+         url('../fonts/regular/maven_pro_regular-webfont.svg#webfontOM8fITNz') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'alegreya_sansregular';
+    src: url('../fonts/alegrya/alegreyasans-regular-webfont.eot');
+    src: url('../fonts/alegrya/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alegrya/alegreyasans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/alegrya/alegreyasans-regular-webfont.woff') format('woff'),
+         url('../fonts/alegrya/alegreyasans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/alegrya/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alegreya_sansextrabold';
+    src: url('../fonts/alegrya/alegreyasans-extrabold-webfont.eot');
+    src: url('../fonts/alegrya/alegreyasans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alegrya/alegreyasans-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/alegrya/alegreyasans-extrabold-webfont.woff') format('woff'),
+         url('../fonts/alegrya/alegreyasans-extrabold-webfont.ttf') format('truetype'),
+         url('../fonts/alegrya/alegreyasans-extrabold-webfont.svg#alegreya_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'alegreya_sansthin';
+    src: url('../fonts/alegrya/alegreyasans-thin-webfont.eot');
+    src: url('../fonts/alegrya/alegreyasans-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alegrya/alegreyasans-thin-webfont.woff2') format('woff2'),
+         url('../fonts/alegrya/alegreyasans-thin-webfont.woff') format('woff'),
+         url('../fonts/alegrya/alegreyasans-thin-webfont.ttf') format('truetype'),
+         url('../fonts/alegrya/alegreyasans-thin-webfont.svg#alegreya_sansthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

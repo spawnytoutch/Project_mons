@@ -78,7 +78,7 @@ header {
 		font-weight: 100;
 		margin: 0;
 		line-height: 60px;
-		font-family: helvetica;
+		font-family: $font;
 		z-index: 111;
 	}
 }
@@ -136,7 +136,7 @@ header {
 		text-decoration: none;
 		border-bottom: solid 1px $blanc;
 		color:$blanc;
-		font-family: helvetica;
+		font-family: $font;
 		font-size: 1.2em;
 		font-weight: 100;
 		@include span (12);
@@ -168,7 +168,7 @@ header {
 		text-decoration: none;
 		border-bottom: solid 1px $blanc;
 		color:$blanc;
-		font-family: helvetica;
+		font-family: $font;
 		font-size: 1.2em;
 		font-weight: 100;
 	}

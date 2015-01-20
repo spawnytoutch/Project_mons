@@ -23,7 +23,7 @@
 	}
 	label {
 		color: $couleur;
-		font-family: helvetica;
+		font-family: $font;
 		font-weight: 100;
 		font-size: 1em;
 		display: block;
@@ -65,7 +65,7 @@
 	#commentaire {
 		@include span (16 of 16);
 		color: $blanc;
-		font-family: helvetica;
+		font-family: $font;
 		background-color: $noir;
 		border:solid $blanc 2px;
 		font-size: 0.8em;

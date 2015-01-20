@@ -23,7 +23,7 @@
 	z-index: 111;
 	margin: 0;
 	padding: 30px 50px;
-	font-family: helvetica, sans-serif;
+	font-family: $font;
 	color: $blanc;
 	text-align: left;
 	overflow-y: auto;
@@ -216,7 +216,7 @@ font-style: italic;
 	bottom: 50px;
 	padding: 0;
 	ul {
-		height: 310px;
+		// height: 310px;
 		list-style: none;
 		padding: 0 15px 0 15px;
 		position: absolute;
@@ -234,7 +234,7 @@ font-style: italic;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 100;
-		font-family: helvetica, sans-serif;
+		font-family: $font;
 		color: white;
 		letter-spacing: 5px;
 		bottom: 30px;
@@ -245,6 +245,9 @@ font-style: italic;
 				background-color: $noir;
 			}
 	}
+}
+.timeline-mobile-p-hover {
+	background-color: $noir;
 }
 /*-----------------------------*\
 		Partie droite
@@ -287,7 +290,7 @@ font-style: italic;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 100;
-		font-family: helvetica, sans-serif;
+		font-family: $font;
 		color: white;
 		letter-spacing: 10px;
 		bottom: 30px;
