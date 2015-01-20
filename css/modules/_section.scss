@@ -6,31 +6,40 @@
 \*-----------------------------*/
 .left-panel {
 	position: absolute;
-	@include span (12);
-	height: 100%;
+	top: 0;
 	left: -100%;
+	height: 100%;
+	@include span(12);
+	padding: 0;
 	z-index: 78;
 	background-color: $noir;
 	opacity: 0.9;
-	// overflow: auto;
 	h2 {
 		cursor: url(../images/cursor/cursor_text.cur),auto;
 	}
 }
-.comments {
-	position: relative;
-	height: 100%;
-	z-index: 111;
-	margin: 0;
-	padding: 30px 50px;
-	font-family: $font;
-	color: $blanc;
-	text-align: left;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	p {
-		margin-top: 150px;
+.cross-left-panel {
+	position: absolute;
+	top: 20px;
+	height: 50px;
+	@include pre(1 of 16);
+	@include span(14 of 16);
+	@include post(1 of 16);
+	padding: 0;
+	z-index: 150;
+	svg {
+		position: absolute;
+		right: 0;
 	}
+}
+.comments {
+	height: 100%;
+	@include pre(2 of 16);
+	@include span(12 of 16);
+	@include post(2 of 16);
+	padding: 50px 0 0 0;
+	color: $blanc;
+	overflow-y: auto;
 }
 .btn-comments {
 	right: -21px;
@@ -40,30 +49,23 @@
 	border-right: 1px solid $couleur;
 	@include transform(rotate(45deg));
 }
-.fa-left {
-	position: absolute;
-	top: 137px;
-	right: 20px;
-	z-index: 120;
-}
 /*-----------------------------*\
 		Partie centrale
 \*-----------------------------*/
 section {
-	@include span (12);
-	padding: 0;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
+	position: absolute;
+	top: 60px;right: 0;bottom: 50px;left: 0;
+	// @include span (12);
+	// padding: 0;
+	// height: 100%;
+	// background-repeat: no-repeat;
+	// background-position: center;
+	// background-attachment: fixed;
+	// background-size: cover;
 }
 .gallery-photo {
-	position: absolute;
-	top: 96px;
-	left: 0;
-	right: 0;
-	bottom: 50px;
+	height: 100%;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
@@ -157,9 +159,9 @@ section {
 .block-title{
     position: absolute;
     @include span (12);
-    height: 60px;
-    top:60px;
+    top: 0;
     left: 0;
+    height: 60px;
     background-color: $couleur;
     z-index: 79;
     h2 {
@@ -314,6 +316,12 @@ font-style: italic;
 }
 
 @include breakpoint (1024px) {
+	section {
+		top: 96px;
+	}
+	.gallery-photo {
+		top: 96px;
+	}
     .block-title, .left-panel {
 		@include span (5);
     }
@@ -341,7 +349,7 @@ font-style: italic;
 		display: none;
 	}
 	.comments p {
-		margin-top: 40px;
+		margin-top: 140px;
 	}
 	.fa-left {
 		top: 173px;

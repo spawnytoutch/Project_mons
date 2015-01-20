@@ -10,6 +10,14 @@ rect:hover, rect:hover+g>* {
 g:hover #roulette{
 	stroke:$couleur;
 }
+.pop-in {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+}
 .overlay-popin {
 	position: absolute;
 	top: 0;
@@ -38,12 +46,13 @@ g:hover #roulette{
 	text-align: center;
 }
 .text1{
-	padding-top: 300px;
-	font-family: $font;
+	@include pre(3);
+	@include span(6);
+	@include post(3);
+	padding: 0;
 	color:#00bfdf;
 	font-size: 16px;
 	font-weight: 300;
-	text-align: center;
 }
 .arrows{
 	@include pre (3);

@@ -29,10 +29,10 @@ body {
 }
 .overflow-on {
 	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
 }
 .overflow-off {
 	overflow: hidden;
-	-webkit-overflow-scrolling: touch;
 }
 .active {
 	color:$couleur !important;
