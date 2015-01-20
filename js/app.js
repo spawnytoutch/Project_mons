@@ -1,30 +1,28 @@
  (function($){
 	$(document).ready(function(){
-		
+
 		displayUtils.init();
 		if(testUrl){
 				handlers.init();
 		}
-		
+
 	});
 
 	var urlTmp = window.location.href;
 	var testUrl = urlTmp.indexOf("galerie.html") > -1;
-	var urlSplit, nameBuilding, buildingHistory, posMouse, truc, mc, elem;
+	var urlSplit, nameBuilding, buildingHistory, elem, mc;
 	var panelVal = 0;
 	var indexImg = 0;
 	var overLeftPanel = false;
-	
+
 	var handlers = {
 		init: function(){
-				var elem = document.getElementById('section-gallery');
-				var mc = new Hammer(elem);
+				elem = document.getElementById('section-gallery');
+				mc = new Hammer(elem);
 				handlers.dataJson();
 				handlers.callAjax();
-				//mc.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL});
 				mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL});
 				mc.on("swipeleft swiperight swipeup swipedown", handlers.hammerHandlers);
-				//new Hammer(elem,{preventDefault: true}).on('swiperight swipeleft panup pandown', handlers.hammerHandlers);
 				$('.arrow-up').bind({click: handlers.beforeImg});
 				$('.arrow-down').bind({click: handlers.afterImg});
 				$('.btn-comments').bind({click: handlers.openComments});
@@ -57,10 +55,8 @@
 				});
 		},
 		hammerHandlers: function(e){
-			// e.stopPropagation();
-			console.log(e.type);
 			switch(e.type) {
-						case 'swiperight': 
+						case 'swiperight':
 						alert('r');
 						handlers.openComments();
 						break;
@@ -68,11 +64,11 @@
 						alert('l');
 						handlers.closePanels();
 						break;
-						case 'swipeup': // Haut
+						case 'swipeup':
 						alert('u');
 						handlers.beforeImg();
 						break;
-						case 'swipedown': // Bas
+						case 'swipedown':
 						alert('d');
 						handlers.afterImg();
 						break;
@@ -173,7 +169,6 @@
 		},
 		changeImg: function(){
 				$('#gallery-photo').fadeOut(500, handlers.changeBackground());
-				
 				$('.title-picture h1').text(buildingHistory[indexImg]['titleImg']);
 				$('.comments p').text(buildingHistory[indexImg]['comment']);
 				$('.block-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');
@@ -298,8 +293,14 @@
 		init: function(){
 				$(window).load(displayUtils.resizeWindow);
 				$(window).resize(displayUtils.resizeWindow);
-				$('#btnPopIn').bind({click: displayUtils.showInstructions});
-				$('#pop-in').bind({click: displayUtils.showInstructions});
+				$('#btn-pop-in').bind({click: displayUtils.showInstructions});
+				$('#btn-close-pop-in').bind({click: displayUtils.showInstructions});
+				$('.overlay-popin').bind({click: displayUtils.showInstructions});
+				$('.key1').bind({mouseenter: displayUtils.showTextInstructionsKeyLeft, mouseleave: displayUtils.showTextInstructionsKeyLeft});
+				$('.key2').bind({mouseenter: displayUtils.showTextInstructionsKeyDown, mouseleave: displayUtils.showTextInstructionsKeyDown});
+				$('.key3').bind({mouseenter: displayUtils.showTextInstructionsKeyUp, mouseleave: displayUtils.showTextInstructionsKeyUp});
+				$('.key4').bind({mouseenter: displayUtils.showTextInstructionsKeyRight, mouseleave: displayUtils.showTextInstructionsKeyRight});
+				$('.mouse').bind({mouseenter: displayUtils.showTextInstructionsMouse, mouseleave: displayUtils.showTextInstructionsMouse});
 				$('#burger-button').bind({click: displayUtils.toggleMenuBurger});
 				$('#burger-button-gallery').bind({click: displayUtils.toggleMenuBurgerGallery});
 		},
@@ -311,6 +312,21 @@
 		},
 		showInstructions: function(){
 			$('.pop-in').toggleClass('display-off');
+		},
+		showTextInstructionsKeyLeft: function(){
+			$('.text1').toggleClass('display-off').html('Touche Gauche :'+'<br>'+'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, enim doloribus in perspiciatis delectus molestiae mollitia adipisci. Repudiandae impedit perspiciatis labore, provident laudantium aperiam pariatur.');
+		},
+		showTextInstructionsKeyRight: function(){
+			$('.text1').toggleClass('display-off').text('Touche Droite');
+		},
+		showTextInstructionsKeyUp: function(){
+			$('.text1').toggleClass('display-off').text('Touche Haut');
+		},
+		showTextInstructionsKeyDown: function(){
+			$('.text1').toggleClass('display-off').text('Touche Bas');
+		},
+		showTextInstructionsMouse: function(){
+			$('.text1').toggleClass('display-off').text('Scroll de la souris');
 		},
 		toggleMenuBurgerGallery: function(){
 			$('.header-mobile-nav').toggleClass('display-off');
