@@ -59,19 +59,19 @@
 		hammerHandlers: function(e){
 			switch(e.type) {
 						case 'swiperight':
-						alert('r');
+						//alert('r');
 						handlers.openComments();
 						break;
 						case 'swipeleft':
-						alert('l');
+						//alert('l');
 						handlers.closePanels();
 						break;
 						case 'swipeup':
-						alert('u');
+						//alert('u');
 						handlers.beforeImg();
 						break;
 						case 'swipedown':
-						alert('d');
+						//alert('d');
 						handlers.afterImg();
 						break;
 						default:
@@ -169,6 +169,7 @@
 			$('.overlay').removeClass('overlay-active-black').removeClass('overlay-active-color');
 			$('.timeline-mobile').addClass('display-off');
 			$('.box-position').removeClass('display-off');
+			$('.cross-left-panel').addClass('display-off');
 			if(window.matchMedia("(max-width:1024px)").matches) {
 					$('.left-panel').css('left','-100%');
 				}else{
@@ -189,7 +190,12 @@
 				$('#gallery-photo').fadeOut(500, handlers.changeBackground());
 				$('.title-picture h1').text(buildingHistory[indexImg]['titleImg']);
 				$('.comments p').text(buildingHistory[indexImg]['comment']);
-				$('.block-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');
+				if(window.matchMedia("(min-width:1024px)").matches) {
+					$('.block-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');
+				}else{
+					$('.footer-nav-day').html('<span class="italic">'+buildingHistory[indexImg]["date"]+'</span>');
+					$('.footer-nav-year').html(buildingHistory[indexImg]["year"]);
+				}	
 		},
 		beforeImg: function(){
 				if(indexImg === 0){
@@ -211,6 +217,9 @@
 		},
 		openComments: function(){
 			if(panelVal === 0){
+				if(window.matchMedia("(max-width:1024px)").matches) {
+					$('.cross-left-panel').removeClass('display-off');
+				}
 				$('.left-panel').css('left', '0');
 				$('.overlay').addClass('overlay-active-color');
 				$('.right-panel').css('right', '-50%');
@@ -333,7 +342,7 @@
 				$('.key4').bind({mouseenter: displayUtils.showTextInstructionsKeyRight, mouseleave: displayUtils.showTextInstructionsKeyRight});
 				$('.mouse').bind({mouseenter: displayUtils.showTextInstructionsMouse, mouseleave: displayUtils.showTextInstructionsMouse});
 				$('#burger-button').bind({click: displayUtils.toggleMenuBurger});
-				$('#burger-button-gallery').bind({click: displayUtils.toggleMenuBurgerGallery});
+				//$('#burger-button-gallery').bind({click: displayUtils.toggleMenuBurgerGallery});
 		},
 		resizeWindow: function(){
 				var posTmpArrow = ($(window).innerHeight())-105;
@@ -345,21 +354,22 @@
 		},
 		showInstructions: function(){
 			$('.pop-in').toggleClass('display-off');
+			$('.home-bg').toggleClass('blur-filter');
 		},
 		showTextInstructionsKeyLeft: function(){
-			$('.text1').toggleClass('display-off').html('Touche Gauche :'+'<br>'+'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, enim doloribus in perspiciatis delectus molestiae mollitia adipisci. Repudiandae impedit perspiciatis labore, provident laudantium aperiam pariatur.');
+			$('.text1').toggleClass('display-off').html('Touche Gauche :<br><br>La touche gauche permet l’ouverture de la ligne du temps ou la fermeture des commentaires.');
 		},
 		showTextInstructionsKeyRight: function(){
-			$('.text1').toggleClass('display-off').text('Touche Droite');
+			$('.text1').toggleClass('display-off').html('Touche Droite :<br><br>La touche gauche permet l’ouverture des commentaires ou la fermeture de la ligne du temps.');
 		},
 		showTextInstructionsKeyUp: function(){
-			$('.text1').toggleClass('display-off').text('Touche Haut');
+			$('.text1').toggleClass('display-off').html('Touche Haut :<br><br>Permet de remonter chronologiquement dans le temps vers une date antérieure, et de faire défiler les images de la galerie. Mais aussi de naviguer dans la ligne du temps.');
 		},
 		showTextInstructionsKeyDown: function(){
-			$('.text1').toggleClass('display-off').text('Touche Bas');
+			$('.text1').toggleClass('display-off').html('Touche Bas :<br><br>Permet d’avancer chronologiquement dans le temps vers une date ultérieure, et de faire défiler les images de la galerie. Mais aussi de naviguer dans la ligne du temps.');
 		},
 		showTextInstructionsMouse: function(){
-			$('.text1').toggleClass('display-off').text('Scroll de la souris');
+			$('.text1').toggleClass('display-off').html('Scroll de la souris:<br><br>La souris permet une navigation classique au clic et à la molette dans la galerie et partout ailleurs sur le site.');
 		},
 		toggleMenuBurgerGallery: function(){
 			$('.header-mobile-nav').toggleClass('display-off');
@@ -370,13 +380,14 @@
 			$('.section-contact').toggleClass('display-off');
 			$('.section-about').toggleClass('display-off');
 			$('.section-upload').toggleClass('display-off');
-			if($('body').hasClass('overflow-on')){
-				$('body').removeClass('overflow-on');
-				$('body').addClass('overflow-off');
-			}else{
-				$('body').removeClass('overflow-off');
-				$('body').addClass('overflow-on');
-			}
+			$('.section-galerie').toggleClass('display-off');
+			// if($('body').hasClass('overflow-on')){
+			// 	$('body').removeClass('overflow-on');
+			// 	$('body').addClass('overflow-off');
+			// }else{
+			// 	$('body').removeClass('overflow-off');
+			// 	$('body').addClass('overflow-on');
+			// }
 		}
 	};
 })(jQuery);

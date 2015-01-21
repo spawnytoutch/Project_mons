@@ -1,7 +1,6 @@
 /*--------------------------------------------------*\
 		Home
 \*--------------------------------------------------*/
-
 .home-bg {
 	position: absolute;
 	top: 0;
@@ -15,7 +14,6 @@
 	background-attachment: fixed;
 	z-index: 1;
 }
-
 .logo-mons {
 	position: relative;
 	margin: 0 auto;
@@ -27,7 +25,6 @@
 	margin-bottom: 50px;
 	z-index: 2;
 }
-
 .home-title {
 	width: 85%;
 	margin: 50px auto;
@@ -37,11 +34,9 @@
 	z-index: 2;
 	position: relative;
 }
-
 .gras{
 	font-family: $fontbold;
 }
-
 .buttons{
 	position: relative;
 	height: 50px;
@@ -77,6 +72,13 @@
 			border:3px solid $couleur;
 		}
 	}
+}
+.link-admin {
+	position: absolute;
+	bottom: 0;right: 0;
+	z-index: 100;
+	text-decoration: none;
+	opacity: 0;
 }
 @include breakpoint (600px) {
 	.logo-mons {

@@ -17,7 +17,6 @@ body {
 	color: $blanc;
 	cursor: url(../images/cursor/cursor_current.cur),auto;
 }
-
 .height-100 {
     height: 100%;
 }
@@ -29,7 +28,6 @@ body {
 }
 .overflow-on {
 	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
 }
 .overflow-off {
 	overflow: hidden;
@@ -41,11 +39,11 @@ body {
 		display: none;
 }
 .blur-filter {
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(2px);
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);
 }
 
 @font-face {
