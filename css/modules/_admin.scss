@@ -69,6 +69,20 @@
 			color: $blanc;
 			background-color: $couleur;
 		}
+		a {
+			width: 100%;
+			padding: 0;
+			height: 31px;
+			display: block;
+			line-height: 33px;
+			color: $couleur;
+			text-decoration: none;
+			text-align: center;
+			&:hover {
+				color: $blanc;
+				background-color: $couleur;
+			}
+		}
 	}
 }
 @include breakpoint (1024px) {
