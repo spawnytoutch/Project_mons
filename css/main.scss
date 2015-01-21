@@ -37,9 +37,13 @@ $fontlight: 'alegreya_sansthin';
 @import "modules/map";
 @import "modules/header";
 @import "modules/section";
+@import "modules/left-panel";
+@import "modules/center-panel";
+@import "modules/right-panel";
 @import "modules/footer";
 @import "modules/about";
 @import "modules/contact";
 @import "modules/instruction";
 @import "modules/404";
-@import "modules/admin"
+@import "modules/admin";
+@import "modules/login";
