@@ -3,25 +3,28 @@
 \*-----------------------------*/
 .right-panel {
 	display: none;
+	position: absolute;
 	height: 100%;
 	width: 17.5%;
-	position: absolute;
 	right: -30%;
 	z-index: 90;
 	transition: right 0.3s ease;
 	background-color: $couleur;
 	opacity: 0.85;
 }
-.fa-right {
+.cross-right-panel {
 	position: absolute;
-	top: 105px;
-	left: 20px;
-	z-index: 120;
+	left: 25px;
+	top: 25px;
 }
 .timeline {
-	padding-top: 150px;
-	padding-left: 20px;
-	overflow-y: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 45px;
+	padding-top: 20px;
+	overflow-x: hidden; 
+	overflow-y: auto;
 	ul {
 		list-style: none;
 		padding: 0 0 0 15px;

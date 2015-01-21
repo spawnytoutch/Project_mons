@@ -8,7 +8,7 @@
 }
 .gallery-photo {
 	position: absolute;
-	top: 60px;bottom: 0;left: 0;right: 0;
+	top: 0;bottom: 0;left: 0;right: 0;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
@@ -198,16 +198,15 @@ font-style: italic;
 	.section-gallery {
 		top: 96px;
 	}
-	.gallery-photo {
-		top: 96px;
-	}
 	.block-title {
 		@include span (5);
 		padding: 0;
-		top: 96px;
 		h2 {
 			padding-left: 50px;
 		}
+	}
+	.box-position {
+		top: -96px;
 	}
 	.box-arrow.up {
 		top: 110px;
