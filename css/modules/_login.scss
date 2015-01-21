@@ -1,0 +1,49 @@
+/*--------------------------------------------------*\
+		LOGIN ADMIN
+\*--------------------------------------------------*/
+.form-login {
+	@include span (12);
+	margin-top: 150px;
+}
+.label-login {
+	@include span (4);
+	@include squish (4,4);
+	font-family: $font;
+	text-align: center;
+	padding-bottom: 5px;	
+}
+.input-login {
+	@include span (4);
+	@include squish (4,4);
+	display: block;
+	height: 25px;
+	text-decoration: none;
+	border: 3px solid $blanc;
+	color: $blanc;
+	background-color: $blanc;
+	margin-bottom: 10px;
+}
+.submit-login {
+	@include span (4);
+	@include squish (4,4);
+	display: block;
+	height: 30px;
+	margin-top: 30px;
+	text-decoration: none;
+	border: 3px solid $blanc;
+	color: $blanc;
+	background-color: transparent;
+		&:hover {
+			color: $couleur;
+			background-color: $blanc;
+			border:3px solid $blanc;
+		}
+}
+
+@include breakpoint (1024px) {
+	.form-login {
+		@include span (6);
+		@include squish (3,3);
+		margin-top: 300px;
+	} 
+}
