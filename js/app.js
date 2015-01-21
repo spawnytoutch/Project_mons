@@ -354,7 +354,10 @@
 		},
 		showInstructions: function(){
 			$('.pop-in').toggleClass('display-off');
+			$('.section-map').toggleClass('blur-filter');
 			$('.home-bg').toggleClass('blur-filter');
+			$('header').toggleClass('blur-filter');
+			$('footer').toggleClass('blur-filter');
 		},
 		showTextInstructionsKeyLeft: function(){
 			$('.text1').toggleClass('display-off').html('Touche Gauche :<br><br>La touche gauche permet l’ouverture de la ligne du temps ou la fermeture des commentaires.');

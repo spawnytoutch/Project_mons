@@ -62,7 +62,9 @@
 		display: none;
 	}
 	.section-map {
-		display: block;	
+		display: block;
+		position: absolute;
+		top: 96px;right: 0;bottom: 50px;left: 0;
 	}
 	#map-canvas {
 		height: 100%;
