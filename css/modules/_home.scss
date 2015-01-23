@@ -7,7 +7,7 @@
 	right: 0;
 	left: 0;
 	bottom: 0;
-	background-image: url(../images/bg.jpg);
+	background-image: url(../images/mons_3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -97,6 +97,7 @@
 		&:first-child {
 			@include pre (4);
 			@include span (2);
+			margin-right: 0;
 		}
 		&:last-child {
 			@include span (2);

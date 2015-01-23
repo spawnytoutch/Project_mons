@@ -20,7 +20,7 @@
 }
 .timeline {
 	position: absolute;
-	width: 100%;
+	width: 138%;
 	height: 100%;
 	padding-top: 45px;
 	overflow-x: hidden; 
@@ -41,15 +41,16 @@
 		z-index: 100;
 		-webkit-transition: background-color 0.3s ease;
 		transition: background-color 0.3s ease;
+		transition: all 0.3s ease;
 			&:hover {
 				color: $noir;
-				border-bottom: 1px solid $noir;
+				letter-spacing: 10px;
 			}
 	}
 }
 .timeline-p-hover {
 	color: $noir;
-	border-bottom: 1px solid $noir;
+	letter-spacing: 10px;
 }
 .btn-timeline {
 	position: absolute;
