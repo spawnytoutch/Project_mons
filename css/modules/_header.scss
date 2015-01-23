@@ -58,22 +58,23 @@ header {
 		line-height: 96px;
 		color:$blanc;
 		cursor: url(../images/cursor/pointer.cur), auto;
+		-webkit-transition: all 0.3s ease;
 		transition: all 0.3s ease;
 		&:hover {
 			color: $couleur;
 		}
 	}
 }
-.title-picture, .title-map {
+.title-picture, .title-site {
 	@include span (8 of 16);
-	padding: 0;
 	@include post (1 of 16);
+	padding: 0;
 	height: 60px;
 	z-index: 110;
 	top:0;
 	text-align: center;
 	h1 {
-		color: $couleur;
+		color: $blanc;
 		font-size: 15px;
 		font-weight: 100;
 		margin: 0;
@@ -102,7 +103,7 @@ header {
 			background-color: $blanc;
 			width: 20px;
 			height: 4px;
-			margin-bottom: 4px
+			margin-bottom: 4px;
 		}
 	}
 }
@@ -112,7 +113,7 @@ header {
 .title-picture {
 	display: block;
 }
-.title-map {
+.title-site {
 	display: block;
 }
 .header-mobile-nav {
@@ -265,10 +266,10 @@ header {
 		padding-bottom: 13px;
 		margin-top: 13px;
 	}
-	.title-map {
+	.title-site {
 		@include span (4 of 16);
-		padding: 0;
 		@include post (4 of 16);
+		padding: 0;
 		display: block;
 		height: 96px;
 		line-height: 96px;
@@ -290,8 +291,12 @@ header {
 		top: 23px;
 		right: 0;
 		a {
+			svg * {
+				-webkit-transition: all 0.3s ease;
+				transition: stroke 0.3s ease;
+			}
 			&:hover>svg * {
-			stroke: $couleur;
+				stroke: $couleur;
 			}
 		}
 	}

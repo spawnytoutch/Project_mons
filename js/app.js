@@ -223,10 +223,11 @@
 		openComments: function(){
 			if(panelVal === 0){
 				if(window.matchMedia("(max-width:1024px)").matches) {
-					$('.cross-left-panel').removeClass('display-off');
+					//$('.cross-left-panel').removeClass('display-off');
 					$('#section-gallery').unbind();
 					$('.box-position').toggleClass('display-off');
 				}
+				$('.cross-left-panel').removeClass('display-off');
 				$('.left-panel').css('left', '0');
 				$('.overlay').addClass('overlay-active-color');
 				$('.right-panel').css('right', '-50%');

@@ -1,15 +1,6 @@
 /*--------------------------------------------------*\
 		Footer
 \*--------------------------------------------------*/
-
-@font-face {
-	font-family: 'FontAwesome';
-	src: url('fonts/fontawesome-webfont.eot?v=4.2.0');
-	src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
 footer {
 	@with-layout(16);
 	@include span(16 of 16);
@@ -48,6 +39,7 @@ footer {
 		font-size: 16px;
 		color: $blanc;
 		text-decoration: none;
+		-webkit-transition: all 0.3s ease;
 		transition: all 0.3s ease;
 		cursor: url(../images/cursor/pointer.cur), auto;
 		&:hover {
@@ -55,8 +47,6 @@ footer {
 		}
 	}
 }
-
-
 
 @include breakpoint (1024px) {
 	footer{

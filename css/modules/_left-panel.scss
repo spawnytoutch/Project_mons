@@ -15,20 +15,6 @@
 		cursor: url(../images/cursor/cursor_text.cur),auto;
 	}
 }
-.cross-left-panel {
-	position: absolute;
-	top: 20px;
-	height: 50px;
-	@include pre(1 of 16);
-	@include span(14 of 16);
-	@include post(1 of 16);
-	padding: 0;
-	z-index: 150;
-	svg {
-		position: absolute;
-		right: 0;
-	}
-}
 .comments {
 	height: 100%;
 	@include pre(2 of 16);
@@ -39,8 +25,13 @@
 	overflow-y: auto;
 }
 .btn-comments {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 48%;
 	right: -21px;
 	background: $noir;
+	z-index: 110;
 	cursor: url(../images/cursor/pointer.cur),auto;
 	border-top: 1px solid $couleur;
 	border-right: 1px solid $couleur;
@@ -54,12 +45,12 @@
 		@include span (5);
 		padding: 0;
 		left: -40.66667%;
+		-webkit-transition: left 0.3s ease;
 		transition: left 0.3s ease;
 	}
 	.comments {
-		padding:180px 50px 0 50px;
 		p {
-			margin-top: 140px;
+			margin-top: 50px;
 		}
 	}
 }

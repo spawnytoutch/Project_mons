@@ -14,13 +14,6 @@
 	background-attachment: fixed;
 	background-size: cover;
 }
-.btn-comments, .btn-timeline {
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	top: 48%;
-	z-index: 110;
-}
 .overlay {
 	display: none;
 }
@@ -75,7 +68,6 @@
 	border-top: 3px solid $couleur;
 	border-right: 3px solid $couleur;
 	@include transform(rotate(-45deg));
-	//transform:rotate(-45deg);
 	cursor: url(../images/cursor/pointer.cur),auto;
 }
 .arrow-down{
@@ -110,6 +102,19 @@
 		font-size: 18px;
 		font-weight: 600;
 		line-height: 30px;
+	}
+}
+.cross-left-panel {
+	position: absolute;
+	top: 20px;
+	height: 60px;
+	@include pre(1 of 16);
+	@include span(14 of 16);
+	@include post(1 of 16);
+	padding: 0;
+	svg {
+		position: absolute;
+		right: 0;
 	}
 }
 .italic {
@@ -204,6 +209,9 @@ font-style: italic;
 		h2 {
 			padding-left: 50px;
 		}
+	}
+	.cross-left-panel {
+		
 	}
 	.box-position {
 		top: -96px;

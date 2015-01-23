@@ -95,7 +95,6 @@
 	.buttons li {
 		padding: 0;
 		&:first-child {
-			@include squish (0,0);
 			@include pre (4);
 			@include span (2);
 		}
