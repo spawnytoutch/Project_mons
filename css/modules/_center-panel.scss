@@ -217,7 +217,7 @@ font-style: italic;
 	}
 	.box-title {
 		@include pre (1 of 16);
-		@include span (10 of 16 last);
+		@include span (4 of 16 last);
 		padding: 0;
 	}
 	.box-position {
