@@ -65,7 +65,7 @@
 						break;
 						case 'swipeleft':
 						//alert('l');
-						if(window.matchMedia("(max-width:1024px)").matches){
+						if(window.matchMedia("(max-width:1152px)").matches){
 							handlers.closePanels();
 						}else{
 							handlers.openTimeline();
@@ -109,7 +109,7 @@
 				$('.timeline-mobile ul').append('<li><p>'+buildingHistory[i]["year"]+'</p></li>');
 			}
 			$('.timeline p:eq(0)').addClass('timeline-p-hover');
-			if(window.matchMedia("(max-width:1024px)").matches){
+			if(window.matchMedia("(max-width:1152px)").matches){
 				$('.footer-nav-day').html('<span class="italic">'+buildingHistory[0]["date"]+'</span>');
 				$('.footer-nav-year').html(buildingHistory[0]["year"]);
 				$('.box-title h2').html(buildingHistory[0]["titleImg"]);
@@ -174,9 +174,8 @@
 			$('.timeline-mobile').addClass('display-off');
 			$('.box-position').removeClass('display-off');
 			$('.cross-left-panel').addClass('display-off');
-			if(window.matchMedia("(max-width:1024px)").matches) {
+			if(window.matchMedia("(max-width:1152px)").matches) {
 					$('.left-panel').css('left','-100%');
-					//$('.footer-nav').toggleClass('display-off');
 				}else{
 					$('.left-panel').css('left','-40.66667%');
 					$('.right-panel').css('right', '-16.5%');
@@ -195,7 +194,7 @@
 				$('#gallery-photo').fadeOut(500, handlers.changeBackground());
 				$('.title-picture h1').text(buildingHistory[indexImg]['titleImg']);
 				$('.comments p').text(buildingHistory[indexImg]['comment']);
-				if(window.matchMedia("(min-width:1024px)").matches) {
+				if(window.matchMedia("(min-width:1152px)").matches) {
 					$('.box-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');
 				}else{
 					$('.footer-nav-day').html('<span class="italic">'+buildingHistory[indexImg]["date"]+'</span>');
@@ -222,10 +221,10 @@
 		},
 		openComments: function(){
 			if(panelVal === 0){
-				if(window.matchMedia("(max-width:1024px)").matches) {
-					//$('.cross-left-panel').removeClass('display-off');
+				if(window.matchMedia("(max-width:1152px)").matches) {
 					$('#section-gallery').unbind();
 					$('.box-position').toggleClass('display-off');
+					$('.timeline-mobile').toggleClass('display-off');
 				}
 				$('.cross-left-panel').removeClass('display-off');
 				$('.left-panel').css('left', '0');
@@ -270,7 +269,7 @@
 			}
 		},
 		gestionKeyLeft: function(){
-			if(window.matchMedia("(max-width:1024px)").matches){
+			if(window.matchMedia("(max-width:1152px)").matches){
 					if(panelVal === -1){
 							handlers.closePanels();
 					}
