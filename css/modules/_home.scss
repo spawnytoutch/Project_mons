@@ -1,48 +1,60 @@
 /*--------------------------------------------------*\
 		Home
 \*--------------------------------------------------*/
-.home-bg {
+.box-index {
 	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	background-image: url(../images/mons_3.jpg);
+	top: 0;right: 0;bottom: 0;left: 0;
+	background-image: url(../images/bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
-	z-index: 1;
-}
-.logo-mons {
-	position: relative;
-	margin: 0 auto;
-	margin-top: 60px;
-	display: block;
-	background-color: $couleur;
-	width: 150px;
-	border-radius: 50%;
-	margin-bottom: 50px;
-	z-index: 2;
 }
 .home-title {
-	width: 85%;
-	margin: 50px auto;
-	font-family: $fontlight;
+	position: absolute;
+	width: 100%;
+	margin: 0;
+	padding: 15px 25px 0 25px;
+	font-family: $font;
 	font-weight: 100;
 	font-size: 20px;
-	z-index: 2;
-	position: relative;
+	text-shadow: 1px 1px grey;
 }
-.gras{
-	font-family: $fontbold;
+.box-bg {
+	position: absolute;
+	top: 0;bottom: 0;left: 0;right: 0;
 }
-.buttons{
-	position: relative;
+.box-logo {
+	position: absolute;
+	height: 150px;
+	width: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.logo-mons {
+	position: absolute;
+	width: 150px;
+	height: 100%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: $couleur;
+	border-radius: 50%;
+}
+.box-btn {
+	position: absolute;
+	width: 100%;
 	height: 50px;
-	z-index: 2;
+	top: 70%;
 	ul {
 		@include span (12);
+		margin: 0;
+		padding: 0;
 		list-style: none;
 	}
 	li {
@@ -51,6 +63,7 @@
 		&:first-child {
 			@include squish (4,4);
 			@include span (4);
+			padding: 0;
 			height: 50px;
 		}
 		&:last-child {
@@ -66,6 +79,7 @@
 	text-decoration: none;
 	border: 3px solid $blanc;
 	color: $blanc;
+	cursor: url(../images/cursor/pointer.cur),auto;
 		&:hover {
 			color: $blanc;
 			background-color: $couleur;
@@ -80,32 +94,27 @@
 	text-decoration: none;
 	opacity: 0;
 }
-@include breakpoint (600px) {
-	.logo-mons {
-		margin-top: 130px;
-	}
-}
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.home-title {
-		margin: 50px 0 0 50px;
+		padding: 50px 25px 0 25px;
+		font-family: $fontlight;
+		font-weight: 100;
+		font-size: 30px;
+		text-shadow: 1px 1px grey;
 	}
-	.logo-mons {
-		margin-top: 200px;
-	}
-	.buttons li {
-		padding: 0;
+	.box-btn li {
 		&:first-child {
-			@include pre (4);
-			@include span (2);
-			margin-right: 0;
+			@include pre (8 of 24);
+			@include span (3 of 24);
+			@include post (1 of 24);
+			padding: 0;
 		}
 		&:last-child {
-			@include span (2);
-			@include post (4);
 			display: block;
-			a {
-			width: 100%;
-			}
+			@include pre (1 of 24);
+			@include span (3 of 24);
+			@include post (8 of 24);
+			padding: 0;
 		}
 	}
 }

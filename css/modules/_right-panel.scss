@@ -23,7 +23,7 @@
 	width: 138%;
 	height: 100%;
 	padding-top: 45px;
-	overflow-x: hidden; 
+	overflow-x: hidden;
 	overflow-y: auto;
 	ul {
 		list-style: none;
@@ -68,7 +68,7 @@
 
 /*-----------------------------*/
 
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.right-panel {
 		display: block;
 		right: -16.5%;

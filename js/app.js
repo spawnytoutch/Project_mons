@@ -112,9 +112,9 @@
 			if(window.matchMedia("(max-width:1024px)").matches){
 				$('.footer-nav-day').html('<span class="italic">'+buildingHistory[0]["date"]+'</span>');
 				$('.footer-nav-year').html(buildingHistory[0]["year"]);
-				$('.block-title h2').html(buildingHistory[0]["titleImg"]);
+				$('.box-title h2').html(buildingHistory[0]["titleImg"]);
 			}else{
-				$('.block-title h2').html(buildingHistory[0]["titleImg"]+' <span class="italic">'+buildingHistory[0]["date"]+' '+buildingHistory[0]["year"]+'</span>');
+				$('.box-title h2').html(buildingHistory[0]["titleImg"]+' <span class="italic">'+buildingHistory[0]["date"]+' '+buildingHistory[0]["year"]+'</span>');
 			}
 		},
 		mouseClick: function(){
@@ -179,7 +179,7 @@
 					//$('.footer-nav').toggleClass('display-off');
 				}else{
 					$('.left-panel').css('left','-40.66667%');
-					$('.right-panel').css('right', '-17%');
+					$('.right-panel').css('right', '-16.5%');
 			}
 		},
 		changeHoverTimeline: function(){
@@ -196,7 +196,7 @@
 				$('.title-picture h1').text(buildingHistory[indexImg]['titleImg']);
 				$('.comments p').text(buildingHistory[indexImg]['comment']);
 				if(window.matchMedia("(min-width:1024px)").matches) {
-					$('.block-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');
+					$('.box-title h2').html(buildingHistory[indexImg]['titleImg']+' <span class="italic">'+buildingHistory[indexImg]['date']+buildingHistory[indexImg]['year']+'</span>');
 				}else{
 					$('.footer-nav-day').html('<span class="italic">'+buildingHistory[indexImg]["date"]+'</span>');
 					$('.footer-nav-year').html(buildingHistory[indexImg]["year"]);
@@ -359,7 +359,7 @@
 		showInstructions: function(){
 			$('.pop-in').toggleClass('display-off');
 			$('section').toggleClass('blur-filter');
-			$('.home-bg').toggleClass('blur-filter');
+			$('.box-index').toggleClass('blur-filter');
 			$('header').toggleClass('blur-filter');
 			$('footer').toggleClass('blur-filter');
 		},
@@ -384,6 +384,7 @@
 			$('.section-about').toggleClass('display-off');
 			$('.section-upload').toggleClass('display-off');
 			$('#section-gallery').toggleClass('display-off');
+			$('.footer-nav').toggleClass('display-off');
 		}
 	};
 })(jQuery);

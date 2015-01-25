@@ -57,7 +57,7 @@
 .lienGalerie {
 	color: $noir;
 }
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.display{
 		display: none;
 	}

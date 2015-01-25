@@ -1,7 +1,6 @@
 /*--------------------------------------------------*\
 		Formulaires
 \*--------------------------------------------------*/
-
 .contact {
 	@with-layout(16);
 	@include pre (1 of 16);
@@ -88,7 +87,7 @@
 		padding-bottom: 100px;
 	}
 }
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.label-input {
 		@include span (4 of 16);
 	}

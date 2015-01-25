@@ -22,15 +22,9 @@ $font: 'alegreya_sansregular', helvetica;
 $fontbold: 'alegreya_sansextrabold';
 $fontlight: 'alegreya_sansthin';
 
-// Tools
-@import "tools/mixins";
-
 // Base
 @import "base/base";
 @import "base/form";
-
-// Layout
-@import "layout/grid";
 
 // Modules
 @import "modules/home";

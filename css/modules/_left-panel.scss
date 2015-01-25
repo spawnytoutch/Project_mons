@@ -23,6 +23,10 @@
 	padding: 70px 0 10px 0;
 	color: $blanc;
 	overflow-y: auto;
+	p {
+		font-size: 16px;
+		line-height: 20px;
+	}
 }
 .btn-comments {
 	position: absolute;
@@ -40,7 +44,7 @@
 
 /*-----------------------------*/
 
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.left-panel {
 		@include span (5);
 		padding: 0;
@@ -51,6 +55,8 @@
 	.comments {
 		p {
 			margin-top: 50px;
+			font-size: 19px;
+			line-height: 24px;
 		}
 	}
 }

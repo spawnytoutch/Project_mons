@@ -36,6 +36,7 @@ g:hover #roulette{
 	position: absolute;
 	top: 50px;
 	right: 50px;
+	cursor: url(../images/cursor/pointer.cur), auto;
 	svg:hover>* {
 		stroke:$couleur;
 	}

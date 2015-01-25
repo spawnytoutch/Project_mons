@@ -34,6 +34,8 @@ body {
 }
 .active {
 	color:$couleur !important;
+	fill: $couleur;
+
 }
 .display-off {
 	display: none;
@@ -46,46 +48,34 @@ body {
 	filter: blur(8px);
 	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="8" /></filter></svg>#filter');
 }
+.gras{
+	font-family: $fontbold;
+}
 @font-face {
 	font-family: 'MavenProRegular';
 	src: url('../fonts/regular/maven_pro_regular-webfont.eot');
-	src: url('../fonts/regular/maven_pro_regular-webfont.eot?#iefix') format('eot'),
-		 url('../fonts/regular/maven_pro_regular-webfont.woff') format('woff'),
-		 url('../fonts/regular/maven_pro_regular-webfont.ttf') format('truetype'),
-		 url('../fonts/regular/maven_pro_regular-webfont.svg#webfontOM8fITNz') format('svg');
+	src: url('../fonts/regular/maven_pro_regular-webfont.eot?#iefix') format('eot'), url('../fonts/regular/maven_pro_regular-webfont.woff') format('woff'), url('../fonts/regular/maven_pro_regular-webfont.ttf') format('truetype'), url('../fonts/regular/maven_pro_regular-webfont.svg#webfontOM8fITNz') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'alegreya_sansregular';
 	src: url('../fonts/alegrya/alegreyasans-regular-webfont.eot');
-	src: url('../fonts/alegrya/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/alegrya/alegreyasans-regular-webfont.woff2') format('woff2'),
-		 url('../fonts/alegrya/alegreyasans-regular-webfont.woff') format('woff'),
-		 url('../fonts/alegrya/alegreyasans-regular-webfont.ttf') format('truetype'),
-		 url('../fonts/alegrya/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg');
+	src: url('../fonts/alegrya/alegreyasans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/alegrya/alegreyasans-regular-webfont.woff2') format('woff2'), url('../fonts/alegrya/alegreyasans-regular-webfont.woff') format('woff'), url('../fonts/alegrya/alegreyasans-regular-webfont.ttf') format('truetype'),	url('../fonts/alegrya/alegreyasans-regular-webfont.svg#alegreya_sansregular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'alegreya_sansextrabold';
 	src: url('../fonts/alegrya/alegreyasans-extrabold-webfont.eot');
-	src: url('../fonts/alegrya/alegreyasans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/alegrya/alegreyasans-extrabold-webfont.woff2') format('woff2'),
-		 url('../fonts/alegrya/alegreyasans-extrabold-webfont.woff') format('woff'),
-		 url('../fonts/alegrya/alegreyasans-extrabold-webfont.ttf') format('truetype'),
-		 url('../fonts/alegrya/alegreyasans-extrabold-webfont.svg#alegreya_sansextrabold') format('svg');
+	src: url('../fonts/alegrya/alegreyasans-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/alegrya/alegreyasans-extrabold-webfont.woff2') format('woff2'), url('../fonts/alegrya/alegreyasans-extrabold-webfont.woff') format('woff'), url('../fonts/alegrya/alegreyasans-extrabold-webfont.ttf') format('truetype'), url('../fonts/alegrya/alegreyasans-extrabold-webfont.svg#alegreya_sansextrabold') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'alegreya_sansthin';
 	src: url('../fonts/alegrya/alegreyasans-thin-webfont.eot');
-	src: url('../fonts/alegrya/alegreyasans-thin-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/alegrya/alegreyasans-thin-webfont.woff2') format('woff2'),
-		 url('../fonts/alegrya/alegreyasans-thin-webfont.woff') format('woff'),
-		 url('../fonts/alegrya/alegreyasans-thin-webfont.ttf') format('truetype'),
-		 url('../fonts/alegrya/alegreyasans-thin-webfont.svg#alegreya_sansthin') format('svg');
+	src: url('../fonts/alegrya/alegreyasans-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/alegrya/alegreyasans-thin-webfont.woff2') format('woff2'), url('../fonts/alegrya/alegreyasans-thin-webfont.woff') format('woff'), url('../fonts/alegrya/alegreyasans-thin-webfont.ttf') format('truetype'), url('../fonts/alegrya/alegreyasans-thin-webfont.svg#alegreya_sansthin') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

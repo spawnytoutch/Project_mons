@@ -46,9 +46,9 @@
 .photo-admin{
 	@include span (10);
 	@include squish (1,1);
-	padding: 0; 
+	padding: 0;
 	img{
-		max-width: 100%
+		max-width: 100%;
 	}
 }
 .boutton-admin{
@@ -85,33 +85,33 @@
 		}
 	}
 }
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.info-admin{
-	@include span (5);
-	@include squish (1,0);
-	padding: 0;
-	p{
-		margin-top: 0;
-		}
-	}
-	.photo-admin{
-	@include span (5);
-	@include squish (0,1);
-	padding: 0;
-	padding-left:35px; 
-	img{
-		max-width: 100%
-		}
-	}
-	.boutton-admin{
-	@include span (2);
-	@include squish (9,2);
-	padding: 0;
-	button{
 		@include span (5);
 		@include squish (1,0);
 		padding: 0;
-		height: 35px;
+		p{
+			margin-top: 0;
+		}
 	}
-}
+	.photo-admin{
+		@include span (5);
+		@include squish (0,1);
+		padding: 0;
+		padding-left:35px;
+		img{
+			max-width: 100%;
+		}
+	}
+	.boutton-admin{
+		@include span (2);
+		@include squish (9,2);
+		padding: 0;
+		button{
+			@include span (5);
+			@include squish (1,0);
+			padding: 0;
+			height: 35px;
+		}
+	}
 }

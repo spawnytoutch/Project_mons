@@ -40,10 +40,10 @@
 		}
 }
 
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.form-login {
 		@include span (6);
 		@include squish (3,3);
 		margin-top: 300px;
-	} 
+	}
 }

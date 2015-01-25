@@ -89,15 +89,13 @@ header {
 	@include post (1 of 16);
 	position: relative;
 	height: 60px;
+	cursor: url(../images/cursor/pointer.cur), auto;
 	.menu-burger {
 		position: absolute;
 		top: 20px;
 		height: 20px;
 		right: 0;
 		z-index: 90;
-		// &:hover>div {
-		// 	background-color: $couleur;
-		// }
 		div {
 			right: 0;
 			background-color: $blanc;
@@ -133,6 +131,7 @@ header {
 		list-style: none;
 	}
 	a {
+		@include span (12);
 		margin: 0;
 		padding: 20px 10px;
 		text-align: center;
@@ -142,7 +141,7 @@ header {
 		font-family: $font;
 		font-size: 1.2em;
 		font-weight: 100;
-		@include span (12);
+		cursor: url(../images/cursor/pointer.cur), auto;
 	}
 	div {
 		@include span (10);
@@ -174,25 +173,27 @@ header {
 		font-family: $font;
 		font-size: 1.2em;
 		font-weight: 100;
+		cursor: url(../images/cursor/pointer.cur), auto;
 	}
 	div {
 		@include span (10);
-		@include squish (1,1);	
+		@include squish (1,1);
 	}
 }
 .bg-color-blue {
 	background-color: $couleur;
 	height: 335px;
+	p {
+		font-size: 0.973em;
+	}
 }
 .border-top {
 	border-top: solid 1px $blanc;
 }
-
 .menu-burger-active {
 	display: block;
 	background-color: $noir;
 }
-
 .icon-inline {
 	ul {
 		width: 254px;
@@ -210,19 +211,23 @@ header {
 	a {
 		width: 50px;
 		border:none;
+		svg * {
+			-webkit-transition: fill 0.3s ease;
+			transition: fill 0.3s ease;
+		}
+		&:hover>svg * {
+			fill: $couleur;
+		}
 	}
 }
-
 @include breakpoint (600px) {
-	.header-mobile-nav {
-		div {
+	.header-mobile-nav-map {
+		li div {
 			padding-top: 45px;
 		}
 	}
-
 }
-
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	.header-mobile-nav,.menu-burger{
 		display: none;
 	}
@@ -246,9 +251,6 @@ header {
 	}
 	header {
 		height: 96px;
-	}
-	.header-map {
-
 	}
 	.header-logo img {
 		width: 70px;
@@ -274,8 +276,8 @@ header {
 		height: 96px;
 		line-height: 96px;
 		h1 {
-		height: 96px;
-		line-height: 96px;
+			height: 96px;
+			line-height: 96px;
 		}
 	}
 	.instruction {
@@ -283,7 +285,6 @@ header {
 		padding: 0;
 		@include post (1 of 16);
 	}
-
 	.icone-instruction {
 		display: block;
 		height: 45px;

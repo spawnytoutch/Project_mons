@@ -42,13 +42,20 @@ footer {
 		-webkit-transition: all 0.3s ease;
 		transition: all 0.3s ease;
 		cursor: url(../images/cursor/pointer.cur), auto;
+		svg * {
+				-webkit-transition: fill 0.3s ease;
+				transition: fill 0.3s ease;
+			}
 		&:hover {
 			color: $couleur;
+		}
+		g:hover>* {
+			fill: $couleur;
 		}
 	}
 }
 
-@include breakpoint (1024px) {
+@include breakpoint (1152px) {
 	footer{
 		display: block;
 	}
